@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件通報與桌上演練服務 - TaiBear Security Studio 臺熊資安工坊</title>
+    <meta name="description" content="TaiBear 引導式事件通報與桌上演練，模擬勒索軟體擴散、個資外洩危機等場景，協助企業資安應變小組 (CSIRT) 釐清權責分工與改善應變手冊。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="10" width="22" height="16" rx="4" fill="#E6A15C"/>
+                    <path d="M24 13C26.2091 13 28 14.7909 28 17C28 19.2091 26.2091 21 24 21V13Z" stroke="#E6A15C" stroke-width="2"/>
+                    <path d="M6 6C6 6 8 3 11 3C14 3 14 6 14 6" stroke="#f8f9fa" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="9" cy="15" r="1.5" fill="#0D0D0E"/>
+                    <circle cx="17" cy="15" r="1.5" fill="#0D0D0E"/>
+                </svg>
+                TaiBear<span>資安工坊</span>
+            </a>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="about.html">關於 TaiBear</a></li>
+                    <li><a href="services.html" class="active">服務方案</a></li>
+                    <li><a href="plans.html">套餐方案</a></li>
+                    <li><a href="scenarios.html">適用情境</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="contact.html">聯絡我們</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary">立即諮詢</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subpage Hero -->
+    <section class="detail-hero text-center">
+        <div class="container">
+            <div class="hero-tagline" style="margin-bottom: 20px;">TABLETOP EXERCISES</div>
+            <h1 class="section-title" style="font-size: 3.2rem; line-height: 1.2;">事件通報與桌上演練服務</h1>
+            <p class="section-subtitle" style="margin-bottom: 30px;">當勒索軟體鎖定主伺服器、或是客戶敏感個資遭到外洩，您的團隊能在 30 分鐘內啟動正確應變嗎？透過模擬真實災難場景的引導式桌上演練，釐清內部通報鏈結與決策權責。</p>
+            <div style="display: flex; gap: 16px; justify-content: center;">
+                <a href="contact.html" class="btn btn-primary">預約演練工作坊</a>
+                <a href="plans.html" class="btn btn-secondary">查看套餐方案</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exercise Themes -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">三大實戰推演情境主題</h2>
+                <p class="section-subtitle">我們設計的推演情境均基於台灣一線資安事件，提供最高強度的決策考驗。</p>
+            </div>
+            
+            <div class="detail-features">
+                <!-- Theme 1 -->
+                <div class="glass-panel detail-feature-card">
+                    <span style="font-size: 1.5rem; display:block; margin-bottom: 12px;">💻</span>
+                    <h3 style="color:var(--accent-gold); margin-bottom:16px;">1. 勒索軟體擴散與加密</h3>
+                    <p style="color:var(--text-secondary); font-size:0.95rem;">模擬核心系統、備份系統遭受勒索軟體加密癱瘓。考驗應變小組 (CSIRT) 在面臨贖金要求、系統停機與外部合規壓力下的通報順序、還原策略及業務持續性 (BCP) 決策。</p>
+                </div>
+                <!-- Theme 2 -->
+                <div class="glass-panel detail-feature-card">
+                    <span style="font-size: 1.5rem; display:block; margin-bottom: 12px;">📁</span>
+                    <h3 style="color:var(--accent-gold); margin-bottom:16px;">2. 顧客大規模個資外洩</h3>
+                    <p style="color:var(--text-secondary); font-size:0.95rem;">模擬資料庫遭駭客竊取，且企業收到勒索信件威脅公開敏感個資。推演法務、外部公關、營運處與 IT 在媒體爆料、主管機關突擊調查與客戶索賠時的對外通告與危機控管機制。</p>
+                </div>
+                <!-- Theme 3 -->
+                <div class="glass-panel detail-feature-card">
+                    <span style="font-size: 1.5rem; display:block; margin-bottom: 12px;">👔</span>
+                    <h3 style="color:var(--accent-gold); margin-bottom:16px;">3. 假冒主管詐騙 (BEC)</h3>
+                    <p style="color:var(--text-secondary); font-size:0.95rem;">模擬財務人員收到來自「假冒總經理」的特急匯款簡訊與郵件，或假冒供應商更改付款帳號。檢視財務審核鏈、高階決策查核點與雙重授權機制中是否存在流程人因漏洞。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Execution Steps -->
+    <section class="section-padding" style="background-color: rgba(255, 255, 255, 0.01);">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">演練引導流程</h2>
+                <p class="section-subtitle">由經驗豐富的資安顧問親自帶領，將推演轉化為具體的改進指南。</p>
+            </div>
+            
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="process-step-num">1</div>
+                    <h4>現狀調研</h4>
+                    <p>審查企業現有應變流程手冊 (Playbook) 與部門權責。</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num">2</div>
+                    <h4>客製腳本</h4>
+                    <p>依據產業特性（如製造、金融、零售）設計專屬的突發災難情境與插播事件。</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num">3</div>
+                    <h4>沙盤推演</h4>
+                    <p>顧問作為引導人，在半天的工作坊中逐步推演事件發生、蔓延、控制與恢復的反應。</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num">4</div>
+                    <h4>決策健檢</h4>
+                    <p>在推演中檢視「誰有權下決定中斷網路」、「何時通知大眾」等決策盲點。</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num">5</div>
+                    <h4>改進建議</h4>
+                    <p>產出完整的應變手冊修正建議書與演練歷程記錄。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverables -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">交付成果與價值</h2>
+                <p class="section-subtitle">落實危機處理流程，提供符合國內外合規標準的具體證明。</p>
+            </div>
+            
+            <div class="deliverable-list">
+                <!-- Deliverable 1 -->
+                <div class="glass-panel deliverable-card">
+                    <h4>應變流程優化建議書 (Playbook Review)</h4>
+                    <p>針對桌上演練中所暴露出來的「通報盲點」、「權責重疊」、「資訊落差」等流程漏洞，提供具體的 SOP 調整指引與資安控制項修正建議。</p>
+                </div>
+                <!-- Deliverable 2 -->
+                <div class="glass-panel deliverable-card">
+                    <h4>參演證明與記錄備忘錄</h4>
+                    <p>詳細記錄演練的討論歷程、插播事件應對結果以及參演人員清單。可作為符合 ISO 27001、GDPR、個資法、上市櫃資安專章或金管會稽核的直接演練佐證。</p>
+                </div>
+                <!-- Deliverable 3 -->
+                <div class="glass-panel deliverable-card">
+                    <h4>應變決策指引卡 (CSIRT Quick Card)</h4>
+                    <p>為決策主管與 IT 成員製作便於攜帶與查詢的應變小卡，條列關鍵通報電話、分工查核表（Checklist）與初步控制三步驟，讓同仁臨危不亂。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo">
+                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="10" width="22" height="16" rx="4" fill="#E6A15C"/>
+                        <path d="M24 13C26.2091 13 28 14.7909 28 17C28 19.2091 26.2091 21 24 21V13Z" stroke="#E6A15C" stroke-width="2"/>
+                    </svg>
+                    TaiBear<span>資安工坊</span>
+                </a>
+                <p class="footer-desc">TaiBear Security Studio 專注於將資安教育融入日常，建立好用、有效、符合合規要求的培訓方案。</p>
+            </div>
+            <div class="footer-col">
+                <h4>導覽頁面</h4>
+                <ul>
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="services.html">服務方案</a></li>
+                    <li><a href="plans.html">套餐方案</a></li>
+                    <li><a href="scenarios.html">適用情境</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>演練詳情</h4>
+                <ul>
+                    <li><a href="service-phishing.html">社交工程演練</a></li>
+                    <li><a href="service-tabletop.html">事件通報桌上演練</a></li>
+                    <li><a href="faq.html">常見問題 (FAQ)</a></li>
+                    <li><a href="contact.html">聯絡諮詢</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>聯絡資訊</h4>
+                <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom: 8px;">Email: info@taibear.security</p>
+                <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom: 20px;">服務時間: 週一至週五 09:00 - 18:00</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 臺熊資安工坊 TaiBear Security Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
