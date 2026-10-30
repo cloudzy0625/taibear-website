@@ -1,0 +1,47 @@
+/* 兩頁草稿補充樣式：沿用現站色票、容器、卡片與頁尾。 */
+.draft-site .nav-links { gap: 16px; }
+.draft-site .nav-links a { white-space: nowrap; font-size: 0.875rem; }
+.draft-site .logo { white-space: nowrap; gap: 6px; font-size: 1.2rem; }
+.draft-site .nav-actions .btn { padding: 12px 16px; white-space: nowrap; }
+.draft-site .nav-container { gap: 20px; }
+.draft-site .detail-hero .section-title { font-size: clamp(2.3rem, 6vw, 3.2rem); }
+.draft-site .detail-hero .section-subtitle { margin-bottom: 24px; }
+.draft-label { display: inline-block; color: var(--accent-gold); border: 1px solid var(--border-hover); border-radius: 30px; padding: 6px 16px; font-size: 0.85rem; }
+.draft-content { border-top: 1px solid var(--border-color); }
+.reading-note { color: var(--text-secondary); max-width: 850px; margin: 0 auto 40px; }
+.date-group + .date-group { margin-top: 60px; }
+.date-group > h2 { font-size: 1.7rem; margin-bottom: 24px; }
+.news-list { list-style: none; display: grid; gap: 20px; }
+.news-card { padding: 28px 32px; }
+.item-meta { color: var(--accent-gold); font-size: 0.85rem; margin-bottom: 12px; }
+.news-card h3, .apt-card h2 { font-size: 1.4rem; margin-bottom: 16px; }
+.item-summary { color: var(--text-secondary); margin-bottom: 20px; }
+.source-label { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px; }
+.draft-site .card-link { display: inline; overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 4px; }
+.apt-list { list-style: none; margin-bottom: 0; }
+.apt-list > li { min-width: 0; }
+.apt-card { height: 100%; display: flex; flex-direction: column; }
+.apt-card .item-summary { flex-grow: 1; }
+.draft-site a:focus-visible, .draft-site button:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 5px; }
+.draft-site section[id], .draft-site article[id] { scroll-margin-top: 110px; }
+@media (min-width: 1025px) {
+    .draft-site .header .container { max-width: 1440px; }
+}
+/* 八項導覽在平板即切換選單，避免擠壓；修正現站 nav-actions 在手機被隱藏的情況。 */
+@media (max-width: 1024px) {
+    .draft-site .nav-actions { display: flex; }
+    .draft-site .menu-toggle { display: flex; padding: 10px; }
+    .draft-site .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-panel-solid); flex-direction: column; padding: 24px; gap: 16px; text-align: center; max-height: calc(100dvh - 85px); overflow-y: auto; border-bottom: 1px solid var(--border-color); }
+    .draft-site .nav-links.active { display: flex; }
+    .draft-site .nav-links a { font-size: 1rem; }
+}
+@media (max-width: 480px) {
+    .draft-site .nav-actions .btn { display: none; }
+    .draft-site .footer-grid { grid-template-columns: 1fr; }
+    .draft-site .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .news-card { padding: 24px; }
+    .draft-site .detail-hero { padding-top: 145px; padding-bottom: 55px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .draft-site *, .draft-site *::before, .draft-site *::after { animation: none; transition: none; scroll-behavior: auto; }
+}
