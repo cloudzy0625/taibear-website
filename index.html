@@ -6,44 +6,40 @@
     <title>TaiBear Security Studio 臺熊資安工坊 - 企業資安意識演練與教育訓練首選</title>
     <meta name="description" content="用一杯咖啡的時間，完成企業資安訓練。TaiBear 協助企業以更輕量、有效且可追蹤的方式，完成員工資安教育、社交工程演練與事件應變。">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fixed.css">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
-<body>
+<body class="fixed-site">
 
     <!-- Header Navigation -->
     <header class="header">
         <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="index.html" class="logo active" aria-current="page">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <rect x="2" y="10" width="22" height="16" rx="4" fill="#E6A15C"/>
                     <path d="M24 13C26.2091 13 28 14.7909 28 17C28 19.2091 26.2091 21 24 21V13Z" stroke="#E6A15C" stroke-width="2"/>
                     <path d="M6 6C6 6 8 3 11 3C14 3 14 6 14 6" stroke="#f8f9fa" stroke-width="2" stroke-linecap="round"/>
                     <path d="M11 7C11 7 12.5 4.5 14.5 4.5C16.5 4.5 16.5 7 16.5 7" stroke="#f8f9fa" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="9" cy="15" r="1.5" fill="#0D0D0E"/>
-                    <circle cx="17" cy="15" r="1.5" fill="#0D0D0E"/>
+                    <circle cx="9" cy="15" r="1.5" fill="#0D0D0E"/><circle cx="17" cy="15" r="1.5" fill="#0D0D0E"/>
                     <path d="M11 19C12.5 19 13 18 13 18" stroke="#0D0D0E" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>
                 TaiBear<span>資安工坊</span>
             </a>
-            
-            <nav>
+            <nav aria-label="主要導覽">
                 <ul class="nav-links" id="nav-links">
                     <li><a href="about.html">關於 TaiBear</a></li>
                     <li><a href="services.html">服務方案</a></li>
                     <li><a href="plans.html">套餐方案</a></li>
                     <li><a href="scenarios.html">適用情境</a></li>
+                    <li><a href="news.html">資安訊息</a></li>
+                    <li><a href="apt.html">APT 組織</a></li>
                     <li><a href="faq.html">常見問題</a></li>
                     <li><a href="contact.html">聯絡我們</a></li>
                 </ul>
             </nav>
-            
             <div class="nav-actions">
                 <a href="contact.html" class="btn btn-primary">立即諮詢</a>
-                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="開啟導覽選單" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
         </div>
     </header>
@@ -260,11 +256,8 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col">
-                <a href="index.html" class="logo">
-                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2" y="10" width="22" height="16" rx="4" fill="#E6A15C"/>
-                        <path d="M24 13C26.2091 13 28 14.7909 28 17C28 19.2091 26.2091 21 24 21V13Z" stroke="#E6A15C" stroke-width="2"/>
-                    </svg>
+                <a href="index.html" aria-current="page" class="logo">
+                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="10" width="22" height="16" rx="4" fill="#E6A15C"/><path d="M24 13C26.2091 13 28 14.7909 28 17C28 19.2091 26.2091 21 24 21V13Z" stroke="#E6A15C" stroke-width="2"/></svg>
                     TaiBear<span>資安工坊</span>
                 </a>
                 <p class="footer-desc">TaiBear Security Studio 專注於將資安教育融入日常，建立好用、有效、符合合規要求的培訓方案。</p>
@@ -276,6 +269,8 @@
                     <li><a href="services.html">服務方案</a></li>
                     <li><a href="plans.html">套餐方案</a></li>
                     <li><a href="scenarios.html">適用情境</a></li>
+                    <li><a href="news.html">資安訊息</a></li>
+                    <li><a href="apt.html">APT 組織</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -289,13 +284,8 @@
             </div>
             <div class="footer-col">
                 <h4>聯絡資訊</h4>
-                <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom: 8px;">Email: info@taibear.app</p>
-                <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom: 20px;">服務時間: 週一至週五 09:00 - 18:00</p>
-                <div class="footer-social">
-                    <a href="#" class="footer-social-link" aria-label="LinkedIn">In</a>
-                    <a href="#" class="footer-social-link" aria-label="Facebook">Fb</a>
-                    <a href="#" class="footer-social-link" aria-label="Github">Gh</a>
-                </div>
+                <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:8px;">Email: <a href="mailto:info@taibear.app">info@taibear.app</a></p>
+                <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:20px;">服務時間: 週一至週五 09:00 - 18:00</p>
             </div>
         </div>
         <div class="container footer-bottom">
@@ -305,5 +295,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/fixed.js"></script>
 </body>
 </html>
