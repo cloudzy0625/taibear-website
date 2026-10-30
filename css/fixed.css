@@ -1,0 +1,23 @@
+/* 第二輪共用頁首／頁尾；不覆寫本文與 hero 樣式。 */
+.fixed-site .nav-links { gap: 16px; }
+.fixed-site .nav-links a { white-space: nowrap; font-size: 0.875rem; }
+.fixed-site .header .logo { white-space: nowrap; gap: 6px; font-size: 1.2rem; }
+.fixed-site .nav-actions .btn { padding: 12px 16px; white-space: nowrap; }
+.fixed-site .nav-container { gap: 20px; }
+.fixed-site .header a:focus-visible, .fixed-site .header button:focus-visible,
+.fixed-site .footer a:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 5px; }
+@media (min-width: 1025px) {
+    .fixed-site .header .container { max-width: 1440px; }
+}
+@media (max-width: 1024px) {
+    .fixed-site .nav-actions { display: flex; }
+    .fixed-site .menu-toggle { display: flex; padding: 10px; }
+    .fixed-site .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-panel-solid); flex-direction: column; padding: 24px; gap: 16px; text-align: center; max-height: calc(100dvh - 85px); overflow-y: auto; border-bottom: 1px solid var(--border-color); }
+    .fixed-site .nav-links.active { display: flex; }
+    .fixed-site .nav-links a { font-size: 1rem; }
+}
+@media (max-width: 480px) {
+    .fixed-site .nav-actions .btn { display: none; }
+    .fixed-site .footer-grid { grid-template-columns: 1fr; }
+    .fixed-site .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
