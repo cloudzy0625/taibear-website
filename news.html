@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安訊息 - TaiBear Security Studio 臺熊資安工坊</title>
+    <meta name="description" content="TaiBear 資安訊息整理國外、臺灣與中國相關威脅動態，透過日期分組、重點摘要與來源連結，掌握漏洞修補、資料外洩及攻擊研究。">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/drafts.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body class="draft-site">
+    <header class="header">
+        <div class="container nav-container">
+            <a href="https://www.taibear.app/index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="2" y="10" width="22" height="16" rx="4" fill="#E6A15C"/>
+                    <path d="M24 13C26.2091 13 28 14.7909 28 17C28 19.2091 26.2091 21 24 21V13Z" stroke="#E6A15C" stroke-width="2"/>
+                    <path d="M6 6C6 6 8 3 11 3C14 3 14 6 14 6" stroke="#f8f9fa" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M11 7C11 7 12.5 4.5 14.5 4.5C16.5 4.5 16.5 7 16.5 7" stroke="#f8f9fa" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="9" cy="15" r="1.5" fill="#0D0D0E"/><circle cx="17" cy="15" r="1.5" fill="#0D0D0E"/>
+                    <path d="M11 19C12.5 19 13 18 13 18" stroke="#0D0D0E" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                TaiBear<span>資安工坊</span>
+            </a>
+            <nav aria-label="主要導覽">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="https://www.taibear.app/about.html">關於 TaiBear</a></li>
+                    <li><a href="https://www.taibear.app/services.html">服務方案</a></li>
+                    <li><a href="https://www.taibear.app/plans.html">套餐方案</a></li>
+                    <li><a href="https://www.taibear.app/scenarios.html">適用情境</a></li>
+                    <li><a href="news.html" class="active" aria-current="page">資安訊息</a></li>
+                    <li><a href="apt.html">APT 組織</a></li>
+                    <li><a href="https://www.taibear.app/faq.html">常見問題</a></li>
+                    <li><a href="https://www.taibear.app/contact.html">聯絡我們</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://www.taibear.app/contact.html" class="btn btn-primary">立即諮詢</a>
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="開啟導覽選單" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="detail-hero text-center" aria-labelledby="page-title">
+            <div class="container">
+                <div class="hero-tagline">SECURITY NEWS</div>
+                <h1 class="section-title" id="page-title">資安訊息</h1>
+                <p class="section-subtitle">從漏洞修補到威脅動態，用精簡摘要掌握值得關注的資安訊息，並循來源深入閱讀。</p>
+                <p class="draft-label">審稿草稿・未上線・6 則範例</p>
+            </div>
+        </section>
+        <section class="section-padding draft-content" aria-label="每日資安訊息">
+            <div class="container">
+                <p class="reading-note">以下按簡報收錄日期分組，事件發生或公告日期另於摘要說明。「中國相關」指研究方的攻擊歸因，並非事件發生地；歸因保留原來源的判斷範圍。</p>
+                <section class="date-group" aria-labelledby="date-1030">
+                    <h2 id="date-1030"><time datetime="2026-10-30">2026-10-30</time></h2>
+                    <ul class="news-list">
+                        <li><article class="glass-panel news-card" id="wordpress-update">
+                            <p class="item-meta"><time datetime="2026-10-30">2026-10-30</time> · 國外／軟體更新</p>
+                            <h3>WordPress 7.1.4 修補安全漏洞，研究方已見利用嘗試</h3>
+                            <p class="item-summary">WordPress 於 10 月 28 日發布 7.1.4，處理 22 項漏洞，其中一項涉及更新流程的競態條件，可能讓未授權者遠端執行程式碼。Wordfence 表示發布後已觀察到利用嘗試，網站維運人員應優先確認更新狀態。</p>
+                            <p class="source-label">原始來源：Wordfence 安全更新分析</p>
+                            <a class="card-link" href="https://www.wordfence.com/blog/2026/10/wordpress-7-1-4-security-release-rce/">閱讀 Wordfence 報告 →</a>
+                        </article></li>
+                        <li><article class="glass-panel news-card" id="taiwan-nas">
+                            <p class="item-meta"><time datetime="2026-10-30">2026-10-30</time> · 臺灣／勒索軟體</p>
+                            <h3>橙的公告 NAS 遭勒索攻擊，已斷網隔離</h3>
+                            <p class="item-summary">臺灣上市公司橙的（4554）於 10 月 28 日公告，區域網路內的 NAS 遭勒索軟體攻擊，已採取斷網與隔離措施。公司初步評估營運不致受到重大影響，後續影響仍應以正式公告為準。</p>
+                            <p class="source-label">原始來源：iThome（公司重大訊息報導）</p>
+                            <a class="card-link" href="https://www.ithome.com.tw/news/180053">閱讀 iThome 報導 →</a>
+                        </article></li>
+                        <li><article class="glass-panel news-card" id="taiwan-defense-report">
+                            <p class="item-meta"><time datetime="2026-10-30">2026-10-30</time> · 臺灣／威脅趨勢</p>
+                            <h3>微軟報告指臺灣受威脅頻率居亞太首位</h3>
+                            <p class="item-summary">據臺灣微軟《Digital Defense Report 2026》相關報導，臺灣在 2026 年上半年受威脅頻率位居全球第四、亞太第一。同篇報導引述金管會 10 月 29 日資料，上半年資安險保費約 3.19 億元，其中半導體業占約 48.71%。</p>
+                            <p class="source-label">原始來源：BigGo 財經（微軟報告與金管會資料報導）</p>
+                            <a class="card-link" href="https://finance.biggo.com/news/71bee38f-7055-4220-aba4-085d7ac8f52f">閱讀 BigGo 財經報導 →</a>
+                        </article></li>
+                        <li><article class="glass-panel news-card" id="china-linked-firewall">
+                            <p class="item-meta"><time datetime="2026-10-30">2026-10-30</time> · 中國相關／研究方歸因</p>
+                            <h3>Dream 研判疑似中國關聯攻擊串連漏洞入侵防火牆</h3>
+                            <p class="item-summary">韓媒 10 月 29 日引述 Dream 研究指出，攻擊者串連 PHP2Shell 與 Fragnesia，取得 25 台對外防火牆的 root 權限，目標範圍包含臺灣及美國政府關聯環境。疑似與中國有關的判斷來自 Dream，並非已獲獨立確認的歸因結論。</p>
+                            <p class="source-label">原始來源：Korea JoongAng Daily（引述 Dream 研究）</p>
+                            <a class="card-link" href="https://www.koreajoongangdaily.com/business/chinese-fingerprints-found-on-php-firewall-hack/12945243">閱讀 Korea JoongAng Daily 報導 →</a>
+                        </article></li>
+                    </ul>
+                </section>
+                <section class="date-group" aria-labelledby="date-1029">
+                    <h2 id="date-1029"><time datetime="2026-10-29">2026-10-29</time></h2>
+                    <ul class="news-list">
+                        <li><article class="glass-panel news-card" id="tailscale-update">
+                            <p class="item-meta"><time datetime="2026-10-29">2026-10-29</time> · 國外／遠端存取</p>
+                            <h3>Tailscale 1.104.4 修補 SSH 與 Serve 問題</h3>
+                            <p class="item-summary">Tailscale 於 10 月 28 日釋出 1.104.4，修補涉及 SSH 與 Serve 的 TS-2026-014 至 TS-2026-017 問題。依本次收錄紀錄，headscale 伺服器端的相關問題當時仍未修補，採用該架構者需另行追蹤。</p>
+                            <p class="source-label">原始來源：Tailscale 官方修補說明</p>
+                            <a class="card-link" href="https://tailscale.com/blog/tailscale-ssh-findings-fixes">閱讀 Tailscale 官方說明 →</a>
+                        </article></li>
+                        <li><article class="glass-panel news-card" id="sony-data-breach">
+                            <p class="item-meta"><time datetime="2026-10-29">2026-10-29</time> · 國外／日本資料外洩</p>
+                            <h3>So-net 會員資料庫遭入侵，逾 258 萬筆紀錄外洩</h3>
+                            <p class="item-summary">據媒體引述 Sony Network Communications 10 月 27 日公告，So-net 會員資料庫於 10 月 19 日遭入侵，外洩約 258.5 萬筆紀錄。資料另涉及 54,401 組電子郵件密碼與 16 筆銀行帳戶資料，受影響會員需留意帳號保護與後續通知。</p>
+                            <p class="source-label">原始來源：TechTimes（Sony 公告報導）</p>
+                            <a class="card-link" href="https://www.techtimes.co.uk/sony-data-breach-so-net-plala-records-exposed-1809492">閱讀 TechTimes 報導 →</a>
+                        </article></li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="https://www.taibear.app/index.html" class="logo">
+                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="10" width="22" height="16" rx="4" fill="#E6A15C"/><path d="M24 13C26.2091 13 28 14.7909 28 17C28 19.2091 26.2091 21 24 21V13Z" stroke="#E6A15C" stroke-width="2"/></svg>
+                    TaiBear<span>資安工坊</span>
+                </a>
+                <p class="footer-desc">TaiBear Security Studio 專注於將資安教育融入日常，建立好用、有效、符合合規要求的培訓方案。</p>
+            </div>
+            <div class="footer-col">
+                <h4>導覽頁面</h4>
+                <ul>
+                    <li><a href="https://www.taibear.app/about.html">關於我們</a></li>
+                    <li><a href="https://www.taibear.app/services.html">服務方案</a></li>
+                    <li><a href="https://www.taibear.app/plans.html">套餐方案</a></li>
+                    <li><a href="https://www.taibear.app/scenarios.html">適用情境</a></li>
+                    <li><a href="news.html" aria-current="page">資安訊息</a></li>
+                    <li><a href="apt.html">APT 組織</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>演練詳情</h4>
+                <ul>
+                    <li><a href="https://www.taibear.app/service-phishing.html">社交工程演練</a></li>
+                    <li><a href="https://www.taibear.app/service-tabletop.html">事件通報桌上演練</a></li>
+                    <li><a href="https://www.taibear.app/faq.html">常見問題 (FAQ)</a></li>
+                    <li><a href="https://www.taibear.app/contact.html">聯絡諮詢</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>聯絡資訊</h4>
+                <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:8px;">Email: <a href="mailto:info@taibear.app">info@taibear.app</a></p>
+                <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:20px;">服務時間: 週一至週五 09:00 - 18:00</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 臺熊資安工坊 TaiBear Security Studio. All rights reserved.</p>
+            <p>專業資安顧問團隊 ‧ 用一杯咖啡防禦企業邊界</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/drafts.js"></script>
+</body>
+</html>
