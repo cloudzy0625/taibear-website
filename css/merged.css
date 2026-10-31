@@ -239,7 +239,7 @@
 .western-apt .western-apt-inner { max-width: 1400px; margin: 0 auto; }
 .western-apt .western-apt-kicker { color: var(--wa-accent); font-size: 13px; font-weight: 700; letter-spacing: .08em; }
 .western-apt .western-apt-heading { font-family: "Noto Serif TC", serif; font-weight: 900; font-size: clamp(24px, 3vw, 34px); line-height: 1.45; margin: 8px 0 16px; }
-.western-apt .western-apt-intro { max-width: 960px; color: var(--wa-muted); margin: 0 0 28px; }
+.western-apt .western-apt-intro { color: var(--wa-muted); margin: 0 0 28px; text-align: left; letter-spacing: normal; text-wrap: pretty; }
 .western-apt .western-apt-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
 .western-apt .western-apt-card { min-width: 0; padding: 24px; background: var(--wa-panel); border: 1px solid var(--wa-line); border-radius: 14px; overflow-wrap: anywhere; }
 .western-apt .western-apt-card-title { font-family: inherit; font-size: 21px; line-height: 1.5; font-weight: 800; letter-spacing: normal; margin: 0 0 12px; }
