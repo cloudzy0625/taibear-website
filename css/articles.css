@@ -1,0 +1,26 @@
+.articles-list { display: grid; gap: 22px; }
+.article-card { padding: 30px 32px; }
+.article-card h2 { font-size: 1.5rem; margin-bottom: 14px; }
+.article-card .item-summary { margin-bottom: 18px; }
+.article-meta { display: flex; flex-wrap: wrap; gap: 10px 16px; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 30px; }
+.article-meta strong { color: var(--text-primary); }
+.article-meta a, .article-body a { color: var(--accent-gold); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.article-body { max-width: 900px; margin: 0 auto; }
+.article-body > * + * { margin-top: 20px; }
+.article-body h2 { font-size: 1.8rem; margin-top: 58px; }
+.article-body h3 { font-size: 1.3rem; margin-top: 34px; }
+.article-body p, .article-body li { color: var(--text-secondary); }
+.article-body ul, .article-body ol { padding-left: 24px; }
+.article-body li + li { margin-top: 8px; }
+.article-body blockquote { border-left: 3px solid var(--accent-gold); background: rgba(230, 161, 92, 0.06); color: var(--text-secondary); padding: 18px 20px; border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0; }
+.article-body code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; color: #f4c58d; background: rgba(255,255,255,0.06); padding: 0.12em 0.32em; border-radius: 4px; overflow-wrap: anywhere; }
+.article-body pre { padding: 18px; overflow-x: auto; border: 1px solid var(--border-color); background: #101014; border-radius: var(--border-radius-sm); }
+.article-body pre code { padding: 0; background: transparent; }
+.article-table-wrap { overflow-x: auto; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); }
+.article-table { width: 100%; min-width: 680px; border-collapse: collapse; text-align: left; }
+.article-table th, .article-table td { padding: 14px 16px; vertical-align: top; border-bottom: 1px solid var(--border-color); color: var(--text-secondary); }
+.article-table th { color: var(--text-primary); background: rgba(255,255,255,0.03); font-family: var(--font-heading); }
+.article-table tr:last-child td { border-bottom: 0; }
+.back-link { display: inline-flex; margin-bottom: 28px; color: var(--accent-gold); font-family: var(--font-heading); font-weight: 600; }
+.article-body .back-link:last-child { margin-top: 44px; margin-bottom: 0; }
+@media (max-width: 480px) { .article-card { padding: 24px; } .article-body h2 { font-size: 1.55rem; } }
