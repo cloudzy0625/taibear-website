@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-10-31",
+    "region": "world",
+    "title": "幣安確認 63 億美元遭竊：工程師筆電遭入侵成破口",
+    "summary": "幣安確認 10/29 疑似遭駭事件最終損失 63 億美元：攻擊者入侵一名 DevOps 工程師的筆電，經服務容器送出未授權提領，是史上最大規模的加密貨幣竊案之一。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-10-31",
+    "region": "world",
+    "title": "CISA 新增 KEV：Ivanti Connect Secure 兩漏洞串連攻擊鏈",
+    "summary": "CISA 10/30 將 Ivanti Connect Secure 的 CVE-2026-111357 與 CVE-2026-118527 列入已知利用漏洞目錄，兩者與 CVE-2026-104935 串連成攻擊鏈，聯邦機關須限期修補。",
+    "source_name": "CISA",
+    "source_url": "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source_type": "官方"
+  },
+  {
+    "date": "2026-10-31",
+    "region": "world",
+    "title": "Cursor 市集擴充套件遭植入木馬，Claude Code 擴充套件藏 SSH 後門",
+    "summary": "Cursor 官方市集上架的 Claude Code 擴充套件 2.1.313 遭植入木馬，內藏 SSH 後門，最多約 5,000 名用戶受影響，凸顯 AI 開發工具市集的供應鏈風險。",
+    "source_name": "The Hacker News",
+    "source_url": "http://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-10-31",
+    "region": "world",
+    "title": "Drupal Commerce 高度關鍵授權繞過漏洞已在野利用",
+    "summary": "Drupal Commerce Core 的 CVE-2026-118539 為高度關鍵授權繞過漏洞，且已確認在野利用，使用該模組的電商網站應立即更新。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-10-31",
+    "region": "world",
+    "title": "319 個 Chrome 擴充套件綁架搜尋，合計 1,340 萬次安裝",
+    "summary": "研究發現 319 個 Chrome 擴充套件（多偽裝成 PDF 與搜尋工具）會綁架使用者搜尋，合計安裝次數達 1,340 萬次。",
+    "source_name": "Malwarebytes",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/10/fake-pdf-and-search-tools-hijacked-searches-for-13-4-million-chrome-users",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-10-31",
+    "region": "taiwan",
+    "title": "91APP 資安事件後續：最大影響 1,329 品牌、近 480 萬消費者，11/2 公布補償登記",
+    "summary": "91APP 資安事件影響範圍更新：最大可能影響 1,329 個品牌、4,798,255 名消費者，公司將於 11/2 公布補償登記流程。",
+    "source_name": "今周刊",
+    "source_url": "https://www.businesstoday.com.tw/article/category/183030/post/202610300008/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-10-31",
+    "region": "taiwan",
+    "title": "群暉 NAS 遭 C3RB3R 勒索軟體鎖定，破口漏洞說法兩造不同",
+    "summary": "舊版 DSM 的群暉 NAS 遭 C3RB3R 勒索軟體攻擊。破口說法兩造不同：群暉指為 2024 年 12 月已修補的漏洞，360 則指向 2026 年 9 月 18 日修補的 CVE-2026-13639／13684，兩說並列供查證。",
+    "source_name": "EconoTimes",
+    "source_url": "https://econotimes.com/Ransomware-Targets-South-Korean-Synology-Users-on-Older-DSM-Versions-1766734",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-10-31",
+    "region": "taiwan",
+    "title": "資安署呼籲檢視防火牆與網通設備管理介面暴露面（PHP2Shell 後續）",
+    "summary": "資通安全署 10/29 晚間呼籲各機關與企業檢視防火牆、網通設備的管理介面是否對外暴露並儘速更新，為 PHP2Shell 漏洞利用潮的後續因應。",
+    "source_name": "中央社（資安署呼籲）",
+    "source_url": "https://www.cna.com.tw/news/afe/202610290387.aspx",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-10-31",
+    "region": "china",
+    "title": "中國三部門通報 35 款 App 違規收集個資",
+    "summary": "中國三部門 10/30 通報 35 款 App 存在違規收集使用個人資訊問題，要求相關業者限期整改。",
+    "source_name": "新浪財經",
+    "source_url": "https://finance.sina.com.cn/stock/zqgd/2026-10-30/doc-iniwzazt8174407.shtml",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-10-31",
+    "region": "china",
+    "title": "Palo Alto 確認 PHP2Shell 正攻擊對外暴露的 PAN-OS 管理介面",
+    "summary": "Palo Alto Networks 10/29 確認 PHP2Shell 漏洞正被用於攻擊對外暴露的 PAN-OS 管理介面，Unit 42 並獨立驗證了 Dream 研究揭露的攻擊工具。",
+    "source_name": "CybersecurityNews",
+    "source_url": "https://cybersecuritynews.com/palo-alto-php2shell-exploitation/",
+    "source_type": "媒體"
+  },
+  {
     "date": "2026-10-30",
     "region": "world",
     "title": "WordPress 7.1.4 修補安全漏洞，研究方已見利用嘗試",
