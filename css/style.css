@@ -467,20 +467,9 @@ h1, h2, h3, h4, h5, h6 {
     flex-grow: 1;
 }
 
-.plan-features li {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+.plan-features li {     font-size: 0.9rem;     color: var(--text-secondary);     margin-bottom: 12px;     padding-left: 22px;     position: relative; }
 
-.plan-features li::before {
-    content: '✓';
-    color: var(--accent-gold);
-    font-weight: bold;
-}
+.plan-features li::before {     content: '✓';     color: var(--accent-gold);     font-weight: bold;     position: absolute;     left: 0; }
 
 .plan-card .btn {
     width: 100%;
