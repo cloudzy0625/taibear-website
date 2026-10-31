@@ -1,0 +1,56 @@
+[
+  {
+    "date": "2026-10-30",
+    "region": "world",
+    "title": "WordPress 7.1.4 修補安全漏洞，研究方已見利用嘗試",
+    "summary": "WordPress 於 10 月 28 日發布 7.1.4，處理 22 項漏洞，其中一項涉及更新流程的競態條件，可能讓未授權者遠端執行程式碼。Wordfence 表示發布後已觀察到利用嘗試，網站維運人員應優先確認更新狀態。",
+    "source_name": "Wordfence 安全更新分析",
+    "source_url": "https://www.wordfence.com/blog/2026/10/wordpress-7-1-4-security-release-rce/",
+    "source_type": "官方"
+  },
+  {
+    "date": "2026-10-30",
+    "region": "taiwan",
+    "title": "橙的公告 NAS 遭勒索攻擊，已斷網隔離",
+    "summary": "臺灣上市公司橙的（4554）於 10 月 28 日公告，區域網路內的 NAS 遭勒索軟體攻擊，已採取斷網與隔離措施。公司初步評估營運不致受到重大影響，後續影響仍應以正式公告為準。",
+    "source_name": "iThome（公司重大訊息報導）",
+    "source_url": "https://www.ithome.com.tw/news/180053",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-10-30",
+    "region": "taiwan",
+    "title": "微軟報告指臺灣受威脅頻率居亞太首位",
+    "summary": "據臺灣微軟《Digital Defense Report 2026》相關報導，臺灣在 2026 年上半年受威脅頻率位居全球第四、亞太第一。同篇報導引述金管會 10 月 29 日資料，上半年資安險保費約 3.19 億元，其中半導體業占約 48.71%。",
+    "source_name": "BigGo 財經（微軟報告與金管會資料報導）",
+    "source_url": "https://finance.biggo.com/news/71bee38f-7055-4220-aba4-085d7ac8f52f",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-10-30",
+    "region": "china",
+    "title": "Dream 研判疑似中國關聯攻擊串連漏洞入侵防火牆",
+    "summary": "韓媒 10 月 29 日引述 Dream 研究指出，攻擊者串連 PHP2Shell 與 Fragnesia，取得 25 台對外防火牆的 root 權限，目標範圍包含臺灣及美國政府關聯環境。疑似與中國有關的判斷來自 Dream，並非已獲獨立確認的歸因結論。",
+    "source_name": "Korea JoongAng Daily（引述 Dream 研究）",
+    "source_url": "https://www.koreajoongangdaily.com/business/chinese-fingerprints-found-on-php-firewall-hack/12945243",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-10-29",
+    "region": "world",
+    "title": "Tailscale 1.104.4 修補 SSH 與 Serve 問題",
+    "summary": "Tailscale 於 10 月 28 日釋出 1.104.4，修補涉及 SSH 與 Serve 的 TS-2026-014 至 TS-2026-017 問題。依本次收錄紀錄，headscale 伺服器端的相關問題當時仍未修補，採用該架構者需另行追蹤。",
+    "source_name": "Tailscale 官方修補說明",
+    "source_url": "https://tailscale.com/blog/tailscale-ssh-findings-fixes",
+    "source_type": "官方"
+  },
+  {
+    "date": "2026-10-29",
+    "region": "world",
+    "title": "So-net 會員資料庫遭入侵，逾 258 萬筆紀錄外洩",
+    "summary": "據媒體引述 Sony Network Communications 10 月 27 日公告，So-net 會員資料庫於 10 月 19 日遭入侵，外洩約 258.5 萬筆紀錄。資料另涉及 54,401 組電子郵件密碼與 16 筆銀行帳戶資料，受影響會員需留意帳號保護與後續通知。",
+    "source_name": "TechTimes（Sony 公告報導）",
+    "source_url": "https://www.techtimes.co.uk/sony-data-breach-so-net-plala-records-exposed-1809492",
+    "source_type": "媒體"
+  }
+]

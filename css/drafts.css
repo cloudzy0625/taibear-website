@@ -45,3 +45,8 @@
 @media (prefers-reduced-motion: reduce) {
     .draft-site *, .draft-site *::before, .draft-site *::after { animation: none; transition: none; scroll-behavior: auto; }
 }
+
+/* 新聞依地區分組；只增加新聞專用樣式。 */
+.news-region + .news-region { margin-top: 60px; }
+.news-region > h2 { font-size: 1.7rem; margin-bottom: 24px; }
+.news-status { color: var(--text-secondary); }
