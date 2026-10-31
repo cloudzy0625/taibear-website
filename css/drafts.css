@@ -50,3 +50,12 @@
 .news-region + .news-region { margin-top: 60px; }
 .news-region > h2 { font-size: 1.7rem; margin-bottom: 24px; }
 .news-status { color: var(--text-secondary); }
+
+/* News region tabs (2026-10-31) */
+.news-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+.news-tab { appearance: none; -webkit-appearance: none; border: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.03); color: var(--text-secondary); border-radius: 999px; padding: 10px 20px; font-family: var(--font-primary); font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: var(--transition-smooth); }
+.news-tab:hover { color: var(--text-primary); border-color: var(--border-hover); }
+.news-tab.is-active { color: #0d0d0e; background: var(--accent-gold); border-color: transparent; }
+.news-tab:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 3px; }
+.news-region[hidden] { display: none; }
+.news-region + .news-region { margin-top: 0; }
