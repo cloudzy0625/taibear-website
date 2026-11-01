@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-11-01",
+    "region": "world",
+    "title": "Chainalysis 遭「攻擊性代理式」手法入侵，客戶身分資料被存取",
+    "summary": "區塊鏈分析公司 Chainalysis 於 10/30 披露，外部攻擊者以「攻擊性代理式」手法入侵內部系統與工具，存取了部分客戶的用戶識別碼、姓名、電郵與機構角色標籤；公司稱調查內容、憑證與工作階段權杖暫未見遭存取。",
+    "source_name": "The Hacker News",
+    "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-01",
+    "region": "world",
+    "title": "Northflank 遭入侵：假設所有環境變數已遭解密，客戶 AI 金鑰遭濫用",
+    "summary": "雲端託管平台 Northflank 於 10/30 接獲 Wiz 警報後披露入侵，要求所有客戶假設環境變數已被解密並立即輪替全部金鑰；多名客戶回報其 AI API 金鑰遭未授權使用，入侵根因與受影響客戶數尚未公布。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-01",
+    "region": "world",
+    "title": "Android「死亡簡訊」概念驗證公開：零點擊可癱瘓未修補手機",
+    "summary": "研究員公開 Android CVE-2026-58882 的概念驗證：特製 WAP Push 簡訊無須用戶操作即可使通話服務崩潰、中斷通話（含緊急電話），約 20 則可致重開機迴圈；Android 14 至 17 的 10 月更新已修補，Android 12／13 未獲修補。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-01",
+    "region": "world",
+    "title": "日本無印良品 App 遭未授權存取，最多約 2,726 萬筆紀錄可能外洩",
+    "summary": "日本良品計畫 10/30 公告，官方 MUJI App 遭外部未授權存取，最多約 2,726 萬筆顧客紀錄可能外洩，含已退會用戶，資料為電郵、出生日期與性別，不含信用卡、姓名、地址與電話；目前未確認暗網流出或遭惡用。",
+    "source_name": "良品計畫（PR TIMES 官方公告）",
+    "source_url": "https://prtimes.jp/main/html/rd/p/000001877.000000987.html",
+    "source_type": "官方"
+  },
+  {
+    "date": "2026-11-01",
+    "region": "world",
+    "title": "Linux 核心 MPTCP 遠端 root 研究更新：Red Hat 10/31 調升評分並公布緩解",
+    "summary": "Linux 核心 CVE-2026-98432 為 IPv4 TCP 握手競態 use-after-free，Anthropic 稱其 AI 模型已在 MPTCP 監聽伺服器上做出遠端 root 概念驗證；10/31 追蹤更新指 Red Hat 將評分調升至 9.8 並公布 nftables 緩解，Ubuntu／RHEL 修補仍待發放。",
+    "source_name": "Fenko Security（漏洞追蹤更新）",
+    "source_url": "https://fenko.nz/blog/cve-2026-98432-tcp-kernel/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-01",
+    "region": "world",
+    "title": "幣安後續發展：FBI 歸因北韓 TraderTraitor，提領預計 11/1 恢復",
+    "summary": "幣安 63 億美元竊案後續：FBI 與 TRM Labs、Chainalysis 將攻擊歸因於北韓 TraderTraitor（歸因屬上述單位說法，幣安本身未指名兇手）；幣安稱除工程師筆電外，後續調查還發現其他入侵點，並稱已補回約九成資產、預計 11/1 恢復提領。",
+    "source_name": "Cybersecurity ASEAN",
+    "source_url": "https://cybersecurityasean.com/daily-news/binance-hack-6-3-billion-north-korea-tradertraitor",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-01",
+    "region": "taiwan",
+    "title": "臺灣無印良品確認受 91APP 事件波及，11/2 起陸續通知顧客（後續發展）",
+    "summary": "臺灣無印良品公告，10/29 接獲 91APP 通知其訂單資料庫遭駭，確認臺灣官網部分購物訂單受波及，範圍為 2025/4/4 至 2026/10/14 的官網訂單，含姓名、電話、配送地址、電郵與訂單紀錄，不含信用卡與登入密碼；將自 11/2 起陸續通知受影響顧客。",
+    "source_name": "聯合新聞網",
+    "source_url": "https://udn.com/news/amp/story/7270/9847893",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-01",
+    "region": "china",
+    "title": "香港考評局國際考試系統事故，約 1.69 萬人個資外洩",
+    "summary": "香港考試及評核局 10/30 公告，10/29 發現部分國際考試資訊系統發生網絡安全事故，約 16,900 名申請兩項國際考試的內地居住人士姓名、出生日期與電郵外洩，已報警並通報私隱專員公署；文憑試目前未見受影響。",
+    "source_name": "on.cc 東網",
+    "source_url": "https://hk.on.cc/hk/bkn/cnt/news/20261030/bkn-20261030233544010-1030_00822_001.html?refer=hn1",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-01",
+    "region": "china",
+    "title": "南京警方破獲路由器殭屍網路案：逾 10 萬台二手路由器被植入木馬",
+    "summary": "南京警方 10/31 披露破獲江蘇首起路由器植入木馬搭建殭屍網路案，逾 10 萬台二手路由器被植入木馬流入市場，遍布 30 多個省市的 3.2 萬餘台聯網設備；涉案設備可被遠端控制、劫持流量與竊取資料，警方已查扣 8,000 餘台並聯動廠商推送升級清除木馬。",
+    "source_name": "現代快報（鳳凰網轉載）",
+    "source_url": "https://feng.ifeng.com/c/8xgM1he2lPQ",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-01",
+    "region": "china",
+    "title": "國泰航空 Amadeus 事件後續：約 5.3 萬筆訂單紀錄遭未授權存取（後續發展）",
+    "summary": "國泰航空 10/30 表示，旅遊科技供應商 Amadeus 系統遭未授權存取，約 5.3 萬筆國泰訂單受影響，多為訂位代號、姓名與航班資料，少數另含聯絡方式、旅行證件或飛行常客編號；國泰稱未見付款資料遭存取，自身系統與營運未受影響。",
+    "source_name": "The Straits Times（路透報導）",
+    "source_url": "https://www.straitstimes.com/asia/east-asia/cathay-pacific-joins-growing-list-of-airlines-hit-by-data-breach?ref=latest-headlines",
+    "source_type": "媒體"
+  },
+  {
     "date": "2026-10-31",
     "region": "world",
     "title": "幣安確認 63 億美元遭竊：工程師筆電遭入侵成破口",
