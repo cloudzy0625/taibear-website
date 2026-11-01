@@ -24,3 +24,7 @@
 .back-link { display: inline-flex; margin-bottom: 28px; color: var(--accent-gold); font-family: var(--font-heading); font-weight: 600; }
 .article-body .back-link:last-child { margin-top: 44px; margin-bottom: 0; }
 @media (max-width: 480px) { .article-card { padding: 24px; } .article-body h2 { font-size: 1.55rem; } }
+
+.item-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.tag-chip { font-size: 0.78rem; color: var(--text-secondary); border: 1px solid var(--border-color); border-radius: 999px; padding: 3px 10px; background: rgba(255,255,255,0.03); white-space: nowrap; }
+.article-meta .meta-tags { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
