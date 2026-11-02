@@ -1,5 +1,86 @@
 [
   {
+    "date": "2026-11-02",
+    "region": "world",
+    "title": "Canonical LXD／MicroCloud 滿分漏洞 CVE-2026-112816：無私鑰可冒充可信用戶端",
+    "summary": "Canonical LXD 與 MicroCloud 的憑證驗證瑕疵讓攻擊者僅憑可信用戶端的公開憑證、無須私鑰即可冒充該用戶端，取得叢集與虛擬機器存取權，特權帳號遭冒充時可能取得宿主機 root；Canonical 已釋出修補版，尚無在野利用跡象。",
+    "source_name": "The Hacker News",
+    "source_url": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-02",
+    "region": "world",
+    "title": "Alpine Linux 遭 GitLab 重大漏洞攻擊未遂：重建伺服器並全面重設密碼（後續發展）",
+    "summary": "Alpine Linux 10/20–21 遭人以 KEV 列管的 GitLab CVE-2026-97229 攻擊，雖未證實程式碼遭執行或套件遭竄改，但因日誌不足無法排除入侵，專案決定重建 GitLab 伺服器並重設全部密碼，提醒用戶同步更新。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-02",
+    "region": "world",
+    "title": "TeamViewer 高風險漏洞 CVE-2026-111585：被控端可反向攻擊連線者，速更新至 15.83",
+    "summary": "TeamViewer 15.83 修補整數溢位漏洞 CVE-2026-111585（CVSS 8.8）：惡意或已遭入侵的被控端可在連線者接受遠端連線後，使其用戶端當機，Windows 上研究已示範程式碼執行；原廠稱發布時未見在野利用。",
+    "source_name": "The Hacker News",
+    "source_url": "https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-02",
+    "region": "world",
+    "title": "Amadeus 外洩案擴大：馬來西亞航空證實客戶資料可能受影響（後續發展）",
+    "summary": "馬來西亞航空 11/1 證實，訂位技術供應商 Amadeus 的資安事件可能影響 2023 年 8 月至 2026 年 9 月間經其處理的客戶資料；馬航稱自身系統未遭入侵、暫無財務資料遭存取跡象，受影響人數與資料類型尚未公布。",
+    "source_name": "Channel NewsAsia",
+    "source_url": "https://www.channelnewsasia.com/asia/malaysia-airlines-amadeus-security-breach-6510631",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-02",
+    "region": "world",
+    "title": "CISA KEV 修補期限：Ivanti Connect Secure 漏洞今日到期",
+    "summary": "CISA 10/30 列入 KEV 的 Ivanti Connect Secure CVE-2026-111357 聯邦修補期限為今日 11/2（另一漏洞 CVE-2026-118527 為 11/13）；兩者與 10/13 的 CVE-2026-104935 串連成攻擊鏈，Cisco ASA／GitLab 兩項的期限則為 11/1。",
+    "source_name": "CISA",
+    "source_url": "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source_type": "官方"
+  },
+  {
+    "date": "2026-11-02",
+    "region": "world",
+    "title": "Google 修補 Chrome 156：共 21 個漏洞，含 1 個重大等級",
+    "summary": "Google 10/29 為 Chrome 穩定版與延伸穩定版發布 156 更新，共修補 21 個漏洞，重大等級 CVE-2026-76024 位於 MediaStream 元件，特製網頁有機會遠端讀取沙箱內記憶體；Windows／macOS 應更新至 156.0.8078.79 或 .80。",
+    "source_name": "iThome",
+    "source_url": "https://www.ithome.com.tw/news/180097",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-02",
+    "region": "taiwan",
+    "title": "數發部訂定通訊傳播控制系統資安防護基準，2027 年元旦生效",
+    "summary": "數位發展部針對納管的通訊及傳播領域關鍵基礎設施提供者訂定控制系統資安防護基準，2027 年 1 月 1 日生效，依高、中、普三級訂定遠端存取授權與多因子鑑別、網路隔離、備份與營運持續等要求。",
+    "source_name": "iThome",
+    "source_url": "https://www.ithome.com.tw/news/180069",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-02",
+    "region": "taiwan",
+    "title": "91APP 事件後續：全家、康那香、安麗相繼證實受波及，補償登記今日起開放（後續發展）",
+    "summary": "91APP 事件影響持續浮現：全家、康那香、安麗相繼證實旗下訂單資料存放於遭非法存取的資料庫；91APP 稱最大可能影響 1,329 品牌、近 480 萬消費者，補償諮詢與申請自今日 11/2 起在取得品牌授權後陸續通知，受理至 2027 年 2 月 1 日。",
+    "source_name": "民報",
+    "source_url": "https://www.peoplenews.tw/articles/economic-news/64403",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-02",
+    "region": "china",
+    "title": "卡巴斯基揭露 NetamLoader：鎖定亞洲政府專用 Windows 10 的隱蔽載入鏈",
+    "summary": "卡巴斯基揭露 2026 上半年偵測到的 NetamLoader .NET 載入框架：惡意 CAB 藏於 Windows 更新下載目錄，借用合法 Patch My PC 元件以 AppDomainManager 注入執行並清除痕跡；卡巴斯基未歸因特定組織、僅見單一受害者，目標疑為中國政府版的說法為媒體推論、未獲證實。",
+    "source_name": "The Hacker News",
+    "source_url": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
+    "source_type": "媒體"
+  },
+  {
     "date": "2026-11-01",
     "region": "world",
     "title": "Chainalysis 遭「攻擊性代理式」手法入侵，客戶身分資料被存取",
@@ -101,15 +182,6 @@
   {
     "date": "2026-10-31",
     "region": "world",
-    "title": "CISA 新增 KEV：Ivanti Connect Secure 兩漏洞串連攻擊鏈",
-    "summary": "CISA 10/30 將 Ivanti Connect Secure 的 CVE-2026-111357 與 CVE-2026-118527 列入已知利用漏洞目錄，兩者與 CVE-2026-104935 串連成攻擊鏈，聯邦機關須限期修補。",
-    "source_name": "CISA",
-    "source_url": "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-    "source_type": "官方"
-  },
-  {
-    "date": "2026-10-31",
-    "region": "world",
     "title": "Cursor 市集擴充套件遭植入木馬，Claude Code 擴充套件藏 SSH 後門",
     "summary": "Cursor 官方市集上架的 Claude Code 擴充套件 2.1.313 遭植入木馬，內藏 SSH 後門，最多約 5,000 名用戶受影響，凸顯 AI 開發工具市集的供應鏈風險。",
     "source_name": "The Hacker News",
@@ -195,42 +267,6 @@
     "summary": "臺灣上市公司橙的（4554）於 10 月 28 日公告，區域網路內的 NAS 遭勒索軟體攻擊，已採取斷網與隔離措施。公司初步評估營運不致受到重大影響，後續影響仍應以正式公告為準。",
     "source_name": "iThome（公司重大訊息報導）",
     "source_url": "https://www.ithome.com.tw/news/180053",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-30",
-    "region": "taiwan",
-    "title": "微軟報告指臺灣受威脅頻率居亞太首位",
-    "summary": "據臺灣微軟《Digital Defense Report 2026》相關報導，臺灣在 2026 年上半年受威脅頻率位居全球第四、亞太第一。同篇報導引述金管會 10 月 29 日資料，上半年資安險保費約 3.19 億元，其中半導體業占約 48.71%。",
-    "source_name": "BigGo 財經（微軟報告與金管會資料報導）",
-    "source_url": "https://finance.biggo.com/news/71bee38f-7055-4220-aba4-085d7ac8f52f",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-30",
-    "region": "china",
-    "title": "Dream 研判疑似中國關聯攻擊串連漏洞入侵防火牆",
-    "summary": "韓媒 10 月 29 日引述 Dream 研究指出，攻擊者串連 PHP2Shell 與 Fragnesia，取得 25 台對外防火牆的 root 權限，目標範圍包含臺灣及美國政府關聯環境。疑似與中國有關的判斷來自 Dream，並非已獲獨立確認的歸因結論。",
-    "source_name": "Korea JoongAng Daily（引述 Dream 研究）",
-    "source_url": "https://www.koreajoongangdaily.com/business/chinese-fingerprints-found-on-php-firewall-hack/12945243",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-29",
-    "region": "world",
-    "title": "Tailscale 1.104.4 修補 SSH 與 Serve 問題",
-    "summary": "Tailscale 於 10 月 28 日釋出 1.104.4，修補涉及 SSH 與 Serve 的 TS-2026-014 至 TS-2026-017 問題。依本次收錄紀錄，headscale 伺服器端的相關問題當時仍未修補，採用該架構者需另行追蹤。",
-    "source_name": "Tailscale 官方修補說明",
-    "source_url": "https://tailscale.com/blog/tailscale-ssh-findings-fixes",
-    "source_type": "官方"
-  },
-  {
-    "date": "2026-10-29",
-    "region": "world",
-    "title": "So-net 會員資料庫遭入侵，逾 258 萬筆紀錄外洩",
-    "summary": "據媒體引述 Sony Network Communications 10 月 27 日公告，So-net 會員資料庫於 10 月 19 日遭入侵，外洩約 258.5 萬筆紀錄。資料另涉及 54,401 組電子郵件密碼與 16 筆銀行帳戶資料，受影響會員需留意帳號保護與後續通知。",
-    "source_name": "TechTimes（Sony 公告報導）",
-    "source_url": "https://www.techtimes.co.uk/sony-data-breach-so-net-plala-records-exposed-1809492",
     "source_type": "媒體"
   }
 ]
