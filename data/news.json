@@ -1,5 +1,86 @@
 [
   {
+    "date": "2026-11-03",
+    "region": "world",
+    "title": "Node-RED 滿分漏洞 CVE-2026-58115 已在野利用：西門子 IoT 閘道器可被未授權遠端執行程式碼",
+    "summary": "VulnCheck 11/2 警示，Node-RED 缺少身分驗證的遠端程式碼執行漏洞 CVE-2026-58115（CVSS 10.0）已在野利用，攻擊者可對未設管理驗證的暴露主機植入 Linux 殭屍植入程式與 webshell；西門子 SIMATIC IoT2050 Advanced 須更新至 V4.3.4.1。",
+    "source_name": "SecurityOnline（VulnCheck 研究）",
+    "source_url": "https://securityonline.info/node-red-rce-vulnerability-cve-2026-58115/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-03",
+    "region": "world",
+    "title": "Google 瓦解 130 萬台 Android 電視盒殭屍網路 XCPE：指深圳廠商 Videostrong 蓄意預埋後門（後續發展）",
+    "summary": "Google 11/2 公布，XCPE 殭屍網路逾 130 萬台裝置（多為電視盒）已失去控制伺服器；Google 高度確信深圳廠商 Videostrong 蓄意在韌體預埋 x.cpe 後門並販售存取權，用於廣告詐欺與住宅代理，後門仍在裝置上、用戶無法自行清除，Google 已終止其認證裝置資格。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-03",
+    "region": "world",
+    "title": "歐洲多國超市冷藏系統遭駭：逾 115 間門市冷櫃被遠端竄改溫度、被迫停業處理",
+    "summary": "駭客遠端竄改歐洲多家連鎖超市的冷藏系統，涉及比利時、荷蘭、瑞典、盧森堡、愛爾蘭與愛沙尼亞逾 115 間門市，部分冷櫃被關機或強制除霜導致商品損失；是否為協同攻擊、各鏈的入侵途徑仍未確認。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-03",
+    "region": "world",
+    "title": "GitLab 滿分漏洞仍有逾萬台未修補：KEV 列管的 CVE-2026-97229 已在野攻擊（後續發展）",
+    "summary": "Shadowserver 11/2 指出，逾 1,000 台對外 GitLab 仍未修補已列入 CISA KEV、正在被攻擊的 CVE-2026-97229，另逾 11,300 台受另一滿分漏洞 CVE-2026-110264 影響；兩者皆為正規表示式整數溢位、可未授權遠端執行程式碼，須立即升級至官方修補版。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-03",
+    "region": "world",
+    "title": "BTCPay Server 舊版熱錢包遭竊：2.4.1 以前版本受攻擊，官方急籲升至 2.4.7",
+    "summary": "開源支付處理器 BTCPay Server 警示，2.4.1（2026-07-23）以前版本存在攻擊向量，已有用戶熱錢包的比特幣與萊特幣遭盜領；官方稱 2.4.7 最新版目前無可信的遭竊通報，呼籲所有用戶立即更新並通報損失。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-03",
+    "region": "world",
+    "title": "幣安遭竊後續發展：提領恢復首日淨流出 36.4 億美元，約占平台資產 2.1%",
+    "summary": "幣安 11/1 恢復提領後 9.5 小時內處理提款 46.5 億美元、存款 10.1 億美元，淨流出 36.4 億美元；幣安稱提領量已趨穩、已補回約 95% 的 63 億美元遭竊資產，FBI 歸因北韓 TraderTraitor 的說法先前已報導。",
+    "source_name": "自由時報（路透報導）",
+    "source_url": "https://ec.ltn.com.tw/article/breakingnews/5626189",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-03",
+    "region": "taiwan",
+    "title": "鑫傳（6856）重訊：母子公司資訊系統遭網路攻擊，部分檔案無法解密",
+    "summary": "鑫傳重大訊息（事實發生日 10/30，11/2–3 日報彙整才納入本早報）：母子公司資訊系統遭外部駭客攻擊，部分檔案無法解密、影響內部作業系統運作；公司稱目前評估無個資與大量內部文件外洩之虞、對營運財務無重大影響，已隔離設備並以備份還原。",
+    "source_name": "MoneyDJ（公開資訊觀測站重大訊息）",
+    "source_url": "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=b7bdae60-072b-4163-9845-3fbb705dd7d3",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-03",
+    "region": "taiwan",
+    "title": "台數科（6464）重訊：母子公司遭駭客攻擊，部分伺服器檔案遭惡意加密",
+    "summary": "台數科重大訊息（事實發生日 10/30，11/2–3 日報彙整才納入本早報）：母子公司資訊系統遭外部不明駭客攻擊，部分伺服器檔案遭惡意加密、影響內部作業系統運作；公司稱目前評估無個資與核心機密外洩、對營運財務無重大影響，已隔離並以安全備份還原。",
+    "source_name": "MoneyDJ（公開資訊觀測站重大訊息）",
+    "source_url": "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=1c681aab-1a32-4fd9-9b11-65728432cfa1",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-03",
+    "region": "china",
+    "title": "CrowdStrike：Vapor Panda 以 ARTEX AI 代理對 200 多個組織發動間諜攻擊（歸因屬 CrowdStrike 說法）",
+    "summary": "CrowdStrike 10/29 報告（BleepingComputer 11/2 報導）指出，中國關聯組織 Vapor Panda 自 10/17 起以 ARTEX 多代理 AI 滲透測試框架對 14 國 200 多個組織發動攻擊，鎖定政府部會、電信、半導體、國防與金融等，至少 9 個組織確認遭入侵後活動；200 多家為目標數、非全部遭入侵，歸因屬 CrowdStrike 說法。",
+    "source_name": "BleepingComputer（CrowdStrike 研究）",
+    "source_url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/",
+    "source_type": "媒體"
+  },
+  {
     "date": "2026-11-02",
     "region": "world",
     "title": "Canonical LXD／MicroCloud 滿分漏洞 CVE-2026-112816：無私鑰可冒充可信用戶端",
@@ -186,87 +267,6 @@
     "summary": "Cursor 官方市集上架的 Claude Code 擴充套件 2.1.313 遭植入木馬，內藏 SSH 後門，最多約 5,000 名用戶受影響，凸顯 AI 開發工具市集的供應鏈風險。",
     "source_name": "The Hacker News",
     "source_url": "http://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-31",
-    "region": "world",
-    "title": "Drupal Commerce 高度關鍵授權繞過漏洞已在野利用",
-    "summary": "Drupal Commerce Core 的 CVE-2026-118539 為高度關鍵授權繞過漏洞，且已確認在野利用，使用該模組的電商網站應立即更新。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-31",
-    "region": "world",
-    "title": "319 個 Chrome 擴充套件綁架搜尋，合計 1,340 萬次安裝",
-    "summary": "研究發現 319 個 Chrome 擴充套件（多偽裝成 PDF 與搜尋工具）會綁架使用者搜尋，合計安裝次數達 1,340 萬次。",
-    "source_name": "Malwarebytes",
-    "source_url": "https://www.malwarebytes.com/blog/news/2026/10/fake-pdf-and-search-tools-hijacked-searches-for-13-4-million-chrome-users",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-31",
-    "region": "taiwan",
-    "title": "91APP 資安事件後續：最大影響 1,329 品牌、近 480 萬消費者，11/2 公布補償登記",
-    "summary": "91APP 資安事件影響範圍更新：最大可能影響 1,329 個品牌、4,798,255 名消費者，公司將於 11/2 公布補償登記流程。",
-    "source_name": "今周刊",
-    "source_url": "https://www.businesstoday.com.tw/article/category/183030/post/202610300008/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-31",
-    "region": "taiwan",
-    "title": "群暉 NAS 遭 C3RB3R 勒索軟體鎖定，破口漏洞說法兩造不同",
-    "summary": "舊版 DSM 的群暉 NAS 遭 C3RB3R 勒索軟體攻擊。破口說法兩造不同：群暉指為 2024 年 12 月已修補的漏洞，360 則指向 2026 年 9 月 18 日修補的 CVE-2026-13639／13684，兩說並列供查證。",
-    "source_name": "EconoTimes",
-    "source_url": "https://econotimes.com/Ransomware-Targets-South-Korean-Synology-Users-on-Older-DSM-Versions-1766734",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-31",
-    "region": "taiwan",
-    "title": "資安署呼籲檢視防火牆與網通設備管理介面暴露面（PHP2Shell 後續）",
-    "summary": "資通安全署 10/29 晚間呼籲各機關與企業檢視防火牆、網通設備的管理介面是否對外暴露並儘速更新，為 PHP2Shell 漏洞利用潮的後續因應。",
-    "source_name": "中央社（資安署呼籲）",
-    "source_url": "https://www.cna.com.tw/news/afe/202610290387.aspx",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-31",
-    "region": "china",
-    "title": "中國三部門通報 35 款 App 違規收集個資",
-    "summary": "中國三部門 10/30 通報 35 款 App 存在違規收集使用個人資訊問題，要求相關業者限期整改。",
-    "source_name": "新浪財經",
-    "source_url": "https://finance.sina.com.cn/stock/zqgd/2026-10-30/doc-iniwzazt8174407.shtml",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-31",
-    "region": "china",
-    "title": "Palo Alto 確認 PHP2Shell 正攻擊對外暴露的 PAN-OS 管理介面",
-    "summary": "Palo Alto Networks 10/29 確認 PHP2Shell 漏洞正被用於攻擊對外暴露的 PAN-OS 管理介面，Unit 42 並獨立驗證了 Dream 研究揭露的攻擊工具。",
-    "source_name": "CybersecurityNews",
-    "source_url": "https://cybersecuritynews.com/palo-alto-php2shell-exploitation/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-30",
-    "region": "world",
-    "title": "WordPress 7.1.4 修補安全漏洞，研究方已見利用嘗試",
-    "summary": "WordPress 於 10 月 28 日發布 7.1.4，處理 22 項漏洞，其中一項涉及更新流程的競態條件，可能讓未授權者遠端執行程式碼。Wordfence 表示發布後已觀察到利用嘗試，網站維運人員應優先確認更新狀態。",
-    "source_name": "Wordfence 安全更新分析",
-    "source_url": "https://www.wordfence.com/blog/2026/10/wordpress-7-1-4-security-release-rce/",
-    "source_type": "官方"
-  },
-  {
-    "date": "2026-10-30",
-    "region": "taiwan",
-    "title": "橙的公告 NAS 遭勒索攻擊，已斷網隔離",
-    "summary": "臺灣上市公司橙的（4554）於 10 月 28 日公告，區域網路內的 NAS 遭勒索軟體攻擊，已採取斷網與隔離措施。公司初步評估營運不致受到重大影響，後續影響仍應以正式公告為準。",
-    "source_name": "iThome（公司重大訊息報導）",
-    "source_url": "https://www.ithome.com.tw/news/180053",
     "source_type": "媒體"
   }
 ]
