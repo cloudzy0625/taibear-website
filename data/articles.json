@@ -1,5 +1,21 @@
 [
   {
+    "slug": "nikke-launcher-cdn-compromise-2026",
+    "title": "NIKKE 事件分析：開官方啟動器玩遊戲，電腦被裝了遠端控制木馬",
+    "date": "2026-11-04",
+    "category": "供應鏈安全",
+    "tags": [
+      "NIKKE",
+      "供應鏈攻擊",
+      "Level Infinite",
+      "CDN 竄改",
+      "遠端控制木馬",
+      "遊戲資安"
+    ],
+    "summary": "《勝利女神：妮姬》PC 啟動器載入的 4 個官方 CDN 檔案自 2026 年 9 月 27 日起遭植入惡意程式碼，10 月 23 日起部分玩家開啟動器時被下載遠端控制代理程式，可竊取瀏覽器密碼、開發者憑證與加密貨幣錢包資料；官方已確認異常並修復，受害規模與入侵管道仍未知。",
+    "url": "articles/nikke-launcher-cdn-compromise-2026.html"
+  },
+  {
     "slug": "key-figures-database-2026",
     "title": "重點人物資料庫曝光：中國民族外宣 CRM 的結構與歸因出入",
     "date": "2026-11-02",
