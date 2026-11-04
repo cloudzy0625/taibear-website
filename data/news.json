@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-11-04",
+    "region": "world",
+    "title": "CISA 11/3 新增 KEV：WordPress 核心 CVE-2026-119977 已在野利用，聯邦期限 11/6",
+    "summary": "CISA 11/3 將 WordPress 核心升級視窗競態遠端程式碼執行漏洞 CVE-2026-119977（CVSS 8.1，影響 4.7 至 7.1.3）列入 KEV，Wordfence 指公告後 9 分鐘即見嘗試利用、21 小時內逾 1.85 萬次請求；修補版為 WordPress 7.1.4，聯邦修補期限 11/6。",
+    "source_name": "CISA",
+    "source_url": "https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source_type": "官方"
+  },
+  {
+    "date": "2026-11-04",
+    "region": "world",
+    "title": "cPGuard 更新通道遭劫持：約 2,950 台 Linux 主機伺服器遭植入後門、竊取憑證",
+    "summary": "OPSSHIELD 11/3 披露，攻擊者 11/2 以遭入侵的帳務系統金鑰經 cPGuard 更新通道推送假更新約 70 分鐘，約 2,950 台執行假更新的主機遭竊取密碼雜湊、root SSH 金鑰與資料庫密碼並植入隱藏 root shell；官方已發布乾淨版 5.88.26，呼籲更新並全面輪替憑證。",
+    "source_name": "OPSSHIELD",
+    "source_url": "https://opsshield.com/notice/security-incident-disclosure-servermanage.html",
+    "source_type": "官方"
+  },
+  {
+    "date": "2026-11-04",
+    "region": "world",
+    "title": "哈佛校友系統外洩規模確認：約 85.1 萬個電子郵件地址已進 Have I Been Pwned",
+    "summary": "Have I Been Pwned 11/3 分析 ShinyHunters 外洩檔案後確認，哈佛 2025 年 11 月校友與募款系統入侵案涉及約 85 萬個帳號、85.1 萬個不重複電郵，含姓名、電話、地址與捐款資料；哈佛稱受影響系統一般不含身分證號、密碼與付款卡資料，攻擊者歸屬哈佛未指名。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-04",
+    "region": "world",
+    "title": "Chainstack 遭入侵：客戶資料與密碼雜湊遭存取，列入 AI 攻擊行動一環",
+    "summary": "區塊鏈基礎設施商 Chainstack 11/3 披露，攻擊者 10/26 經第三方元件進入開發環境、10/29 進入部分正式環境，存取含組織名稱、成員電郵與密碼雜湊的客戶資料庫，節點憑證系統亦可被存取（官方稱無證據顯示已被讀取）；官方已於 10/31 斷開存取並要求客戶輪替憑證。",
+    "source_name": "Chainstack",
+    "source_url": "https://chainstack.com/security-incident-nov-2026/",
+    "source_type": "官方"
+  },
+  {
+    "date": "2026-11-04",
+    "region": "world",
+    "title": "Google 警示 LLMjacking：被盜 AI 金鑰單日可燒逾 10 萬美元、累計達 100 萬美元",
+    "summary": "Google 威脅情報小組與 Mandiant 11/2 報告指出，攻擊者以暴露的 LLM 端點或被盜 API 金鑰，經地下「LLM 混音器」轉售模型存取，單一受害組織單日詐欺推論費用逾 10 萬美元、累計達 100 萬美元；其中 Jet Night 在 8 小時內以被盜金鑰執行逾 50 萬次呼叫。",
+    "source_name": "BleepingComputer（Google GTIG／Mandiant 研究）",
+    "source_url": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-04",
+    "region": "world",
+    "title": "Barracuda 兩漏洞串連可奪 root：授權繞過 CVE-2026-116606（9.3）＋命令注入 CVE-2026-111560（8.6）",
+    "summary": "Barracuda 11/2 公告，Email Security Gateway 的未授權授權繞過漏洞與橫跨 6 項產品的命令注入漏洞串連後，可繞過授權並取得裝置 root 權限；利用須能存取管理介面，官方已釋出修補，尚無在野利用通報。",
+    "source_name": "BleepingComputer（Barracuda 公告）",
+    "source_url": "https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-04",
+    "region": "taiwan",
+    "title": "永豐銀行新網銀程式異常：419 名客戶、427 筆共逾 4,000 萬元不明轉出，款項已全數返還",
+    "summary": "金管會 11/3 證實，永豐銀行新網銀交易系統程式異常致 419 名客戶共 427 筆、每筆約 10 萬元、合計逾 4,000 萬元款項不明轉出，全數流向北富銀同一帳戶且已凍結；永豐稱已掌握原因並暫停相關服務、新版 App 已下架，款項與手續費已代墊全數返還，是否遭外部入侵仍在調查、未確認。",
+    "source_name": "自由時報（金管會／永豐銀行說法）",
+    "source_url": "https://ec.ltn.com.tw/article/breakingnews/5628238",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-04",
+    "region": "taiwan",
+    "title": "TWCA 憑證亂數不足：962 個政府機關、9,772 張憑證須於 11/6 前換證，截至 11/2 晚僅 926 張完成",
+    "summary": "數發部 11/2 公告，TWCA 部分憑證序號實際隨機亂數僅 24 bits、未達國際 64 bits 標準，涉及 962 個政府機關、9,772 張網站憑證，舊中繼憑證須於 11/6 零時前廢止；TWCA 已於 11/1 重新產製新憑證並寄發各機關，但截至 11/2 晚僅 926 張完成網站端更新，數發部稱目前未造成具體資安危害。",
+    "source_name": "自由時報（數發部公告）",
+    "source_url": "https://ec.ltn.com.tw/article/breakingnews/5627164",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-04",
+    "region": "china",
+    "title": "卡巴斯基：中文線索攻擊者以開源 CyberStrikeAI 入侵非、拉美教育機構（歸因屬卡巴斯基說法）",
+    "summary": "卡巴斯基 11/3 報告指出，一組未具名、具中文線索的攻擊者以開源滲透框架 CyberStrikeAI 入侵非洲與拉丁美洲教育機構，經遭入侵的 SQL Server 手動入侵、偵察一日後潛伏兩週；中文註解、使用 dnslog.cn 服務與 UTC+8 上班時段重啟 C2 為卡巴斯基列出的線索，非已證實的組織歸因。",
+    "source_name": "Help Net Security（卡巴斯基研究）",
+    "source_url": "https://www.helpnetsecurity.com/2026/11/03/ai-powered-cyberattacks-artex-cyberstrikeai/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-04",
+    "region": "china",
+    "title": "NetAskari 檢視小米內建反詐功能：疑回傳已安裝 App 與裝置識別碼，警方來電說法未經官方證實",
+    "summary": "X 關注清單研究者 @netaskari 11/3 發布初步檢視，追蹤 X 用戶 officer_secret 的說法，檢視小米中國版系統內建反詐功能相關 APK，稱該功能可能回傳已安裝 App 清單、使用者身分、IMSI 與 IMEI 等資料至雲端；朋友接獲中國警方來電的原始說法未經官方證實，NetAskari 的 APK 檢視亦屬初步、非完整調查結論。",
+    "source_name": "NetAskari（Substack 初步檢視）",
+    "source_url": "https://netaskari.substack.com/p/xiaomis-anti-fraud-scam-protection",
+    "source_type": "媒體"
+  },
+  {
     "date": "2026-11-03",
     "region": "world",
     "title": "Node-RED 滿分漏洞 CVE-2026-58115 已在野利用：西門子 IoT 閘道器可被未授權遠端執行程式碼",
@@ -177,96 +267,6 @@
     "summary": "雲端託管平台 Northflank 於 10/30 接獲 Wiz 警報後披露入侵，要求所有客戶假設環境變數已被解密並立即輪替全部金鑰；多名客戶回報其 AI API 金鑰遭未授權使用，入侵根因與受影響客戶數尚未公布。",
     "source_name": "BleepingComputer",
     "source_url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-01",
-    "region": "world",
-    "title": "Android「死亡簡訊」概念驗證公開：零點擊可癱瘓未修補手機",
-    "summary": "研究員公開 Android CVE-2026-58882 的概念驗證：特製 WAP Push 簡訊無須用戶操作即可使通話服務崩潰、中斷通話（含緊急電話），約 20 則可致重開機迴圈；Android 14 至 17 的 10 月更新已修補，Android 12／13 未獲修補。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-01",
-    "region": "world",
-    "title": "日本無印良品 App 遭未授權存取，最多約 2,726 萬筆紀錄可能外洩",
-    "summary": "日本良品計畫 10/30 公告，官方 MUJI App 遭外部未授權存取，最多約 2,726 萬筆顧客紀錄可能外洩，含已退會用戶，資料為電郵、出生日期與性別，不含信用卡、姓名、地址與電話；目前未確認暗網流出或遭惡用。",
-    "source_name": "良品計畫（PR TIMES 官方公告）",
-    "source_url": "https://prtimes.jp/main/html/rd/p/000001877.000000987.html",
-    "source_type": "官方"
-  },
-  {
-    "date": "2026-11-01",
-    "region": "world",
-    "title": "Linux 核心 MPTCP 遠端 root 研究更新：Red Hat 10/31 調升評分並公布緩解",
-    "summary": "Linux 核心 CVE-2026-98432 為 IPv4 TCP 握手競態 use-after-free，Anthropic 稱其 AI 模型已在 MPTCP 監聽伺服器上做出遠端 root 概念驗證；10/31 追蹤更新指 Red Hat 將評分調升至 9.8 並公布 nftables 緩解，Ubuntu／RHEL 修補仍待發放。",
-    "source_name": "Fenko Security（漏洞追蹤更新）",
-    "source_url": "https://fenko.nz/blog/cve-2026-98432-tcp-kernel/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-01",
-    "region": "world",
-    "title": "幣安後續發展：FBI 歸因北韓 TraderTraitor，提領預計 11/1 恢復",
-    "summary": "幣安 63 億美元竊案後續：FBI 與 TRM Labs、Chainalysis 將攻擊歸因於北韓 TraderTraitor（歸因屬上述單位說法，幣安本身未指名兇手）；幣安稱除工程師筆電外，後續調查還發現其他入侵點，並稱已補回約九成資產、預計 11/1 恢復提領。",
-    "source_name": "Cybersecurity ASEAN",
-    "source_url": "https://cybersecurityasean.com/daily-news/binance-hack-6-3-billion-north-korea-tradertraitor",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-01",
-    "region": "taiwan",
-    "title": "臺灣無印良品確認受 91APP 事件波及，11/2 起陸續通知顧客（後續發展）",
-    "summary": "臺灣無印良品公告，10/29 接獲 91APP 通知其訂單資料庫遭駭，確認臺灣官網部分購物訂單受波及，範圍為 2025/4/4 至 2026/10/14 的官網訂單，含姓名、電話、配送地址、電郵與訂單紀錄，不含信用卡與登入密碼；將自 11/2 起陸續通知受影響顧客。",
-    "source_name": "聯合新聞網",
-    "source_url": "https://udn.com/news/amp/story/7270/9847893",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-01",
-    "region": "china",
-    "title": "香港考評局國際考試系統事故，約 1.69 萬人個資外洩",
-    "summary": "香港考試及評核局 10/30 公告，10/29 發現部分國際考試資訊系統發生網絡安全事故，約 16,900 名申請兩項國際考試的內地居住人士姓名、出生日期與電郵外洩，已報警並通報私隱專員公署；文憑試目前未見受影響。",
-    "source_name": "on.cc 東網",
-    "source_url": "https://hk.on.cc/hk/bkn/cnt/news/20261030/bkn-20261030233544010-1030_00822_001.html?refer=hn1",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-01",
-    "region": "china",
-    "title": "南京警方破獲路由器殭屍網路案：逾 10 萬台二手路由器被植入木馬",
-    "summary": "南京警方 10/31 披露破獲江蘇首起路由器植入木馬搭建殭屍網路案，逾 10 萬台二手路由器被植入木馬流入市場，遍布 30 多個省市的 3.2 萬餘台聯網設備；涉案設備可被遠端控制、劫持流量與竊取資料，警方已查扣 8,000 餘台並聯動廠商推送升級清除木馬。",
-    "source_name": "現代快報（鳳凰網轉載）",
-    "source_url": "https://feng.ifeng.com/c/8xgM1he2lPQ",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-01",
-    "region": "china",
-    "title": "國泰航空 Amadeus 事件後續：約 5.3 萬筆訂單紀錄遭未授權存取（後續發展）",
-    "summary": "國泰航空 10/30 表示，旅遊科技供應商 Amadeus 系統遭未授權存取，約 5.3 萬筆國泰訂單受影響，多為訂位代號、姓名與航班資料，少數另含聯絡方式、旅行證件或飛行常客編號；國泰稱未見付款資料遭存取，自身系統與營運未受影響。",
-    "source_name": "The Straits Times（路透報導）",
-    "source_url": "https://www.straitstimes.com/asia/east-asia/cathay-pacific-joins-growing-list-of-airlines-hit-by-data-breach?ref=latest-headlines",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-31",
-    "region": "world",
-    "title": "幣安確認 63 億美元遭竊：工程師筆電遭入侵成破口",
-    "summary": "幣安確認 10/29 疑似遭駭事件最終損失 63 億美元：攻擊者入侵一名 DevOps 工程師的筆電，經服務容器送出未授權提領，是史上最大規模的加密貨幣竊案之一。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-10-31",
-    "region": "world",
-    "title": "Cursor 市集擴充套件遭植入木馬，Claude Code 擴充套件藏 SSH 後門",
-    "summary": "Cursor 官方市集上架的 Claude Code 擴充套件 2.1.313 遭植入木馬，內藏 SSH 後門，最多約 5,000 名用戶受影響，凸顯 AI 開發工具市集的供應鏈風險。",
-    "source_name": "The Hacker News",
-    "source_url": "http://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
     "source_type": "媒體"
   }
 ]
