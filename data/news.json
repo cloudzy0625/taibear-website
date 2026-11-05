@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-11-05",
+    "region": "world",
+    "title": "Sekoia：APT29「Poisoned Source」水坑式攻擊以舊漏洞鎖定未更新手機，同日 CISA 將 Apple WebKit CVE-2024-27834 列入 KEV",
+    "summary": "Sekoia 11/4 披露，APT29（歸因屬 Sekoia 說法，中高信心）經遭入侵網站、仿冒網站與烏克蘭 Plerdy 分析服務供應鏈，對未更新的 iOS／Android 裝置投放已修補漏洞的 exploit 鏈，竊取瀏覽器 Cookie、Wi-Fi 密碼與裝置資料；同日 CISA 將其中一環 Apple WebKit CVE-2024-27834 列入 KEV，聯邦期限 11/18。已更新裝置不受此鏈影響。",
+    "source_name": "The Hacker News（Sekoia 研究）",
+    "source_url": "http://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-05",
+    "region": "world",
+    "title": "Zyxel GS1900 零時差 CVE-2026-107441 遭利用：48 國近千台交換器被入侵，臺灣列重災區之一",
+    "summary": "Zyxel 11/3 公告，GS1900 系列網頁管理介面越界寫入漏洞 CVE-2026-107441 遭未授權遠端執行指令，GreyNoise 觀測自 8/17 起 48 國 996 台裝置遭入侵、組態與雜湊 root 密碼被竊，其中 564 台仍用出廠預設帳密；Zyxel 已於 10/22 釋出韌體，六月舊修補擋不住此漏洞。",
+    "source_name": "BleepingComputer（Zyxel 公告／GreyNoise 研究）",
+    "source_url": "https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-05",
+    "region": "world",
+    "title": "NIKKE PC 啟動器供應鏈攻擊：官方 CDN 指令碼遭竄改，散布遠端存取與竊密惡意程式",
+    "summary": "Level Infinite 11/4 證實 NIKKE PC 啟動器指令碼疑遭第三方竄改並已推送修復；獨立研究者 MotherSphere 指 4 支官方 CDN JavaScript 自 9/27 被植入惡意碼，最早 10/23 即在玩家電腦執行，可遠端下指令、截圖、竊取帳密與瀏覽器錢包資料，手機版未見受影響證據。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/nikke-pc-game-launcher-hacked-to-spread-remote-access-data-stealing-malware/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-05",
+    "region": "world",
+    "title": "DreamHost 證實資料外洩：檔案管理平臺遭入侵約兩個月，FTP 帳密與網頁郵件工作階段外流",
+    "summary": "DreamHost 11/4 通報，攻擊者利用檔案管理平臺軟體漏洞，自 2026 年 8 月至 10/23 取得登入該平臺用戶的 FTP／SFTP 帳密，少數用戶網頁郵件工作階段資訊亦可能外洩；官方稱已阻斷存取並修補漏洞，控制臺登入與帳單資料未見遭存取，受影響人數未公布。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-05",
+    "region": "world",
+    "title": "法國血液機構冷藏系統遭駭：3 處血漿冷儲站溫度閾值被大幅調高，監測及時攔截、血液製品未受損",
+    "summary": "法國血液機構 EFS 11/3 晚聲明，11/1 至 2 日夜間冷藏設備供應商系統遭入侵，3 處血漿冷儲站的溫度與除霜閾值被調至極高，監測警報及時發現、血漿已轉移或封存，官方稱無血液製品損失與健康影響；此波與同期歐洲超市冷藏攻擊時間重疊，入侵途徑仍在調查。",
+    "source_name": "1News（美聯社／EFS 聲明）",
+    "source_url": "https://www.1news.co.nz/2026/11/05/cyberattack-hits-french-blood-bank-but-no-blood-products-compromised/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-05",
+    "region": "taiwan",
+    "title": "永豐銀行後續發展：11/4 記者會確認為駭客攻擊，418 名客戶、427 筆共 4,176 萬元已全數返還",
+    "summary": "永豐銀行 11/4 晚間記者會推翻前日「程式異常」說法，確認外部駭客利用新網銀交易系統供應商的安全設定漏洞，418 名客戶共 427 筆、合計 4,176 萬元遭不明轉出，受害者身分證字號均為 P 開頭，銀行稱駭客以隨機試誤取得有效帳戶、非事先取得個資；款項已於 11/3 全數返還，銀行將向外國供應商求償，北檢已分案偵辦。",
+    "source_name": "iThome",
+    "source_url": "https://www.ithome.com.tw/news/180233",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-05",
+    "region": "taiwan",
+    "title": "臺灣電商 ERP 業者莫筆克科技遭駭：主機遭未授權執行惡意指令，Shopline 全面更換 API 金鑰",
+    "summary": "iThome 11/4 報導，雲端 ERP 業者莫筆克科技 10/31 每日檢核發現主機異常，確認遭未授權執行惡意指令，攻擊由品牌官網服務入口進入，資料庫遭查詢並嘗試外傳；商家自其他平臺匯入的消費者與交易資料亦可能受影響，Shopline 稱平臺本身未遭入侵、已全面更換串接金鑰，果果能量與彼蛋白已公告受影響。",
+    "source_name": "iThome",
+    "source_url": "https://www.ithome.com.tw/news/180213",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-05",
+    "region": "taiwan",
+    "title": "前瞻資安探索會議：政府網路每日平均約 280 萬次入侵嘗試，數發部提 3 項防護策略",
+    "summary": "數發部長林宜敬 11/4 在前瞻資安探索會議（ACE）專題演講指出，臺灣政府網路每日平均遭受約 280 萬次入侵嘗試，AI 使攻擊更自動化與規模化；臺灣推動 3 項策略：以 AI 強化資安防禦、建立涵蓋半導體產業鏈的防護機制、減少不必要網路連線以降低攻擊面。",
+    "source_name": "中央社",
+    "source_url": "https://www.cna.com.tw/news/afe/202611040254.aspx",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-05",
+    "region": "china",
+    "title": "ESET：中國結盟組織 SlippyNunchucks 劫持搜狗輸入法流量，投放 DarkVigil 間諜工具（歸因屬 ESET 說法）",
+    "summary": "ESET 11/4 報告指出，中國結盟組織 SlippyNunchucks（ESET 高信心評估與中國政府利益相關的監控行動）利用搜狗輸入法以未加密 HTTP 取得品牌推廣設定的缺陷，經 DNS 劫持回傳惡意設定，自 7/1 起向香港、泰國、日本、越南、斯里蘭卡與阿曼用戶投放 DarkVigil；DNS 劫持發生位置未明，騰訊已在 16.10 版改用 HTTPS 並啟用憑證綁定。",
+    "source_name": "Infosecurity Magazine（ESET 研究）",
+    "source_url": "https://www.infosecurity-magazine.com/news/slippynunchucks-sogou-dns-hijacking/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-05",
+    "region": "china",
+    "title": "中國互金協會首期自律通報：8 款 App 違規使用「低門檻」行銷用語，限 15 個工作日內整改",
+    "summary": "中國互聯網金融協會 11/2 發布首期《金融產品網絡營銷違規活動自律通報》，耀享花、有道分期、小象錢包等 8 款 App 因違規使用「低門檻」誘導性行銷用語被通報；依 9/30 施行的《金融產品網絡營銷管理辦法》，業者須於通報起 15 個工作日內完成整改，逾期將採取自律管理措施並移送金融管理部門。",
+    "source_name": "中國證券報（中證網）",
+    "source_url": "https://www.cs.com.cn/yh/04/2026/11/04/detail_2026110410049710.html",
+    "source_type": "媒體"
+  },
+  {
     "date": "2026-11-04",
     "region": "world",
     "title": "CISA 11/3 新增 KEV：WordPress 核心 CVE-2026-119977 已在野利用，聯邦期限 11/6",
@@ -177,96 +267,6 @@
     "summary": "Canonical LXD 與 MicroCloud 的憑證驗證瑕疵讓攻擊者僅憑可信用戶端的公開憑證、無須私鑰即可冒充該用戶端，取得叢集與虛擬機器存取權，特權帳號遭冒充時可能取得宿主機 root；Canonical 已釋出修補版，尚無在野利用跡象。",
     "source_name": "The Hacker News",
     "source_url": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-02",
-    "region": "world",
-    "title": "Alpine Linux 遭 GitLab 重大漏洞攻擊未遂：重建伺服器並全面重設密碼（後續發展）",
-    "summary": "Alpine Linux 10/20–21 遭人以 KEV 列管的 GitLab CVE-2026-97229 攻擊，雖未證實程式碼遭執行或套件遭竄改，但因日誌不足無法排除入侵，專案決定重建 GitLab 伺服器並重設全部密碼，提醒用戶同步更新。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-02",
-    "region": "world",
-    "title": "TeamViewer 高風險漏洞 CVE-2026-111585：被控端可反向攻擊連線者，速更新至 15.83",
-    "summary": "TeamViewer 15.83 修補整數溢位漏洞 CVE-2026-111585（CVSS 8.8）：惡意或已遭入侵的被控端可在連線者接受遠端連線後，使其用戶端當機，Windows 上研究已示範程式碼執行；原廠稱發布時未見在野利用。",
-    "source_name": "The Hacker News",
-    "source_url": "https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-02",
-    "region": "world",
-    "title": "Amadeus 外洩案擴大：馬來西亞航空證實客戶資料可能受影響（後續發展）",
-    "summary": "馬來西亞航空 11/1 證實，訂位技術供應商 Amadeus 的資安事件可能影響 2023 年 8 月至 2026 年 9 月間經其處理的客戶資料；馬航稱自身系統未遭入侵、暫無財務資料遭存取跡象，受影響人數與資料類型尚未公布。",
-    "source_name": "Channel NewsAsia",
-    "source_url": "https://www.channelnewsasia.com/asia/malaysia-airlines-amadeus-security-breach-6510631",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-02",
-    "region": "world",
-    "title": "CISA KEV 修補期限：Ivanti Connect Secure 漏洞今日到期",
-    "summary": "CISA 10/30 列入 KEV 的 Ivanti Connect Secure CVE-2026-111357 聯邦修補期限為今日 11/2（另一漏洞 CVE-2026-118527 為 11/13）；兩者與 10/13 的 CVE-2026-104935 串連成攻擊鏈，Cisco ASA／GitLab 兩項的期限則為 11/1。",
-    "source_name": "CISA",
-    "source_url": "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-    "source_type": "官方"
-  },
-  {
-    "date": "2026-11-02",
-    "region": "world",
-    "title": "Google 修補 Chrome 156：共 21 個漏洞，含 1 個重大等級",
-    "summary": "Google 10/29 為 Chrome 穩定版與延伸穩定版發布 156 更新，共修補 21 個漏洞，重大等級 CVE-2026-76024 位於 MediaStream 元件，特製網頁有機會遠端讀取沙箱內記憶體；Windows／macOS 應更新至 156.0.8078.79 或 .80。",
-    "source_name": "iThome",
-    "source_url": "https://www.ithome.com.tw/news/180097",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-02",
-    "region": "taiwan",
-    "title": "數發部訂定通訊傳播控制系統資安防護基準，2027 年元旦生效",
-    "summary": "數位發展部針對納管的通訊及傳播領域關鍵基礎設施提供者訂定控制系統資安防護基準，2027 年 1 月 1 日生效，依高、中、普三級訂定遠端存取授權與多因子鑑別、網路隔離、備份與營運持續等要求。",
-    "source_name": "iThome",
-    "source_url": "https://www.ithome.com.tw/news/180069",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-02",
-    "region": "taiwan",
-    "title": "91APP 事件後續：全家、康那香、安麗相繼證實受波及，補償登記今日起開放（後續發展）",
-    "summary": "91APP 事件影響持續浮現：全家、康那香、安麗相繼證實旗下訂單資料存放於遭非法存取的資料庫；91APP 稱最大可能影響 1,329 品牌、近 480 萬消費者，補償諮詢與申請自今日 11/2 起在取得品牌授權後陸續通知，受理至 2027 年 2 月 1 日。",
-    "source_name": "民報",
-    "source_url": "https://www.peoplenews.tw/articles/economic-news/64403",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-02",
-    "region": "china",
-    "title": "卡巴斯基揭露 NetamLoader：鎖定亞洲政府專用 Windows 10 的隱蔽載入鏈",
-    "summary": "卡巴斯基揭露 2026 上半年偵測到的 NetamLoader .NET 載入框架：惡意 CAB 藏於 Windows 更新下載目錄，借用合法 Patch My PC 元件以 AppDomainManager 注入執行並清除痕跡；卡巴斯基未歸因特定組織、僅見單一受害者，目標疑為中國政府版的說法為媒體推論、未獲證實。",
-    "source_name": "The Hacker News",
-    "source_url": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-01",
-    "region": "world",
-    "title": "Chainalysis 遭「攻擊性代理式」手法入侵，客戶身分資料被存取",
-    "summary": "區塊鏈分析公司 Chainalysis 於 10/30 披露，外部攻擊者以「攻擊性代理式」手法入侵內部系統與工具，存取了部分客戶的用戶識別碼、姓名、電郵與機構角色標籤；公司稱調查內容、憑證與工作階段權杖暫未見遭存取。",
-    "source_name": "The Hacker News",
-    "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-01",
-    "region": "world",
-    "title": "Northflank 遭入侵：假設所有環境變數已遭解密，客戶 AI 金鑰遭濫用",
-    "summary": "雲端託管平台 Northflank 於 10/30 接獲 Wiz 警報後披露入侵，要求所有客戶假設環境變數已被解密並立即輪替全部金鑰；多名客戶回報其 AI API 金鑰遭未授權使用，入侵根因與受影響客戶數尚未公布。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
     "source_type": "媒體"
   }
 ]
