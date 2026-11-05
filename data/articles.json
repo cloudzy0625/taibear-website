@@ -1,5 +1,23 @@
 [
   {
+    "slug": "xcpe-videostrong-botnet-2026",
+    "title": "XCPE 事件分析：130 萬台電視盒的後門，是原廠在出廠前裝的",
+    "date": "2026-11-05",
+    "category": "供應鏈安全",
+    "tags": [
+      "Android TV",
+      "XCPE",
+      "Videostrong",
+      "韌體後門",
+      "住宅代理",
+      "BadBox"
+    ],
+    "summary": "Google 威脅情報小組（GTIG）2026 年 11 月 2 日公布：名為 XCPE 的後門被預載在超過 130 萬台機上盒的韌體裡，裝置出廠前就已是殭屍網路的一員。GTIG 以高度信心研判，深圳製造商 Videostrong 為牟利蓄意開發並營運此後門，把存取權賣給犯罪合作方，載入住宅代理與廣告詐欺等變現模組；Synthient 的獨立調查得出相同結論。聯盟已於 10 月下旬拿下控制伺服器，但後門仍留在裝置韌體中，使用者無法自行移除。",
+    "source_name": "Google GTIG",
+    "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "url": "articles/xcpe-videostrong-botnet-2026.html"
+  },
+  {
     "slug": "nikke-launcher-cdn-compromise-2026",
     "title": "NIKKE 事件分析：開官方啟動器玩遊戲，電腦被裝了遠端控制木馬",
     "date": "2026-11-04",
