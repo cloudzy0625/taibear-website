@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-11-06",
+    "region": "world",
+    "source_name": "Binarly",
+    "source_type": "媒體",
+    "source_url": "https://www.binarly.io/blog/zyxel-gs1900-rce-cve-2026-107441",
+    "summary": "Binarly 11/5 公布，在調查中國駭客 Red Heron 與 Kapibala 的攻擊基礎設施時，發現針對 GS1900 網頁管理介面的漏洞利用工具；修補 CVE-2026-7273 時只加了參數數量檢查、且檢查排在複製之後，攻擊者仍可越界寫入取得 root 權限並竊取設定檔與 root 密碼雜湊。臺灣為重災區之一，564 台仍用出廠預設帳密，須升至 2.90 Patch 3 韌體並改掉預設密碼。",
+    "title": "Zyxel GS1900 後續發展：Binarly 揭露中國駭客利用新零時差 CVE-2026-107441 竊取敏感資料，舊修補擋不住（歸因屬 Binarly 說法）"
+  },
+  {
+    "date": "2026-11-06",
+    "region": "world",
+    "source_name": "iThome",
+    "source_type": "媒體",
+    "source_url": "https://www.ithome.com.tw/news/180255",
+    "summary": "該行 11/4 證實遭網路攻擊，攻擊者經外部服務商平臺取得銀行系統存取管道，利用銀行自有帳戶向其他金融機構未授權轉帳；區塊鏈調查員 ZachXBT 最早揭露，估計逾 1.18 億歐元（約 1.33 億美元），部分款項疑經加密貨幣平臺轉移。銀行稱客戶帳戶未受影響、部分款項已凍結追回中。",
+    "title": "法國銀行 Crédit Mutuel Arkéa 遭網攻，逾 1.18 億歐元遭攻擊者轉走"
+  },
+  {
+    "date": "2026-11-06",
+    "region": "world",
+    "source_name": "BleepingComputer",
+    "source_type": "媒體",
+    "source_url": "https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/",
+    "summary": "憑證機構 DigiCert 11/5 證實，2025 年 2 月伺服器遷移誤將內部業務系統暴露上網，外部人員可自行註冊帳號，並於 2026 年 6/27–7/2 以唯讀權限存取部分封存客戶資料，含姓名、商務電郵、電話、地址，少數帳戶另含護照、駕照等身分證件。DigiCert 稱憑證簽發服務與已發憑證未受影響。",
+    "title": "DigiCert 資料外洩：客戶資料與身分證件遭未授權存取"
+  },
+  {
+    "date": "2026-11-06",
+    "region": "world",
+    "source_name": "Norad",
+    "source_type": "官方",
+    "source_url": "https://www.norad.no/en/for-partners/partner/cyberattack-on-norad-information-for-affected-users/",
+    "summary": "挪威發展合作署 Norad 11/3 通報，攻擊者盜用 27 組帳號登入補助申請入口 Grants Portal，2 萬 614 名註冊用戶（涵蓋 1 萬 2,511 個組織）的姓名與電郵可能全數外洩，至少 3 個境外組織的申請文件亦遭竊。Norad 稱不排除衝突地區與威權國家申請人的姓名在其中，幕後者未明。",
+    "title": "挪威援助機構 Norad 遭駭：2 萬 614 名補助入口用戶資料可能外洩"
+  },
+  {
+    "date": "2026-11-06",
+    "region": "world",
+    "source_name": "The Register",
+    "source_type": "媒體",
+    "source_url": "https://www.theregister.com/cyber-crime/2026/11/05/new-yorks-queens-public-library-battles-ransomware-crims-wi-fi-checkouts-and-website-go-dark/5307796",
+    "summary": "皇后區公共圖書館 11/4 晚證實遭勒索軟體攻擊，官網、館內電腦、借還書機、公共 Wi-Fi、手機 App 與數位媒體服務全部中斷，66 個據點維持開館但服務受限，恢復需時；目前無勒索組織出面認領。",
+    "title": "紐約皇后區公共圖書館遭勒索軟體攻擊：66 個據點網站、Wi-Fi 與借還書系統停擺"
+  },
+  {
+    "date": "2026-11-06",
+    "region": "world",
+    "source_name": "Malwarebytes",
+    "source_type": "媒體",
+    "source_url": "https://www.malwarebytes.com/blog/bugs/2026/11/chrome-157-fixes-213-security-issues-including-7-critical-flaws",
+    "summary": "Google 11/3 將 Chrome 157 推上穩定版（桌機 157.0.8103.38/.39、Android 同版），一次修補 213 個安全問題，其中 7 項重大、77 項高風險，多為繪圖與記憶體安全缺陷（Dawn、ANGLE、WebGL 等），部分可經惡意網頁在沙箱外執行程式碼；Google 未說明是否已被利用，更新後須重新啟動瀏覽器才生效。",
+    "title": "Google Chrome 157 修補 213 個漏洞、含 7 項重大"
+  },
+  {
+    "date": "2026-11-06",
+    "region": "world",
+    "source_name": "iThome",
+    "source_type": "媒體",
+    "source_url": "https://www.ithome.com.tw/news/180262",
+    "summary": "Debian 與 Ubuntu 11/5 釋出 APT 更新，修補驗證繞過漏洞 CVE-2026-109518（CVSS 7.7）：攻擊者若能操控 HTTP 傳輸流量，可在驗證完成後替換套件內容，誘使系統安裝惡意程式並以 root 執行；Debian 12/13 與 Ubuntu 22.04、24.04、26.04 LTS、26.10 均已釋出修補。",
+    "title": "Debian、Ubuntu 修補 APT 套件管理工具高風險漏洞 CVE-2026-109518"
+  },
+  {
+    "date": "2026-11-06",
+    "region": "world",
+    "source_name": "iThome",
+    "source_type": "媒體",
+    "source_url": "https://www.ithome.com.tw/news/180196",
+    "summary": "英國國家網路安全中心（NCSC）最新 AI 網路威脅評估指出，2028 年前攻擊者「極可能」以 AI 驅動的惡意程式對關鍵基礎設施發動勒索軟體攻擊；AI 未必帶來全新手法，但會讓既有攻擊更快、規模更大，老舊系統未修補的已知漏洞與新導入的 AI 工具都是破口；報告點名中國與俄羅斯仍是主要國家級網路威脅來源。",
+    "title": "英國 NCSC 預警：2028 年前 AI 惡意程式極可能用於關鍵基礎設施勒索攻擊"
+  },
+  {
+    "date": "2026-11-06",
+    "region": "taiwan",
+    "source_name": "iThome",
+    "source_type": "媒體",
+    "source_url": "https://www.ithome.com.tw/news/180247",
+    "summary": "中天生技子公司棉花田（11/3 重訊）、王品旗下萬鮮（11/4 重訊）、葡萄王線上商城「購健康」（11/4 重訊）相繼揭露，委外購物網站服務廠商系統出現異常資料存取；葡萄王案由順立智慧（Cyberbiz）通知，商城訂單與消費者個資疑似外洩。三案網站營運正常、初步評估對營運無重大影響，但實際受影響範圍仍在調查。",
+    "title": "三家上市公司同日揭露電商委外平臺異常存取：棉花田、王品萬鮮、葡萄王"
+  },
+  {
+    "date": "2026-11-06",
+    "region": "china",
+    "source_name": "The Hindu",
+    "source_type": "媒體",
+    "source_url": "https://www.thehindu.com/news/national/hackers-used-china-linked-ai-tools-to-steal-from-indian-financial-firms/article71670577.ece",
+    "summary": "印度電腦緊急應變小組 CERT-In 11/4 通報，將一波針對非銀行金融、金融科技與加密貨幣交易所的 AI 驅動攻擊命名為「Crafty Falcon」：攻擊者以 ARTEX、PentAGI、Cairn、CyberStrikeAI 等公開 AI 工具自動執行完整攻擊鏈、呼叫受害者自身的支付與撥款 API 轉走資金，威脅「持續且正在進行」。研究者指出其中至少兩款工具與中國有關，但 CERT-In 未指明幕後者與所屬地。",
+    "title": "印度 CERT-In 點名「Crafty Falcon」：以 ARTEX 等 AI 工具攻擊金融機構（工具與中國的關聯屬研究者說法）"
+  },
+  {
     "date": "2026-11-05",
     "region": "world",
     "title": "Sekoia：APT29「Poisoned Source」水坑式攻擊以舊漏洞鎖定未更新手機，同日 CISA 將 Apple WebKit CVE-2024-27834 列入 KEV",
@@ -177,96 +267,6 @@
     "summary": "X 關注清單研究者 @netaskari 11/3 發布初步檢視，追蹤 X 用戶 officer_secret 的說法，檢視小米中國版系統內建反詐功能相關 APK，稱該功能可能回傳已安裝 App 清單、使用者身分、IMSI 與 IMEI 等資料至雲端；朋友接獲中國警方來電的原始說法未經官方證實，NetAskari 的 APK 檢視亦屬初步、非完整調查結論。",
     "source_name": "NetAskari（Substack 初步檢視）",
     "source_url": "https://netaskari.substack.com/p/xiaomis-anti-fraud-scam-protection",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-03",
-    "region": "world",
-    "title": "Node-RED 滿分漏洞 CVE-2026-58115 已在野利用：西門子 IoT 閘道器可被未授權遠端執行程式碼",
-    "summary": "VulnCheck 11/2 警示，Node-RED 缺少身分驗證的遠端程式碼執行漏洞 CVE-2026-58115（CVSS 10.0）已在野利用，攻擊者可對未設管理驗證的暴露主機植入 Linux 殭屍植入程式與 webshell；西門子 SIMATIC IoT2050 Advanced 須更新至 V4.3.4.1。",
-    "source_name": "SecurityOnline（VulnCheck 研究）",
-    "source_url": "https://securityonline.info/node-red-rce-vulnerability-cve-2026-58115/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-03",
-    "region": "world",
-    "title": "Google 瓦解 130 萬台 Android 電視盒殭屍網路 XCPE：指深圳廠商 Videostrong 蓄意預埋後門（後續發展）",
-    "summary": "Google 11/2 公布，XCPE 殭屍網路逾 130 萬台裝置（多為電視盒）已失去控制伺服器；Google 高度確信深圳廠商 Videostrong 蓄意在韌體預埋 x.cpe 後門並販售存取權，用於廣告詐欺與住宅代理，後門仍在裝置上、用戶無法自行清除，Google 已終止其認證裝置資格。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-03",
-    "region": "world",
-    "title": "歐洲多國超市冷藏系統遭駭：逾 115 間門市冷櫃被遠端竄改溫度、被迫停業處理",
-    "summary": "駭客遠端竄改歐洲多家連鎖超市的冷藏系統，涉及比利時、荷蘭、瑞典、盧森堡、愛爾蘭與愛沙尼亞逾 115 間門市，部分冷櫃被關機或強制除霜導致商品損失；是否為協同攻擊、各鏈的入侵途徑仍未確認。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-03",
-    "region": "world",
-    "title": "GitLab 滿分漏洞仍有逾萬台未修補：KEV 列管的 CVE-2026-97229 已在野攻擊（後續發展）",
-    "summary": "Shadowserver 11/2 指出，逾 1,000 台對外 GitLab 仍未修補已列入 CISA KEV、正在被攻擊的 CVE-2026-97229，另逾 11,300 台受另一滿分漏洞 CVE-2026-110264 影響；兩者皆為正規表示式整數溢位、可未授權遠端執行程式碼，須立即升級至官方修補版。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-03",
-    "region": "world",
-    "title": "BTCPay Server 舊版熱錢包遭竊：2.4.1 以前版本受攻擊，官方急籲升至 2.4.7",
-    "summary": "開源支付處理器 BTCPay Server 警示，2.4.1（2026-07-23）以前版本存在攻擊向量，已有用戶熱錢包的比特幣與萊特幣遭盜領；官方稱 2.4.7 最新版目前無可信的遭竊通報，呼籲所有用戶立即更新並通報損失。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-03",
-    "region": "world",
-    "title": "幣安遭竊後續發展：提領恢復首日淨流出 36.4 億美元，約占平台資產 2.1%",
-    "summary": "幣安 11/1 恢復提領後 9.5 小時內處理提款 46.5 億美元、存款 10.1 億美元，淨流出 36.4 億美元；幣安稱提領量已趨穩、已補回約 95% 的 63 億美元遭竊資產，FBI 歸因北韓 TraderTraitor 的說法先前已報導。",
-    "source_name": "自由時報（路透報導）",
-    "source_url": "https://ec.ltn.com.tw/article/breakingnews/5626189",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-03",
-    "region": "taiwan",
-    "title": "鑫傳（6856）重訊：母子公司資訊系統遭網路攻擊，部分檔案無法解密",
-    "summary": "鑫傳重大訊息（事實發生日 10/30，11/2–3 日報彙整才納入本早報）：母子公司資訊系統遭外部駭客攻擊，部分檔案無法解密、影響內部作業系統運作；公司稱目前評估無個資與大量內部文件外洩之虞、對營運財務無重大影響，已隔離設備並以備份還原。",
-    "source_name": "MoneyDJ（公開資訊觀測站重大訊息）",
-    "source_url": "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=b7bdae60-072b-4163-9845-3fbb705dd7d3",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-03",
-    "region": "taiwan",
-    "title": "台數科（6464）重訊：母子公司遭駭客攻擊，部分伺服器檔案遭惡意加密",
-    "summary": "台數科重大訊息（事實發生日 10/30，11/2–3 日報彙整才納入本早報）：母子公司資訊系統遭外部不明駭客攻擊，部分伺服器檔案遭惡意加密、影響內部作業系統運作；公司稱目前評估無個資與核心機密外洩、對營運財務無重大影響，已隔離並以安全備份還原。",
-    "source_name": "MoneyDJ（公開資訊觀測站重大訊息）",
-    "source_url": "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=1c681aab-1a32-4fd9-9b11-65728432cfa1",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-03",
-    "region": "china",
-    "title": "CrowdStrike：Vapor Panda 以 ARTEX AI 代理對 200 多個組織發動間諜攻擊（歸因屬 CrowdStrike 說法）",
-    "summary": "CrowdStrike 10/29 報告（BleepingComputer 11/2 報導）指出，中國關聯組織 Vapor Panda 自 10/17 起以 ARTEX 多代理 AI 滲透測試框架對 14 國 200 多個組織發動攻擊，鎖定政府部會、電信、半導體、國防與金融等，至少 9 個組織確認遭入侵後活動；200 多家為目標數、非全部遭入侵，歸因屬 CrowdStrike 說法。",
-    "source_name": "BleepingComputer（CrowdStrike 研究）",
-    "source_url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-02",
-    "region": "world",
-    "title": "Canonical LXD／MicroCloud 滿分漏洞 CVE-2026-112816：無私鑰可冒充可信用戶端",
-    "summary": "Canonical LXD 與 MicroCloud 的憑證驗證瑕疵讓攻擊者僅憑可信用戶端的公開憑證、無須私鑰即可冒充該用戶端，取得叢集與虛擬機器存取權，特權帳號遭冒充時可能取得宿主機 root；Canonical 已釋出修補版，尚無在野利用跡象。",
-    "source_name": "The Hacker News",
-    "source_url": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
     "source_type": "媒體"
   }
 ]
