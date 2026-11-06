@@ -1,5 +1,22 @@
 [
   {
+    "slug": "ai-statecraft-apt-ai-adoption-2026",
+    "title": "國家級駭客的 AI 是從哪裡來的？TrendAI 四國路徑與 2026 年的 AI 攻擊現實",
+    "date": "2026-11-06",
+    "category": "AI 攻擊手法",
+    "tags": [
+      "TrendAI",
+      "國家級駭客",
+      "AI 代理",
+      "DeepSeek",
+      "TeamT5"
+    ],
+    "summary": "TrendAI 指出，國家級駭客用 AI 的方式取決於四個條件——國家策略與軍民融合、電力與算力、學術研究與創新、取得先進晶片的管道；條件不同，中國、俄羅斯、北韓、伊朗就走出自己養、省著用、借來用、租來用四條路。2026 年的 GTG-1002、GTIG 零日案例與臺灣 7 月的 AI 代理攻擊，說明 AI 已經在改變攻擊的速度與規模。",
+    "source_name": "TrendAI",
+    "source_url": "https://www.trendaisecurity.com/en-us/resources-insights/deep-research/from-state-ai-ecosystems-to-global-apt-cyberthreats",
+    "url": "articles/ai-statecraft-apt-ai-adoption-2026.html"
+  },
+  {
     "slug": "xcpe-videostrong-botnet-2026",
     "title": "XCPE 事件分析：130 萬台電視盒的後門，是原廠在出廠前裝的",
     "date": "2026-11-05",
