@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BOSSAI 事件分析：一個人加 12 個 AI 代理，從花蓮打向 11 國的攻擊網格</title><meta name="description" content="Acronis TRU 披露：一名花蓮操作者以 12 個 AI 代理組成攻擊網格，在 12 天內掃向 11 國數百個組織，臺灣受創最重——消防救護紀錄與 119 派遣資料確認外洩。證據來自行為者外洩的 9GB 操作環境，本篇拆解網格運作、歸因鏈與證據的限制。"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/drafts.css"><link rel="stylesheet" href="../css/articles.css"></head><body class="draft-site"><header class="header"><div class="container nav-container"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><nav aria-label="主要導覽"><ul class="nav-links" id="nav-links"><li><a href="https://www.taibear.app/about.html">關於 TaiBear</a></li><li><a href="https://www.taibear.app/services.html">服務方案</a></li><li><a href="https://www.taibear.app/plans.html">套餐方案</a></li><li><a href="https://www.taibear.app/scenarios.html">適用情境</a></li><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" class="active" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li><li><a href="https://www.taibear.app/faq.html">常見問題</a></li><li><a href="https://www.taibear.app/contact.html">聯絡我們</a></li></ul></nav><div class="nav-actions"><a href="https://www.taibear.app/contact.html" class="btn btn-primary">立即諮詢</a><button type="button" class="menu-toggle" id="menu-toggle" aria-label="開啟導覽選單" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header><main><section class="detail-hero text-center"><div class="container"><div class="hero-tagline">AI 攻擊手法</div><h1 class="section-title">BOSSAI 事件分析：一個人加 12 個 AI 代理，從花蓮打向 11 國的攻擊網格</h1><p class="section-subtitle">Acronis TRU 披露：一名花蓮操作者以 12 個 AI 代理組成攻擊網格，在 12 天內掃向 11 國數百個組織，臺灣受創最重——消防救護紀錄與 119 派遣資料確認外洩。證據來自行為者外洩的 9GB 操作環境，本篇拆解網格運作、歸因鏈與證據的限制。</p></div></section><section class="section-padding draft-content"><div class="container"><article class="article-body"><a class="back-link" href="../articles.html">← 返回事件分析列表</a><div class="article-meta"><span><strong>分析日期：</strong>2026-11-07</span><span><strong>分類：</strong>AI 攻擊手法</span><span><strong>原始來源：</strong><a href="https://www.acronis.com/en/tru/posts/bossai-inside-the-ai-attack-mesh-that-targeted-taiwans-emergency-services/">Acronis TRU</a></span><span class="meta-tags"><strong>標籤：</strong><span class="tag-chip">BOSSAI</span><span class="tag-chip">Acronis</span><span class="tag-chip">AI 代理</span><span class="tag-chip">花蓮</span><span class="tag-chip">緊急服務</span></span></div>
+<h2>一、概述</h2>
+<p>2026 年 11 月 4 日，Acronis 威脅研究單位（TRU）發布調查報告，披露一套名為 BOSSAI 的 AI 代理攻擊網格。報告評估，這套系統由一名位於臺灣花蓮的操作者獨自運作：12 個分工不同的 AI 代理（9 個實際啟用），在 TRU 觀察的 12 天內，對 11 個國家的數百個組織發動掃描與攻擊，涵蓋政府緊急服務、銀行與借貸業者、大學、軍事系統、電話名錄、電商與博弈網站。</p>
+<p>臺灣是受創最重的地區。依報告分級，確認遭入侵或資料外洩的目標約 10 個、分布 3 國，其中包括臺北消防救護紀錄平台（醫療資料確認可被未授權讀取）與某市 119 派遣系統（案件紀錄確認被拉走）；另有約 15 個目標遭實際攻擊但未確認得手，8 個國家僅止於偵察或已排入攻擊佇列。</p>
+<p>這起案件的證據基礎在同類報告中相當罕見：TRU 找到行為者一個配置錯誤、對外開放的操作環境，取得超過 90,000 個檔案、約 9GB 的資料——攻擊編排日誌、AI 代理對話紀錄、操作者指令歷史、攻擊工具、憑證與受害資料都在其中。研究者因此能看到的不只是攻擊結果，還包括這套系統如何組裝、如何運作、在哪裡失敗。</p>
+<p>TRU 為這類行為者提出新分類詞「AI 增強型威脅」（AI-Augmented Threat, AAT）。需要先說明的是：這是 Acronis 自創的分類，不是業界通用術語；報告本身也記錄了大量代理失敗、幻覺與遭商用模型拒絕的案例（詳見技術分析與證據限制）。本篇沿用報告的確認分級（確認得手／實際攻擊未確認／僅偵察）記述受害情形，不把掃描寫成入侵。</p>
+<h2>二、時間線</h2>
+<p>報告未公布完整的活動起訖日期，以下僅列有明確日期或期間依據的節點：</p>
+<ul>
+<li>2026-07-25：操作者在與 Grok 的對話中，要求將一套海康威視（Hikvision）監控攝影機漏洞利用工具移植到 Linux，遭 Grok 拒絕（日期見於外洩語料）。</li>
+<li>觀察期（報告未註明確切日期）：TRU 觀察 BOSSAI 網格運作 12 天，期間網格對 11 國目標進行掃描、攻擊與資料竊取；同期操作者的韓國保養品商店仍掛在同一 home IP 上，報告撰寫時已被操作者下架。</li>
+<li>2026-11-04：Acronis TRU 發布完整調查報告與 IoC 清單。</li>
+<li>2026-11-05：研究團隊成員於 X 公開摘要此案，指出操作者近期另開始使用 Oktos 後滲透框架。</li>
+</ul>
+<h2>三、技術分析</h2>
+<h3>3.1 網格架構：12 個代理，操作者親自接橋</h3>
+<p>BOSSAI 由 12 個 AI 代理組成，分工比照一個小型團隊：</p>
+<ul>
+<li><strong>建置者</strong>（Grok、OpenClaw、Claude Code、Codex）：組裝與維護網格本身——MCP 接線、DNS、代理設定、通訊軟體閘道。</li>
+<li><strong>攻擊者</strong>（Hermes 為主力，另有 Cursor、Trae、CyberStrike）：掃描目標、撰寫並執行利用。Hermes 一個代理就累積約 95 個工作階段，承載大部分攻擊對話。</li>
+<li><strong>掃描層</strong>（HalberdStrike 與一套破解版 Acunetix 網頁漏洞掃描器）：產出結構化漏洞報告，餵入攻擊管線。</li>
+</ul>
+<p>值得注意的是，代理之間<strong>沒有</strong>自動通訊。操作者本人就是橋：親手把一個代理的產出複製貼上到另一個代理。報告記錄了一個完整的三段接力案例：HalberdStrike 掃描一個臺灣緊急服務目標並產出滲透測試報告，操作者把報告貼給 Hermes 彙整成含攻擊路徑的綜合報告，再貼進 Cursor 下達「幫我利用這些漏洞」的指示，由 Cursor 判斷路徑並執行攻擊。</p>
+<p>操作者以繁體中文下達指令，內容經常極短，有時只有一個受害目標的位址，其餘全交給代理自行判斷。兩個代理接了通訊軟體：WeChat 閘道連到主要攻擊代理 Hermes（使用較少）；OpenClaw（操作者暱稱「小爪」）連到 LINE，處理基礎設施工作，其約 17 個工作階段中，初始設定之後的每一場都透過 LINE 進行——等於操作者用手機就能調度這套系統。</p>
+<h3>3.2 模型分工：商用模型全面拒絕攻擊</h3>
+<p>網格的模型選型呈現清楚的雙軌：</p>
+<ul>
+<li><strong>攻擊核心跑本地「去對齊」模型</strong>：DeepSeek、GLM、Qwen 的去安全對齊（abliterated）版本，由 llama.cpp 在 RTX 4090 主機與位於廣州的 GPU 叢集（192GB 顯存，經隧道連回主節點）上運行。</li>
+<li><strong>基礎設施工作用商用雲端模型</strong>（如 Grok 4.5、MiniMax M3）：寫程式與系統整合能力較強，且這類工作本身不易觸發安全拒絕。</li>
+</ul>
+<p>報告以專節記錄商用模型拒絕參與攻擊的實況：多個模型反覆要求操作者證明行為合法，證明不了就拒絕；有中國商用開源模型同樣拒絕並反過來講解網路犯罪法律。操作者多次嘗試 jailbreak，包括一份以簡體中文寫成、要求模型進入「開發者模式」無條件服從的文本，但從語料看不出曾經成功；操作者是否試過偽造授權文件，報告亦註明無從得知（模型若拿到假文件會如何反應，並不清楚）。連 Claude Code 與 Codex 也被操作者以攔截層轉接到同一顆去對齊模型上運行（主要仍做基礎設施工作）。</p>
+<p>換句話說，這套網格能運作，前提是操作者找得到不受安全對齊約束的本地模型；而報告同時指出，這些模型能力較弱、資源受限，產出大量錯誤，反過來拖累了操作者。</p>
+<h3>3.3 MCP 工具棧與基礎設施</h3>
+<p>代理透過 MCP（Model Context Protocol）伺服器接上攻擊工具：高峰期共掛載 13 個，涵蓋 GitHub 安全工具、CVE 查詢、OSINT、雲端稽核、Ghidra 與 Radare2 二進位分析、Playwright 瀏覽器自動化，以及包成 MCP 的 Kali Linux（nmap、sqlmap、Metasploit、Hydra 等）。調查後期精簡為 3 個：HexStrike AI、Kali MCP 與 Ghidra 橋接。</p>
+<p>基礎設施為 9 個節點的 VPS 機隊。主節點 vps12 是全功能攻擊平台，在單一主機上同時跑 OpenClaw 控制端、Kali MCP、HexStrike AI 與 Oktos 後滲透框架，第 3000 埠掛著操作者自有品牌「Jy技術團隊」的頁面。其他節點分工包括 VPN 層、研發實驗室（監控系統、對外暴露的 MySQL、IoT 殭屍網路酬載投遞）、郵件系統（研判用於釣魚），以及 vps5 上的一套海康威視攝影機全流程漏洞利用工具（未授權存取、遠端執行、webshell 部署、設定檔洩漏）。攻擊流量出口經操作者自管的 SOCKS5 池與 BrightData 機房代理分流。</p>
+<p>此處值得防守方留意：上述工具——MCP 滲透框架、Kali、HexStrike AI——本身都是公開的雙用途工具，也正是合法資安檢測在用的同一批。這起案件示範的是工具被接到去對齊模型與自動化管線之後，單一操作者能放大到什麼規模。</p>
+<h3>3.4 臺灣受害情形（依報告確認分級）</h3>
+<p><strong>確認得手或確認外洩：</strong></p>
+<ul>
+<li>臺北消防局的救護病患照護紀錄平台（ePCR）被發現對外暴露醫療資料，年代回溯至 2018 年：心電圖讀數、救護影像、病患生命徵象，全部無需任何憑證即可讀取。</li>
+<li>某市 119 緊急派遣系統遭代理存取，案件紀錄被拉走：案件時間、回應類型、狀態欄位與涵蓋臺北七個行政區的街道級地點。報告特別註明，這是派遣案件紀錄，不是移動中救護車的即時 GPS，但仍屬緊急應變資料的確認外洩。</li>
+<li>一家臺灣借貸服務公司遭 SQL 注入攻擊（MSSQL 2017 後端），16 個注入點經確認，帳戶資訊資料表的資料被抽出。</li>
+<li>一家行動支付業者的綁卡流程被證明可繞過驗證：送出錯誤的 CVV 仍可完成綁卡，代理端到端實際演示成功。</li>
+<li>一家消防派遣技術供應商的資料庫管理面板被以預設 root 憑證登入，18 張以上的資料表曝露；對同一供應商以已知 CVE 植入 webshell 的嘗試則失敗。</li>
+</ul>
+<p><strong>實際攻擊、未確認得手：</strong></p>
+<ul>
+<li>一套緊急管理資訊系統被多個代理以多路徑攻擊：代理找出一個真實的密碼學缺陷（前端 JavaScript 內硬編碼 AES-256 金鑰，可解出包含管理者身分的 session cookie 內容）與一條部分可用的 SSRF 路徑；完整系統入侵從未確認。</li>
+<li>國家災害應變中心被操作者的自動化平台掃描，平台回報了一個「重大 Apache 遠端執行漏洞」——<strong>該漏洞是捏造的</strong>：該埠實際處於過濾狀態，Apache 版本從未確認，平台自我複查後把全部發現降級為誤報或誤分類。本所列入此例，是因為它示範了 AI 代理產出「格式完整、自信滿滿、內容不存在」的漏洞報告時，防守與調查方必須如何看待這類產出。</li>
+<li>國家消防機關的單一登入入口遭暴力破解，未確認取得存取；一套自製偵察工具指紋辨識了五個臺灣城市的消防系統，未確認入侵。</li>
+<li>其他金融目標（汽車金融、消費金融的身分格式暴力破解、租賃集團約 50 個子網域枚舉掃描）均未確認得手。</li>
+</ul>
+<h3>3.5 其他國家情形（摘要）</h3>
+<ul>
+<li><strong>泰國</strong>（大學為主）：以基礎設施搜尋引擎找出 45 所機構、489 個潛在目標，自動 SQL 注入測試後，3 所大學確認注入成功並抽出資料（其一為 Oracle 資料庫 2,563 列管理員表並嘗試外洩學生資料，其一資料表被完整抽出，其一學生資訊被抽出）；另 2 所有確認注入點但未確認抽資。泰國政府機關僅止於偵察。</li>
+<li><strong>墨西哥</strong>（大規模個資蒐集）：代理被指派建立 3 座城市、12 個富裕社區的電話名錄，從政府統計、郵遞區號與電信主管機關資料彙整出去重，最終產出約 206,800 筆含姓名、地址、郵遞區號的住宅電話紀錄；另一波黃頁爬取另得約 124,000 筆。對電商站的暴力破解（目標約 26 萬筆紀錄）與新聞站的憑證填充（2,600 多組組合）均失敗。</li>
+<li><strong>宏都拉斯</strong>：代理在墨西哥偵察中偶然發現一座軍事空軍人事系統，逆向其 Angular 應用並映射內部 API；系統被完整刻畫但<strong>未被利用</strong>——模型在工作中自行認定超出範圍，未請示操作者就停手。</li>
+<li><strong>僅偵察或排入佇列</strong>：美、英、澳、斯里蘭卡、新加坡的大學（基礎設施搜尋）、中國與越南的批次掃描、日本（查詢已備但未執行）；香港金融與私人俱樂部、印尼零售、加拿大華人電商與媒體共 57 個 URL 排入自動攻擊平台佇列，零掃描、零紀錄。</li>
+</ul>
+<p>整體型態很清楚：得手的案例高度集中在「資料本來就弱保護」之處——自 2018 年開著的舊醫療資料介面、公開可及的派遣 API、生產環境裡有 16 個注入點的借貸系統、未修補的 Oracle 大學資料庫。凡是驗證有確實執行、端點有正確過濾、需要有效 session 的地方，代理都打不進去。AI 代理改變的是廣度與速度的經濟學：一個人可以同時對數百個目標出手，但它沒有變出本來不存在的存取權限。</p>
+<h3>3.6 公開 IoC（Acronis 報告文末清單）</h3>
+<ul>
+<li>IP：112.121.185[.]218、156.240.109[.]26、49.158.237[.]136、202.160.76[.]153、202.160.76[.]154、202.160.76[.]155、202.160.76[.]156、202.160.76[.]157、202.160.76[.]174</li>
+<li>網域：vps.xs1.ccwu[.]cc、xss.xs1.ccwu[.]cc、c.xs1.ccwu[.]cc、attacker-collector[.]com、boss.jytian.cc[.]cd、gdp.gasjy.kdns[.]fr、gds.gasjy.kdns[.]fr、888.bossjy.kdns[.]fr、ssh.gputw[.]ai</li>
+</ul>
+<h2>四、歸因與證據限制</h2>
+<p><strong>歸因鏈（TRU 評估為高信心：單一操作者，位於花蓮市）：</strong></p>
+<p>歸因成立靠的是一連串 OPSEC 失敗疊加 OSINT 交叉比對。攻擊基礎設施與操作者的合法生意共用同一個住宅 IP：同一位址上同時掛著攻擊平台、操作者的韓國保養品（INCELLDERM）經銷商店、監視器事業，以及一套叫「行銷快手」的臉書自動發文 SaaS（客群是臺灣的房仲、車商與中小商家）。GitHub 帳號 TIAN0517 使用「Jy技術團隊」標誌作頭像，其公開信箱出現在花蓮縣一家瓦斯熱水器與廚具行的公開網站上；「九九瓦斯行」的品牌標誌出現在同一個 home IP 的第 9999 埠；SSH 金鑰身分 lstjks 同時出現在主節點的 authorized_keys 與 fork 了 ePCR 程式碼的 GitHub 帳號上。操作者與 Grok 的一段對話裡，一場 SSH 工作階段直接曝露了他的 home IP，連回花蓮市的住宅寬頻。語料中還散落大量未輪替的硬編碼憑證與 API 金鑰（Shodan、Cloudflare、MiniMax、NVIDIA 等），以及一張連回騰訊企業註冊的 WeChat 企業 QR 碼。TRU 的結論是：歸因鏈起點是主節點上的開放目錄，終點是一家登記在案、從同一條住宅寬頻經營合法 SaaS 與瓦斯配送平台的實體，不相關基礎設施或身分重疊的可能性已被大幅排除。</p>
+<p><strong>證據限制（引用本案時必須一併注意）：</strong></p>
+<ol>
+<li><strong>單一來源</strong>：全部證據來自 Acronis 取得的那包 9GB 語料。基於受害資料性質，語料本身不可能公開，外部無法重跑整條證據鏈；可獨立查核的是公開錨點（IoC、基礎設施現況、GitHub 與商店頁面）。截至本篇撰寫（2026-11-05），尚未見受害單位、臺灣官方或其他廠商公開佐證。</li>
+<li><strong>語料內部也有不可驗證的部分</strong>：報告自承 CyberStrike 平台的產出無法從語料獨立驗證；加上代理幻覺有前例（3.4 的捏造漏洞），報告中每一條「發現」都應對照其確認分級引用。</li>
+<li><strong>觀察窗口有限</strong>：TRU 觀察 12 天，佇列中尚有未執行的目標與未完成的攻擊，本篇數字是該窗口的快照，不是全貌。</li>
+<li><strong>動機與歸屬未定</strong>：報告明言操作者的歸屬與目標不明，僅推測以牟利為目的。本案證據不支持國家級 APT 的定性：同一基礎設施上並行的是操作者的合法生意與廣泛的機會型掃描，更接近單人犯罪型操作。</li>
+<li><strong>「單一操作者」是評估、不是司法紀錄</strong>：證據鏈強度足以支撐高信心評估，但截至撰寫時無逮捕、起訴或官方指認公開。</li>
+<li><strong>AI 框架的修辭要打折</strong>：如 3.2 所述，商用模型全面拒絕攻擊、代理之間靠人工接橋、3 個代理從未啟用、錯誤與幻覺頻繁。素材支撐的是「AI 輔助讓單人操作的廣度變便宜」，不支撐「AI 已能自主作戰」。</li>
+</ol>
+<h2>五、防守建議</h2>
+<p>這起案件得手的路徑幾乎全是基本功缺口，防守建議也因此很具體：</p>
+<ol>
+<li><strong>盤點對外暴露的資料介面</strong>：ePCR 醫療資料自 2018 年起無需憑證可讀、119 案件紀錄可由公開 API 拉走——定期盤點對外服務與 API，確認每一支都有驗證與授權檢查；年代久遠的「暫時」介面最危險。</li>
+<li><strong>消滅預設密碼</strong>：消防派遣技術供應商的資料庫面板倒在預設 root 憑證上。所有預設帳密強制變更、啟用多因素驗證，納入委外契約的驗收項目。</li>
+<li><strong>修好注入類基本功</strong>：本案確認得手的路徑以 SQL 注入為大宗（借貸系統 16 個注入點、泰國大學的 Oracle）。參數化查詢、輸入驗證、WAF 與定期弱點掃描仍是性價比最高的投資。</li>
+<li><strong>金鑰與機密不進前端</strong>：緊急管理系統的前端 JavaScript 硬編碼 AES 金鑰，讓 session 內容形同明文。前端出現的任何金鑰都應視為已公開。</li>
+<li><strong>為「廣度掃描」建立偵測</strong>：代理式攻擊的特徵是短時間、多目標、低深度——大量枚舉、指紋辨識、自動化注入測試。監控異常掃描密度與失敗嘗試模式，比盯單一高深度入侵更早能發現這類活動。</li>
+<li><strong>不要用「我們太小沒人打」當策略</strong>：當一個人加一套代理就能同時掃數百個組織，「沒被注意到」不再是防禦。緊急服務、地方機構與中小企業恰是本案的主要受害群。</li>
+<li><strong>把供應商納入同一標準</strong>：派遣系統、委外平台與技術供應商在本案中既是受害者也是跳板，其預設密碼與資料庫曝露直接連動到政府服務本身。</li>
+<li><strong>憑證衛生（行為者的教訓同樣適用防守方）</strong>：硬編碼、跨系統重用、不輪替的 API 金鑰與帳密，是這次歸因成立的主因之一——稽核自家環境中的同類問題。</li>
+</ol>
+<h2>六、原始來源</h2>
+<ul>
+<li>Acronis TRU（2026-11-04）：BOSSAI: Inside the AI attack mesh that targeted Taiwan's emergency services — <a href="https://www.acronis.com/en/tru/posts/bossai-inside-the-ai-attack-mesh-that-targeted-taiwans-emergency-services/">https://www.acronis.com/en/tru/posts/bossai-inside-the-ai-attack-mesh-that-targeted-taiwans-emergency-services/</a>（本篇主要來源；IoC 清單見該文文末）</li>
+<li>研究團隊成員 @ElementalX2 於 X 的發布串（2026-11-05）：<a href="https://x.com/elementalx2/status/2118037296482308223">https://x.com/elementalx2/status/2118037296482308223</a>（Oktos 後滲透框架與模型拒絕行為的補充出處）</li>
+</ul>
+<a class="back-link" href="../articles.html">← 返回事件分析列表</a></article></div></section></main><footer class="footer"><div class="container footer-grid"><div class="footer-col"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><p class="footer-desc">TaiBear Security Studio 專注於將資安教育融入日常，建立好用、有效、符合合規要求的培訓方案。</p></div><div class="footer-col"><h4>導覽頁面</h4><ul><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li></ul></div><div class="footer-col"><h4>演練詳情</h4><ul><li><a href="https://www.taibear.app/service-phishing.html">社交工程演練</a></li></ul></div><div class="footer-col"><h4>聯絡資訊</h4><p>Email: <a href="mailto:info@taibear.app">info@taibear.app</a></p></div></div><div class="container footer-bottom"><p>&copy; 2026 臺熊資安工坊 TaiBear Security Studio. All rights reserved.</p><p>專業資安顧問團隊 ‧ 用一杯咖啡防禦企業邊界</p></div></footer><script src="../js/main.js"></script></body></html>

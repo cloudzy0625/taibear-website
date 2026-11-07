@@ -1,5 +1,22 @@
 [
   {
+    "slug": "bossai-ai-attack-mesh-2026",
+    "title": "BOSSAI 事件分析：一個人加 12 個 AI 代理，從花蓮打向 11 國的攻擊網格",
+    "date": "2026-11-07",
+    "category": "AI 攻擊手法",
+    "tags": [
+      "BOSSAI",
+      "Acronis",
+      "AI 代理",
+      "花蓮",
+      "緊急服務"
+    ],
+    "summary": "Acronis TRU 披露：一名花蓮操作者以 12 個 AI 代理組成攻擊網格，在 12 天內掃向 11 國數百個組織，臺灣受創最重——消防救護紀錄與 119 派遣資料確認外洩。證據來自行為者外洩的 9GB 操作環境，本篇拆解網格運作、歸因鏈與證據的限制。",
+    "source_name": "Acronis TRU",
+    "source_url": "https://www.acronis.com/en/tru/posts/bossai-inside-the-ai-attack-mesh-that-targeted-taiwans-emergency-services/",
+    "url": "articles/bossai-ai-attack-mesh-2026.html"
+  },
+  {
     "slug": "ai-statecraft-apt-ai-adoption-2026",
     "title": "國家級駭客的 AI 是從哪裡來的？TrendAI 四國路徑與 2026 年的 AI 攻擊現實",
     "date": "2026-11-06",
