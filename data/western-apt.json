@@ -1129,5 +1129,32 @@
     "aliases_text": "Gelsemium（**ESET 命名**，源自啟明星辰報告中「狼毒草」一名的譯法；其惡意程式三元件 Gelsemine／Gelsenicine／Gelsevirine 亦由此命名）。本次查證未見其他大廠為它另立廣泛使用的別名。",
     "taiwan_record": "**有，但證據強度分兩級**。① 2021 年白皮書：「Previous reports mention organizations located in **Taiwan**」——是「先前報告提過臺灣組織」，不是 ESET 在該波次親自確認的受害者。② 2024 年 WolfsBane 文：樣本封存檔是從臺灣、菲律賓、新加坡上傳到 VirusTotal——上傳地點不等於確認受害地點，只能寫「樣本來源涉及臺灣」，不能寫成「證實入侵臺灣某單位」。",
     "registry": "**已併入名錄**（2026-11-02 使用者決定：併入主名錄關係圖譜節點，歸因地區「中國」、紀錄層級「完整條目（西方機構披露）」；本專區卡片保留為西方披露彙整導讀）。"
+  },
+  {
+    "name": "Storm-2603",
+    "aliases": [
+      {
+        "name": "Storm-2603",
+        "by": "Microsoft"
+      }
+    ],
+    "attribution": "Microsoft 以中等信心評估其為 China-based threat actor，明言未發現其與其他已知中國行為者的連結，且目前無法有信心評估其目的；Kaspersky 以中等信心將一起 ToolShell 入侵個案歸於 Storm-2603。Storm- 為 Microsoft 臨時編號，歸因尚未定版，不得升級表述。",
+    "targets": "使用地端 Microsoft SharePoint Server 的組織；利用 ToolShell 漏洞入侵、竊取 ASP.NET MachineKey，終局部署 Warlock 與 LockBit 勒索軟體。",
+    "taiwan": "臺灣：本次來源未確認",
+    "intro": "鑽 SharePoint 漏洞進門、最後丟勒索軟體收尾的行為者——跟同漏洞的間諜型組織不同路，連微軟都說看不清它的目的。",
+    "sources": [
+      {
+        "publisher": "Microsoft Threat Intelligence",
+        "title": "Disrupting active exploitation of on-premises SharePoint vulnerabilities",
+        "date": "2025-07-22",
+        "url": "https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/"
+      },
+      {
+        "publisher": "Kaspersky（Securelist）",
+        "title": "How to detect fileless attacks exploiting ToolShell: analyzing the Storm-2603 incident",
+        "date": "2026-11-05",
+        "url": "https://securelist.com/storm-2603-fileless-toolshell-attack/121467/"
+      }
+    ]
   }
 ]
