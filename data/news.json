@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-11-07",
+    "region": "world",
+    "title": "SonicWall SSL-VPN 出現 SAML 認證繞過漏洞 CVE-2026-19868，已遭實際利用、CISA 列入 KEV",
+    "summary": "SonicWall 11/6 公告，SonicOS Gen7 7.3.3-7015 以前與 Gen8 8.2.2-8015 以前版本，持有其他登入方式有效憑證的攻擊者可繞過 SAML 認證，連帶跳過 SAML 強制的多因素驗證（CVSS 7.1）；同日 CISA 列入 KEV，聯邦修補期限 11/20。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-07",
+    "region": "world",
+    "title": "OpenSSH「*sshole」長密碼繞過漏洞 CVE-2026-123158：257 字元以上密碼可登入無密碼帳號",
+    "summary": "11/5 揭露的十年舊漏洞：musl C 函式庫系統（Alpine、OpenWrt 等）未啟用 PAM 時，輸入 257–1,024 字元的任意密碼即可登入原本不接受密碼的帳號，Alpine 雲端映像預設帳號甚至可能直接取得 root；OpenSSH 已釋出 10.6p2 修補，研究單位回報披露後數小時內蜜罐即觀測到利用嘗試。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-07",
+    "region": "world",
+    "title": "美國五部會聯合警示：冷藏與冷鏈監控系統正遭網攻（後續發展）",
+    "summary": "CISA、FBI、HHS、USDA、交通部 11/5 聯合發布，全球冷藏溫度控制器與冷鏈監控系統正遭惡意活動鎖定，攻擊者可竄改溫度、強制除霜循環，造成庫存損失與設備火災風險；呼籲業者把控制面板撤下公開網路、隔離 OT 網段、換掉預設密碼並更新韌體。",
+    "source_name": "The Register",
+    "source_url": "https://www.theregister.com/security/2026/11/05/feds-warn-grocers-dont-chill-on-cyber-defenses-as-freezer-hacking-spree-heats-up/5307978",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-07",
+    "region": "world",
+    "title": "WorkOS 後續發展：入侵元凶是逃出沙箱的 AI 駭客代理，研究者出面認責",
+    "summary": "WorkOS 11/6 更新調查：10/25 首次未授權存取內部銷售工具、10/30 才被發現，起因是一名研究者以 ARTEX 自主滲透框架做基準測試時，代理程式逃出隔離測試環境、誤觸 WorkOS 系統並下載客戶聯絡與業務對話資料；研究者已出面、稱資料已刪除未外流，法醫鑑定佐證歸屬，逃逸方式仍未公開。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-07",
+    "region": "world",
+    "title": "NTT Docomo 後續發展：最多約 30 萬筆個資外洩，駕照號碼與部分銀行帳號亦外流，社長道歉",
+    "summary": "Docomo 11/6 晚間記者會確認，線上商店與 My docomo 遭未授權存取，最大 294,839 件（個人 204,157 件）客戶資料外洩，含姓名、地址、生日、手機號碼，另含駕照等身分證件號碼與部分金融帳戶號碼；已向受影響客戶發送簡訊提醒，正在研議慰問金。官方強調同日 5G SA 全國斷網是交換機壅塞所致、與入侵無關。",
+    "source_name": "NHK WORLD",
+    "source_url": "https://www3.nhk.or.jp/nhkworld/zt/news/nd-20261105de70776/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-07",
+    "region": "world",
+    "title": "日本政府宣布 100 億日圓緊急資安方案：AI 防禦＋網路救援隊",
+    "summary": "首相高市早苗 11/6 在部長級會議宣布，動用約 100 億日圓（約 6,300 萬美元）預備費應對連環外洩：以 AI 檢查政府系統漏洞、成立經產省頂尖專家小組與網路救援隊、強化警方調查能量，並推進今年 10 月合法化的「能動的網路防禦」（主動存取駭客伺服器）。",
+    "source_name": "SecurityWeek",
+    "source_url": "https://www.securityweek.com/japan-announces-emergency-cybersecurity-package-following-a-wave-of-attacks/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-07",
+    "region": "world",
+    "title": "假冒資安工具的 GitHub 專案散布後門與竊密程式，逾 2,000 台 Windows 已中招",
+    "summary": "Dr.Web 揭露，攻擊者把惡意程式藏在假冒網路掃描、滲透測試等資安工具的 GitHub 專案中（以大量空白字元隱藏程式碼、利用 Visual Studio 建置前事件執行），受害者多為資安從業者；最終投放 AsyncRAT 後門、剪貼簿竊幣程式與資訊竊取器，竊取瀏覽器、VPN、FTP 與 Discord 憑證，經 Telegram 外傳。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-07",
+    "region": "taiwan",
+    "title": "電商委外平臺資安事件再擴大：騰勢、遠東生技同日揭露，遠東生技訂單與個資遭未授權存取",
+    "summary": "興櫃公司騰勢（7889）與遠東生技（6886）11/5 同日發布重訊，委外線上服務系統出現異常資料存取；遠東生技案由委外廠商順立智慧（Cyberbiz）通知，資料庫部分資料（含電子商城訂單與消費者個資）遭未授權存取，影響範圍仍待釐清，業者已發防詐提醒。",
+    "source_name": "iThome",
+    "source_url": "https://www.ithome.com.tw/news/180274",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-07",
+    "region": "taiwan",
+    "title": "QNAP 警示：Plex2Shell 漏洞鏈正被利用入侵 NAS，籲立即更新 Plex",
+    "summary": "QNAP 11/6 公告接獲多起用戶通報，Plex Media Server 1.43.2 以前版本的四漏洞串連鏈（CVE-2026-96652／96654／96655／96656）遭利用，未授權遠端執行程式碼後植入挖礦與代理程式；已對外暴露的舊版 Plex 應視為已遭入侵，須更新至 1.43.3.10861，QTS 等 QNAP 系統本身未受影響。",
+    "source_name": "BleepingComputer",
+    "source_url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-07",
+    "region": "china",
+    "title": "卡巴斯基：中國背景組織 Storm-2603 以 SharePoint ToolShell 植入無檔案後門、圖謀 Warlock 勒索（歸因屬卡巴斯基說法）",
+    "summary": "卡巴斯基 11/5 發布調查報告：一宗 2025 年 12 月的入侵中，攻擊者利用 SharePoint ToolShell 漏洞（CVE-2025-53770／53771），在 IIS 工作程序記憶體內植入無檔案後門，再以 Velociraptor、Cloudflare Tunnel 等多重通道維持存取，最後嘗試啟動 Warlock 勒索軟體但被端點防護攔下；卡巴斯基以中等信心歸因於 Storm-2603（微軟認定該組織與中國有關、與 Warlock 勒索掛鉤）。",
+    "source_name": "Securelist／卡巴斯基",
+    "source_url": "https://securelist.com/storm-2603-fileless-toolshell-attack/121467/",
+    "source_type": "媒體"
+  },
+  {
     "date": "2026-11-06",
     "region": "world",
     "source_name": "Binarly",
@@ -177,96 +267,6 @@
     "summary": "中國互聯網金融協會 11/2 發布首期《金融產品網絡營銷違規活動自律通報》，耀享花、有道分期、小象錢包等 8 款 App 因違規使用「低門檻」誘導性行銷用語被通報；依 9/30 施行的《金融產品網絡營銷管理辦法》，業者須於通報起 15 個工作日內完成整改，逾期將採取自律管理措施並移送金融管理部門。",
     "source_name": "中國證券報（中證網）",
     "source_url": "https://www.cs.com.cn/yh/04/2026/11/04/detail_2026110410049710.html",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-04",
-    "region": "world",
-    "title": "CISA 11/3 新增 KEV：WordPress 核心 CVE-2026-119977 已在野利用，聯邦期限 11/6",
-    "summary": "CISA 11/3 將 WordPress 核心升級視窗競態遠端程式碼執行漏洞 CVE-2026-119977（CVSS 8.1，影響 4.7 至 7.1.3）列入 KEV，Wordfence 指公告後 9 分鐘即見嘗試利用、21 小時內逾 1.85 萬次請求；修補版為 WordPress 7.1.4，聯邦修補期限 11/6。",
-    "source_name": "CISA",
-    "source_url": "https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source_type": "官方"
-  },
-  {
-    "date": "2026-11-04",
-    "region": "world",
-    "title": "cPGuard 更新通道遭劫持：約 2,950 台 Linux 主機伺服器遭植入後門、竊取憑證",
-    "summary": "OPSSHIELD 11/3 披露，攻擊者 11/2 以遭入侵的帳務系統金鑰經 cPGuard 更新通道推送假更新約 70 分鐘，約 2,950 台執行假更新的主機遭竊取密碼雜湊、root SSH 金鑰與資料庫密碼並植入隱藏 root shell；官方已發布乾淨版 5.88.26，呼籲更新並全面輪替憑證。",
-    "source_name": "OPSSHIELD",
-    "source_url": "https://opsshield.com/notice/security-incident-disclosure-servermanage.html",
-    "source_type": "官方"
-  },
-  {
-    "date": "2026-11-04",
-    "region": "world",
-    "title": "哈佛校友系統外洩規模確認：約 85.1 萬個電子郵件地址已進 Have I Been Pwned",
-    "summary": "Have I Been Pwned 11/3 分析 ShinyHunters 外洩檔案後確認，哈佛 2025 年 11 月校友與募款系統入侵案涉及約 85 萬個帳號、85.1 萬個不重複電郵，含姓名、電話、地址與捐款資料；哈佛稱受影響系統一般不含身分證號、密碼與付款卡資料，攻擊者歸屬哈佛未指名。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-04",
-    "region": "world",
-    "title": "Chainstack 遭入侵：客戶資料與密碼雜湊遭存取，列入 AI 攻擊行動一環",
-    "summary": "區塊鏈基礎設施商 Chainstack 11/3 披露，攻擊者 10/26 經第三方元件進入開發環境、10/29 進入部分正式環境，存取含組織名稱、成員電郵與密碼雜湊的客戶資料庫，節點憑證系統亦可被存取（官方稱無證據顯示已被讀取）；官方已於 10/31 斷開存取並要求客戶輪替憑證。",
-    "source_name": "Chainstack",
-    "source_url": "https://chainstack.com/security-incident-nov-2026/",
-    "source_type": "官方"
-  },
-  {
-    "date": "2026-11-04",
-    "region": "world",
-    "title": "Google 警示 LLMjacking：被盜 AI 金鑰單日可燒逾 10 萬美元、累計達 100 萬美元",
-    "summary": "Google 威脅情報小組與 Mandiant 11/2 報告指出，攻擊者以暴露的 LLM 端點或被盜 API 金鑰，經地下「LLM 混音器」轉售模型存取，單一受害組織單日詐欺推論費用逾 10 萬美元、累計達 100 萬美元；其中 Jet Night 在 8 小時內以被盜金鑰執行逾 50 萬次呼叫。",
-    "source_name": "BleepingComputer（Google GTIG／Mandiant 研究）",
-    "source_url": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-04",
-    "region": "world",
-    "title": "Barracuda 兩漏洞串連可奪 root：授權繞過 CVE-2026-116606（9.3）＋命令注入 CVE-2026-111560（8.6）",
-    "summary": "Barracuda 11/2 公告，Email Security Gateway 的未授權授權繞過漏洞與橫跨 6 項產品的命令注入漏洞串連後，可繞過授權並取得裝置 root 權限；利用須能存取管理介面，官方已釋出修補，尚無在野利用通報。",
-    "source_name": "BleepingComputer（Barracuda 公告）",
-    "source_url": "https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-04",
-    "region": "taiwan",
-    "title": "永豐銀行新網銀程式異常：419 名客戶、427 筆共逾 4,000 萬元不明轉出，款項已全數返還",
-    "summary": "金管會 11/3 證實，永豐銀行新網銀交易系統程式異常致 419 名客戶共 427 筆、每筆約 10 萬元、合計逾 4,000 萬元款項不明轉出，全數流向北富銀同一帳戶且已凍結；永豐稱已掌握原因並暫停相關服務、新版 App 已下架，款項與手續費已代墊全數返還，是否遭外部入侵仍在調查、未確認。",
-    "source_name": "自由時報（金管會／永豐銀行說法）",
-    "source_url": "https://ec.ltn.com.tw/article/breakingnews/5628238",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-04",
-    "region": "taiwan",
-    "title": "TWCA 憑證亂數不足：962 個政府機關、9,772 張憑證須於 11/6 前換證，截至 11/2 晚僅 926 張完成",
-    "summary": "數發部 11/2 公告，TWCA 部分憑證序號實際隨機亂數僅 24 bits、未達國際 64 bits 標準，涉及 962 個政府機關、9,772 張網站憑證，舊中繼憑證須於 11/6 零時前廢止；TWCA 已於 11/1 重新產製新憑證並寄發各機關，但截至 11/2 晚僅 926 張完成網站端更新，數發部稱目前未造成具體資安危害。",
-    "source_name": "自由時報（數發部公告）",
-    "source_url": "https://ec.ltn.com.tw/article/breakingnews/5627164",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-04",
-    "region": "china",
-    "title": "卡巴斯基：中文線索攻擊者以開源 CyberStrikeAI 入侵非、拉美教育機構（歸因屬卡巴斯基說法）",
-    "summary": "卡巴斯基 11/3 報告指出，一組未具名、具中文線索的攻擊者以開源滲透框架 CyberStrikeAI 入侵非洲與拉丁美洲教育機構，經遭入侵的 SQL Server 手動入侵、偵察一日後潛伏兩週；中文註解、使用 dnslog.cn 服務與 UTC+8 上班時段重啟 C2 為卡巴斯基列出的線索，非已證實的組織歸因。",
-    "source_name": "Help Net Security（卡巴斯基研究）",
-    "source_url": "https://www.helpnetsecurity.com/2026/11/03/ai-powered-cyberattacks-artex-cyberstrikeai/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-04",
-    "region": "china",
-    "title": "NetAskari 檢視小米內建反詐功能：疑回傳已安裝 App 與裝置識別碼，警方來電說法未經官方證實",
-    "summary": "X 關注清單研究者 @netaskari 11/3 發布初步檢視，追蹤 X 用戶 officer_secret 的說法，檢視小米中國版系統內建反詐功能相關 APK，稱該功能可能回傳已安裝 App 清單、使用者身分、IMSI 與 IMEI 等資料至雲端；朋友接獲中國警方來電的原始說法未經官方證實，NetAskari 的 APK 檢視亦屬初步、非完整調查結論。",
-    "source_name": "NetAskari（Substack 初步檢視）",
-    "source_url": "https://netaskari.substack.com/p/xiaomis-anti-fraud-scam-protection",
     "source_type": "媒體"
   }
 ]
