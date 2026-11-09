@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-11-10",
+    "region": "taiwan",
+    "title": "91APP 外洩訂單資料遭暗網兜售：寶雅等品牌 240 萬筆、開價 999 美元",
+    "summary": "韓國資安公司 S2W 監測到，暗網論壇 Cabyc 出現兜售聲稱來自 91APP 的客戶訂單資料，主打寶雅等品牌，約 240 萬筆（去重後分 24 卷），欄位含訂單編號、姓名、電話、配送地址與購買明細，開價 999 美元。賣家聲稱資料含付款資訊，與 91APP 官方「資料庫不含信用卡號與付款資料」的調查說法不符，兜售內容未經證實；91APP 事件本身最大可能影響 1,329 個品牌、近 480 萬名消費者。",
+    "source_name": "S2W Daily Threat（X）",
+    "source_url": "https://x.com/S2W_DailyThreat/status/2119701550067339638",
+    "source_type": "社群（X）"
+  },
+  {
     "date": "2026-11-09",
     "region": "world",
     "title": "Rails 修補 9.8 分重大漏洞：Active Storage 未經驗證可寫入任意檔案",
@@ -259,14 +268,5 @@
     "source_name": "Securelist／卡巴斯基",
     "source_url": "https://securelist.com/storm-2603-fileless-toolshell-attack/121467/",
     "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-06",
-    "region": "world",
-    "source_name": "Binarly",
-    "source_type": "媒體",
-    "source_url": "https://www.binarly.io/blog/zyxel-gs1900-rce-cve-2026-107441",
-    "summary": "Binarly 11/5 公布，在調查中國駭客 Red Heron 與 Kapibala 的攻擊基礎設施時，發現針對 GS1900 網頁管理介面的漏洞利用工具；修補 CVE-2026-7273 時只加了參數數量檢查、且檢查排在複製之後，攻擊者仍可越界寫入取得 root 權限並竊取設定檔與 root 密碼雜湊。臺灣為重災區之一，564 台仍用出廠預設帳密，須升至 2.90 Patch 3 韌體並改掉預設密碼。",
-    "title": "Zyxel GS1900 後續發展：Binarly 揭露中國駭客利用新零時差 CVE-2026-107441 竊取敏感資料，舊修補擋不住（歸因屬 Binarly 說法）"
   }
 ]
