@@ -1,5 +1,23 @@
 [
   {
+    "slug": "cpguard-update-hijack-2026",
+    "title": "cPGuard 事件分析：保護伺服器的資安工具，更新通道被劫持 70 分鐘",
+    "date": "2026-11-09",
+    "category": "供應鏈安全",
+    "tags": [
+      "cPGuard",
+      "供應鏈攻擊",
+      "更新通道",
+      "Linux 伺服器",
+      "憑證外洩",
+      "OPSSHIELD"
+    ],
+    "summary": "攻擊者入侵 OPSSHIELD 帳務與授權伺服器並竊取更新金鑰，經 cPGuard 官方更新通道推送假更新約 70 分鐘，約 2,950 台客戶伺服器被以 root 權限讀走機密並留下隱藏的 root shell。",
+    "source_name": "OPSSHIELD",
+    "source_url": "https://opsshield.com/notice/security-incident-disclosure-servermanage.html",
+    "url": "articles/cpguard-update-hijack-2026.html"
+  },
+  {
     "slug": "bossai-ai-attack-mesh-2026",
     "title": "BOSSAI 事件分析：一個人加 12 個 AI 代理，從花蓮打向 11 國的攻擊網格",
     "date": "2026-11-07",
