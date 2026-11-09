@@ -1,5 +1,86 @@
 [
   {
+    "date": "2026-11-09",
+    "region": "world",
+    "title": "Rails 修補 9.8 分重大漏洞：Active Storage 未經驗證可寫入任意檔案",
+    "summary": "Rails 11/4 發布 8.0.5.2 及 8.1.4.1 安全更新，修補 21 項問題，其中 Active Storage 漏洞 CVSS 9.8：使用 ImageMagick 處理上傳圖片且符合特定設定的網站，未經驗證攻擊者可寫入任意檔案，搭配 Disk 服務還可能讀取任意檔案；watchTowr 已在實驗環境重現，官方尚未說明是否遭實際利用。",
+    "source_name": "iThome",
+    "source_url": "https://www.ithome.com.tw/news/180273",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-09",
+    "region": "world",
+    "title": "微軟：Storm-3358 以 ARTEX 自主攻擊框架鎖定金融業",
+    "summary": "微軟 11/6 指出，柬埔寨籍牟利組織 Storm-3358 自 10 月起以 ARTEX 自主 AI 攻擊框架鎖定東南亞金融機構，掃描對外系統、利用匿名檔案上傳與 SSRF 漏洞，植入 WISP、vshell、AdaptixC2 遠端木馬；ARTEX 濫用已從國家級間諜擴及牟利犯罪。",
+    "source_name": "Microsoft Security Blog",
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
+    "source_type": "官方"
+  },
+  {
+    "date": "2026-11-09",
+    "region": "world",
+    "title": "Gnosis Pay 客戶資料外洩：卡號、住址與關聯錢包一併外流",
+    "summary": "Gnosis Pay 11/6 披露，11/3 偵測到舊版自有品牌卡片系統遭未授權存取、客戶資料外洩；依受害用戶公開的通知，外洩內容含姓名、完整住址、卡號與關聯的全部錢包地址，Cointelegraph 另稱部分通知含有效期與 CVV；資金未受影響，受影響卡片預定 12/20 停用。",
+    "source_name": "CoinDesk",
+    "source_url": "https://www.coindesk.com/business/2026/11/07/gnosis-pay-breach-exposes-card-numbers-home-addresses-and-linked-crypto-wallets",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-09",
+    "region": "world",
+    "title": "SM Entertainment 遭駭：員工身分證號與銀行帳號外洩，子公司同受波及",
+    "summary": "SM Entertainment 11/8 公告，11/4 左右外部攻擊者未授權存取業務系統並外洩部分文件，含員工手機、地址、銀行帳號、住民登錄番號（身分證號）與合約資料；子公司 DearU、Dream Maker 同受波及，粉絲資料未外洩，已通報 KISA 與個資保護委員會。",
+    "source_name": "Chosun Biz",
+    "source_url": "https://biz.chosun.com/en/en-society/2026/11/08/XF4UESERQBB7TP5DZTIUTKGW5Y/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-09",
+    "region": "world",
+    "title": "OpenAI GPT-6 Cyber：找出 Firefox 81 個未知高風險漏洞、Linux 核心 948 個可實際提權漏洞",
+    "summary": "OpenAI 11/5 發表資安專用模型 GPT-6 Cyber，在 Firefox 找出 81 個先前未知的高風險漏洞，並對 Linux 核心 2,308 個疑似漏洞中的 948 個開發出可實際運作的提權攻擊程式；模型資安能力風險等級列為 Critical，初期僅提供給核准的 Daybreak Red 客戶。",
+    "source_name": "iThome",
+    "source_url": "https://www.ithome.com.tw/news/180285",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-09",
+    "region": "world",
+    "title": "菲律賓海外就業系統約 69GiB 資料庫備份疑遭竊，政府展開調查",
+    "summary": "Hunt.io 發現菲律賓海外就業系統資料庫備份疑遭竊：攻擊者暴露的伺服器留有 27 個 MSSQL 備份檔傳輸紀錄，約 69GiB 資料於 9/6 不到 24 分鐘內遭複製，疑涉海外就業管理局業務系統；菲律賓國家隱私委員會已與移工部展開調查。",
+    "source_name": "iThome",
+    "source_url": "https://www.ithome.com.tw/news/180288",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-09",
+    "region": "world",
+    "title": "歐盟初步認定 TikTok「For You」推薦違反 DSA，最高可罰全球營收 6%",
+    "summary": "歐盟執委會 11/6 初步認定 TikTok「For You」推薦演算法違反數位服務法（DSA）：未充分評估演算法把用戶推入悲傷、孤立與身材焦慮內容迴圈的系統性風險，既有緩解措施無效；若確認違規，最高可處全球年營收 6% 罰款，現為初步認定、TikTok 可答辯。",
+    "source_name": "PPC Land",
+    "source_url": "https://ppc.land/tiktok-faces-fine-of-up-to-6-over-for-you-feed-rabbit-holes/",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-09",
+    "region": "world",
+    "title": "Apple 將檢查 iCloud 公開分享的照片與檔案，27.3 版起實施",
+    "summary": "Apple 11/3 宣布，自 iOS、iPadOS、macOS、visionOS 27.3 起，將檢查用戶以「知道連結者皆可存取」公開分享的 iCloud 照片與檔案是否含不法或有害內容；即使開啟進階資料保護，這類公開分享仍不受端對端加密保護，違規內容可能遭移除、帳號停用。",
+    "source_name": "iThome",
+    "source_url": "https://www.ithome.com.tw/news/180284",
+    "source_type": "媒體"
+  },
+  {
+    "date": "2026-11-09",
+    "region": "china",
+    "title": "香港警方：今年首 3 季發現逾 4.4 萬項高風險漏洞，86% 涉遠端桌面服務",
+    "summary": "香港警方公布，今年首 3 季發現逾 4.4 萬項高風險網絡安全漏洞，其中約 3.8 萬項（86%）涉遠端桌面服務；針對香港的網絡威脅情報近 130 萬項、按年升 32%，首 3 位為網絡釣魚、偵察與惡意軟件；65 間學校防火牆韌體過舊已獲協助更新。",
+    "source_name": "明報",
+    "source_url": "https://news.mingpao.com/pns/港聞/article/20261109/s00002/1794157550102/首3季揭4-4萬高風險網安漏洞-八成涉「遙距桌面服務」",
+    "source_type": "媒體"
+  },
+  {
     "date": "2026-11-08",
     "region": "world",
     "title": "Chainalysis 遭駭範圍擴大：全數用戶密碼雜湊與有效權杖外洩（後續發展）",
@@ -187,86 +268,5 @@
     "source_url": "https://www.binarly.io/blog/zyxel-gs1900-rce-cve-2026-107441",
     "summary": "Binarly 11/5 公布，在調查中國駭客 Red Heron 與 Kapibala 的攻擊基礎設施時，發現針對 GS1900 網頁管理介面的漏洞利用工具；修補 CVE-2026-7273 時只加了參數數量檢查、且檢查排在複製之後，攻擊者仍可越界寫入取得 root 權限並竊取設定檔與 root 密碼雜湊。臺灣為重災區之一，564 台仍用出廠預設帳密，須升至 2.90 Patch 3 韌體並改掉預設密碼。",
     "title": "Zyxel GS1900 後續發展：Binarly 揭露中國駭客利用新零時差 CVE-2026-107441 竊取敏感資料，舊修補擋不住（歸因屬 Binarly 說法）"
-  },
-  {
-    "date": "2026-11-06",
-    "region": "world",
-    "source_name": "iThome",
-    "source_type": "媒體",
-    "source_url": "https://www.ithome.com.tw/news/180255",
-    "summary": "該行 11/4 證實遭網路攻擊，攻擊者經外部服務商平臺取得銀行系統存取管道，利用銀行自有帳戶向其他金融機構未授權轉帳；區塊鏈調查員 ZachXBT 最早揭露，估計逾 1.18 億歐元（約 1.33 億美元），部分款項疑經加密貨幣平臺轉移。銀行稱客戶帳戶未受影響、部分款項已凍結追回中。",
-    "title": "法國銀行 Crédit Mutuel Arkéa 遭網攻，逾 1.18 億歐元遭攻擊者轉走"
-  },
-  {
-    "date": "2026-11-06",
-    "region": "world",
-    "source_name": "BleepingComputer",
-    "source_type": "媒體",
-    "source_url": "https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/",
-    "summary": "憑證機構 DigiCert 11/5 證實，2025 年 2 月伺服器遷移誤將內部業務系統暴露上網，外部人員可自行註冊帳號，並於 2026 年 6/27–7/2 以唯讀權限存取部分封存客戶資料，含姓名、商務電郵、電話、地址，少數帳戶另含護照、駕照等身分證件。DigiCert 稱憑證簽發服務與已發憑證未受影響。",
-    "title": "DigiCert 資料外洩：客戶資料與身分證件遭未授權存取"
-  },
-  {
-    "date": "2026-11-06",
-    "region": "world",
-    "source_name": "Norad",
-    "source_type": "官方",
-    "source_url": "https://www.norad.no/en/for-partners/partner/cyberattack-on-norad-information-for-affected-users/",
-    "summary": "挪威發展合作署 Norad 11/3 通報，攻擊者盜用 27 組帳號登入補助申請入口 Grants Portal，2 萬 614 名註冊用戶（涵蓋 1 萬 2,511 個組織）的姓名與電郵可能全數外洩，至少 3 個境外組織的申請文件亦遭竊。Norad 稱不排除衝突地區與威權國家申請人的姓名在其中，幕後者未明。",
-    "title": "挪威援助機構 Norad 遭駭：2 萬 614 名補助入口用戶資料可能外洩"
-  },
-  {
-    "date": "2026-11-06",
-    "region": "world",
-    "source_name": "The Register",
-    "source_type": "媒體",
-    "source_url": "https://www.theregister.com/cyber-crime/2026/11/05/new-yorks-queens-public-library-battles-ransomware-crims-wi-fi-checkouts-and-website-go-dark/5307796",
-    "summary": "皇后區公共圖書館 11/4 晚證實遭勒索軟體攻擊，官網、館內電腦、借還書機、公共 Wi-Fi、手機 App 與數位媒體服務全部中斷，66 個據點維持開館但服務受限，恢復需時；目前無勒索組織出面認領。",
-    "title": "紐約皇后區公共圖書館遭勒索軟體攻擊：66 個據點網站、Wi-Fi 與借還書系統停擺"
-  },
-  {
-    "date": "2026-11-06",
-    "region": "world",
-    "source_name": "Malwarebytes",
-    "source_type": "媒體",
-    "source_url": "https://www.malwarebytes.com/blog/bugs/2026/11/chrome-157-fixes-213-security-issues-including-7-critical-flaws",
-    "summary": "Google 11/3 將 Chrome 157 推上穩定版（桌機 157.0.8103.38/.39、Android 同版），一次修補 213 個安全問題，其中 7 項重大、77 項高風險，多為繪圖與記憶體安全缺陷（Dawn、ANGLE、WebGL 等），部分可經惡意網頁在沙箱外執行程式碼；Google 未說明是否已被利用，更新後須重新啟動瀏覽器才生效。",
-    "title": "Google Chrome 157 修補 213 個漏洞、含 7 項重大"
-  },
-  {
-    "date": "2026-11-06",
-    "region": "world",
-    "source_name": "iThome",
-    "source_type": "媒體",
-    "source_url": "https://www.ithome.com.tw/news/180262",
-    "summary": "Debian 與 Ubuntu 11/5 釋出 APT 更新，修補驗證繞過漏洞 CVE-2026-109518（CVSS 7.7）：攻擊者若能操控 HTTP 傳輸流量，可在驗證完成後替換套件內容，誘使系統安裝惡意程式並以 root 執行；Debian 12/13 與 Ubuntu 22.04、24.04、26.04 LTS、26.10 均已釋出修補。",
-    "title": "Debian、Ubuntu 修補 APT 套件管理工具高風險漏洞 CVE-2026-109518"
-  },
-  {
-    "date": "2026-11-06",
-    "region": "world",
-    "source_name": "iThome",
-    "source_type": "媒體",
-    "source_url": "https://www.ithome.com.tw/news/180196",
-    "summary": "英國國家網路安全中心（NCSC）最新 AI 網路威脅評估指出，2028 年前攻擊者「極可能」以 AI 驅動的惡意程式對關鍵基礎設施發動勒索軟體攻擊；AI 未必帶來全新手法，但會讓既有攻擊更快、規模更大，老舊系統未修補的已知漏洞與新導入的 AI 工具都是破口；報告點名中國與俄羅斯仍是主要國家級網路威脅來源。",
-    "title": "英國 NCSC 預警：2028 年前 AI 惡意程式極可能用於關鍵基礎設施勒索攻擊"
-  },
-  {
-    "date": "2026-11-06",
-    "region": "taiwan",
-    "source_name": "iThome",
-    "source_type": "媒體",
-    "source_url": "https://www.ithome.com.tw/news/180247",
-    "summary": "中天生技子公司棉花田（11/3 重訊）、王品旗下萬鮮（11/4 重訊）、葡萄王線上商城「購健康」（11/4 重訊）相繼揭露，委外購物網站服務廠商系統出現異常資料存取；葡萄王案由順立智慧（Cyberbiz）通知，商城訂單與消費者個資疑似外洩。三案網站營運正常、初步評估對營運無重大影響，但實際受影響範圍仍在調查。",
-    "title": "三家上市公司同日揭露電商委外平臺異常存取：棉花田、王品萬鮮、葡萄王"
-  },
-  {
-    "date": "2026-11-06",
-    "region": "china",
-    "source_name": "The Hindu",
-    "source_type": "媒體",
-    "source_url": "https://www.thehindu.com/news/national/hackers-used-china-linked-ai-tools-to-steal-from-indian-financial-firms/article71670577.ece",
-    "summary": "印度電腦緊急應變小組 CERT-In 11/4 通報，將一波針對非銀行金融、金融科技與加密貨幣交易所的 AI 驅動攻擊命名為「Crafty Falcon」：攻擊者以 ARTEX、PentAGI、Cairn、CyberStrikeAI 等公開 AI 工具自動執行完整攻擊鏈、呼叫受害者自身的支付與撥款 API 轉走資金，威脅「持續且正在進行」。研究者指出其中至少兩款工具與中國有關，但 CERT-In 未指明幕後者與所屬地。",
-    "title": "印度 CERT-In 點名「Crafty Falcon」：以 ARTEX 等 AI 工具攻擊金融機構（工具與中國的關聯屬研究者說法）"
   }
 ]
