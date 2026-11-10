@@ -1,5 +1,21 @@
 [
   {
+    "slug": "apt29-poisoned-source-2026",
+    "title": "Poisoned Source 事件分析：APT29 埋伏在正常網站裡，手機沒更新就中招",
+    "date": "2026-11-10",
+    "category": "入侵事件",
+    "tags": [
+      "APT29",
+      "Sekoia",
+      "水坑攻擊",
+      "iOS",
+      "Android",
+      "DarkSword"
+    ],
+    "summary": "法國資安公司 Sekoia 揭露一場大規模水坑攻擊：攻擊者入侵多國正常網站、仿冒熱門網站，還污染了烏克蘭網站分析服務 Plerdy 整整一週，讓未更新的 iPhone 與 Android 手機一開網頁就被植入竊密程式。Sekoia 以中高信心研判幕後是俄羅斯 APT29；三條利用鏈用的全是已修補漏洞——手機保持更新就不受這波影響。",
+    "url": "articles/apt29-poisoned-source-2026.html"
+  },
+  {
     "slug": "cpguard-update-hijack-2026",
     "title": "cPGuard 事件分析：保護伺服器的資安工具，更新通道被劫持 70 分鐘",
     "date": "2026-11-09",

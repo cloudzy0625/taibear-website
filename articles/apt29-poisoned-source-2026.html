@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Poisoned Source 事件分析：APT29 埋伏在正常網站裡，手機沒更新就中招 - TaiBear Security Studio 臺熊資安工坊</title><meta name="description" content="法國資安公司 Sekoia 揭露一場大規模水坑攻擊：攻擊者入侵多國正常網站、仿冒熱門網站，還污染了烏克蘭網站分析服務 Plerdy 整整一週，讓未更新的 iPhone 與 Android 手機一開網頁就被植入竊密程式。Sekoia 以中高信心研判幕後是俄羅斯 APT29；三條利用鏈用的全是已修補漏洞——手機保持更新就不受這波影響。"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/drafts.css"><link rel="stylesheet" href="../css/articles.css"></head><body class="draft-site"><header class="header"><div class="container nav-container"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><nav aria-label="主要導覽"><ul class="nav-links" id="nav-links"><li><a href="https://www.taibear.app/about.html">關於 TaiBear</a></li><li><a href="https://www.taibear.app/services.html">服務方案</a></li><li><a href="https://www.taibear.app/plans.html">套餐方案</a></li><li><a href="https://www.taibear.app/scenarios.html">適用情境</a></li><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" class="active" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li><li><a href="https://www.taibear.app/faq.html">常見問題</a></li><li><a href="https://www.taibear.app/contact.html">聯絡我們</a></li></ul></nav><div class="nav-actions"><a href="https://www.taibear.app/contact.html" class="btn btn-primary">立即諮詢</a><button type="button" class="menu-toggle" id="menu-toggle" aria-label="開啟導覽選單" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header><main><section class="detail-hero text-center"><div class="container"><div class="hero-tagline">入侵事件</div><h1 class="section-title">Poisoned Source 事件分析：APT29 埋伏在正常網站裡，手機沒更新就中招</h1><p class="section-subtitle">法國資安公司 Sekoia 揭露一場大規模水坑攻擊：攻擊者入侵多國正常網站、仿冒熱門網站，還污染了烏克蘭網站分析服務 Plerdy 整整一週，讓未更新的 iPhone 與 Android 手機一開網頁就被植入竊密程式。Sekoia 以中高信心研判幕後是俄羅斯 APT29；三條利用鏈用的全是已修補漏洞——手機保持更新就不受這波影響。</p></div></section><section class="section-padding draft-content"><div class="container"><article class="article-body"><a class="back-link" href="../articles.html">← 返回事件分析列表</a><div class="article-meta"><span><strong>分析日期：</strong>2026-11-10</span><span><strong>分類：</strong>入侵事件</span><span><strong>原始來源：</strong><a href="https://www.sekoia.com/blog/poisoned-source-apt29-watering-holes-targets-mobile-devices-with-n-day-exploits">Sekoia Threat Detection &amp; Research</a></span><span class="meta-tags"><strong>標籤：</strong><span class="tag-chip">APT29</span><span class="tag-chip">Sekoia</span><span class="tag-chip">水坑攻擊</span><span class="tag-chip">iOS</span><span class="tag-chip">Android</span><span class="tag-chip">DarkSword</span></span></div>
+
+<h2>1. 事件概述</h2>
+<p>法國資安公司 Sekoia 的威脅偵測與研究團隊（TDR）於 2026 年 10 月中旬發現一場大規模「水坑攻擊」（watering hole），並於 11 月 4 日公布調查報告，行動代號「Poisoned Source」。攻擊者在多個正常網站裡埋伏：受害者不需要點任何連結、不需要安裝任何 App，只要用手機打開被動過手腳的網頁，攻擊程式就會先辨識裝置與瀏覽器版本，再送上對應的漏洞利用鏈，全程零互動。</p>
+<p>埋伏的方式有三種：直接入侵美國、烏克蘭、捷克、保加利亞等國的正常網站植入惡意 JavaScript；註冊仿冒熱門網站的相似網域、以反向代理即時竄改頁面；以及供應鏈污染——入侵烏克蘭網站分析服務 Plerdy 的追蹤腳本，讓數以千計掛著該腳本的網站（多數在烏克蘭，包含軍方、特種部隊與軍備相關網站）在 2026 年 8 月 27 日至 9 月 3 日的一週間，全都變成投放點。</p>
+<p>Sekoia 實際取回三條完整的利用鏈：iOS 16.7 裝置被竊取瀏覽器 Cookie；iOS 18.5 裝置被整台收割（簡訊、郵件、WhatsApp 與 Telegram 資料庫、鑰匙圈密碼、照片、健康資料等）；Android 的 Chrome 139 至 145 版則被竊取 Chrome 資料與 Wi-Fi 密碼。三條鏈用的全是已知、且原廠早已修補的漏洞（n-day），沒有零時差；載荷不建立持久化，屬一次性竊取。Sekoia 的結論很直接：作業系統保持更新的裝置，不受這場攻擊影響。</p>
+<p>歸因方面，Sekoia 以「中高信心」研判幕後是 APT29（又稱 Midnight Blizzard、Cozy Bear、The Dukes），即廣泛被歸因於俄羅斯對外情報局（SVR）的入侵組織。同日（11 月 4 日），美國 CISA 把三條鏈用到其中一個漏洞——Apple WebKit 的 CVE-2024-27834——列入已知利用漏洞清單（KEV），聯邦機構修補期限為 11 月 18 日。</p>
+<h2>2. 時間線</h2>
+<ul>
+<li>2026 年 4 月 2–3 日：投放主機 static.flux-telemetry[.]com 與外洩主機 ad.starx-net[.]com 先後建立（Sekoia 公布的基礎設施資料）。</li>
+<li>2026 年 5 月 19 日：仿冒網域 america250[.]holiday 註冊（反向代理美國建國 250 週年官方網站 america250.org）。</li>
+<li>2026 年 6 月 18 日：仿冒網域 theowo[.]club 註冊（反向代理倫敦萊佛士酒店網站，該酒店鄰近英國國防部與唐寧街 10 號）。</li>
+<li>2026 年 8 月 26 日：Plerdy 投放用的轉址主機 edge-ord.clouds-stacks[.]com 建立。</li>
+<li>2026 年 8 月 27 日至 9 月 3 日：Plerdy 的追蹤腳本 main.js 遭植入惡意碼，污染期間一週，數以千計使用該服務的網站訪客被導向指紋腳本。</li>
+<li>2026 年 9 月：iOS 利用工具包 DarkSword 的樣本被上傳至 VirusTotal（Sekoia 引述）。</li>
+<li>2026 年 10 月中旬：Sekoia 在一家烏克蘭天然氣生產公司的網站上偵測到惡意 JavaScript 植入，展開調查並發現整場行動；Sekoia 並與受影響國家的 CERT 協調受害者識別與基礎設施處置。</li>
+<li>2026 年 11 月 4 日：Sekoia 公布「Poisoned Source」報告；同日 CISA 將 CVE-2024-27834 列入 KEV，聯邦修補期限 2026 年 11 月 18 日。</li>
+</ul>
+<h2>3. 技術分析</h2>
+<h3>3.1 三種投放管道，同一支指紋腳本</h3>
+<p>三種管道最後都導向同一支客製指紋腳本（攻擊者自稱 UltimateFingerprinter）。直接入侵的案例包括：烏克蘭天然氣生產公司網站的主版型被植入 JavaScript，頁面載入後動態載入外部指紋腳本；美國化學工業大型產業協會與一個歐洲極右政黨的網站同樣被入侵；保加利亞一個軍事相關網站則是既有的合法 JavaScript 函式庫被竄改、附加惡意碼。</p>
+<p>打不進去的目標，攻擊者改走仿冒路線：america250[.]holiday 與 theowo[.]club 以反向代理方式即時轉送原站內容、並在每頁底部注入惡意 JavaScript。Sekoia 研判，前者看準美國建國 250 週年慶典的邀請主題魚叉式釣魚情境；後者鄰近英國政府核心機構，可能意在鎖定外交代表團與高知名度住客（烏克蘭總統澤倫斯基 2026 年 10 月 14 日訪英期間即下榻該酒店，此為公開報導，屬 Sekoia 的情境研判）。</p>
+<p>第三條、也是規模最大的管道是 Plerdy：攻擊者把惡意碼植入 a.plerdy[.]com 上的合法追蹤檔 public/js/click/main.js，訪客載入正常追蹤腳本的同時也載入攻擊者的指紋腳本。這些網站本身沒有被入侵，問題出在它們共同信任的第三方元件。</p>
+<h3>3.2 UltimateFingerprinter：蒐集 394 個欄位，卻幾乎不影響投放</h3>
+<p>指紋腳本被附加在一支壓縮版 AngularJS 函式庫後面——無用程式碼占整個 2.3 MB 檔案約 98%。Sekoia 認為這可能有兩個目的：把檔案撐大到超過大型語言模型的上下文視窗、妨礙自動化分析；或讓惡意腳本看起來像正常函式庫。</p>
+<p>腳本以 61 個蒐集器建立 394 個欄位的裝置指紋（canvas、WebGL、字型、感測器、WebRTC、Apple 專屬功能、USB／NFC／藍牙等現代 Web API）。但諷刺的是，這份龐大指紋對投放幾乎不起作用：只有三個合理性檢查會擋下投放（螢幕寬高不像手機、navigator.maxTouchPoints 為 0 這類非觸控裝置），其餘欄位是否影響後續利用，Sekoia 明說沒有觀察到證據，蒐集目的不明。投放主機主要就是看作業系統與瀏覽器版本，決定送哪一條利用鏈。</p>
+<h3>3.3 三條利用鏈：全部是已修補漏洞</h3>
+<p>Sekoia 以不同瀏覽器設定檔向投放端點測試，取回三條完整利用鏈：</p>
+<ul>
+<li><strong>A 鏈（iOS 16.7，竊 Cookie）</strong>：CVE-2025-43529（WebContent 遠端程式碼執行；與 DarkSword 工具包用的是同一個漏洞，但程式被重新實作）＋ CVE-2024-27834（繞過 Pointer Authentication，PAC）。利用鏈會逐一掃描執行中的 App 程序，讀取各 App 容器裡的 Cookies.binarycookies——不只 Safari，任何執行中且以此格式存放 Cookie 的 App 都在範圍內。檔案裡還殘留兩個到不了的舊漏洞程式（CVE-2024-27808、CVE-2024-27833），應是工具包早期版本的遺留。鏈上設有一個防重複感染的標記 Cookie（VDGH_TOKEN_REF），但到期時間算錯：本想設 1 天，實際 1 分鐘就失效，只能擋住極快速的重複感染。</li>
+<li><strong>B 鏈（iOS 18.5，整機收割）</strong>：這條就是 DarkSword 工具包本體，分三階段自 ad.starx-net[.]com 下載——CVE-2025-43529 取得初始執行、CVE-2026-20700 繞過 PAC；CVE-2025-14174 與 CVE-2025-43510 逃逸沙箱；CVE-2025-43520 取得核心讀寫權限（另有兩個備用漏洞 CVE-2025-31277、CVE-2025-24201 在包內但此次未用）。收割範圍幾乎是整台手機：SMS 與 iMessage 資料庫、郵件索引、語音留言、WhatsApp 與 Telegram 資料庫、鑰匙圈的密碼與權杖、帳號資料庫、Wi-Fi 密碼、聯絡人、通話紀錄、行事曆、筆記、Safari 瀏覽紀錄與 Cookie、App 使用時間軸、定位快取、健康資料、照片圖庫與 iCloud Drive。</li>
+<li><strong>C 鏈（Android Chrome 139–145，竊 Chrome 資料與 Wi-Fi 密碼）</strong>：CVE-2026-3910 在 Chrome 渲染器取得執行，再以 CVE-2025-27038（Adreno GPU 驅動）逃逸沙箱並提權，最終載荷被 Sekoia 命名為 AndroSnitch，蒐集 Chrome 的 Cookies、Login Data、History 與系統的 WifiConfigStore.xml。兩個細節尚無解釋：投放明確排除 Chrome 143 版；若偵測到機型 SM-S938B（Samsung Galaxy S25 Ultra），利用會直接中止。</li>
+</ul>
+<p>三條鏈的外洩目的地相同：ad.starx-net[.]com:8881/telemetry/v12。Cookie 與工作階段資料被偷的直接風險，是攻擊者可冒用受害者的登入工作階段（例如 Webmail），不必知道密碼。</p>
+<h3>3.4 工具來源：國家級組織重用商業監控商的利用框架</h3>
+<p>Sekoia 指出，B 鏈的 DarkSword 被研判是商業監控廠商（CSV）開發的 iOS 利用工具包。這不是第一次：Google TAG 在 2024 年的報告中指出，APT29 2023–2024 年對蒙古政府網站的水坑攻擊，用的正是與 Intellexa、NSO Group 等商業監控商相同或高度相似的利用程式，目標同樣是竊取 Cookie；TAG 也明說不知道 APT29 如何取得這些利用。本次行動同樣看得出「重用未改造」的痕跡：A 鏈的投放端只放行 iOS 16.7，但該利用實際可作用於 16.0 至 17.4——操作者像是直接拿現成工具包來用，沒有把投放條件改成工具的完整能力範圍。Sekoia 的判斷是：打包好的 n-day 利用鏈降低了高階手機利用的成本與門檻，這類重用未來只會更常見。C 鏈的 AndroSnitch 與 2024 年那場蒙古行動的 ANDROSNATCH 載荷有多項相似（蒐集的檔案、libcurl 外洩、寫死的權杖、同一個編譯工具鏈），但 Sekoia 保留：樣本太小、工具鏈標記可偽造，同源說法不能下定論。</p>
+<h2>4. 歸因與證據限制</h2>
+<ul>
+<li><strong>歸因屬 Sekoia 的研判，不是多方共同定論。</strong> Sekoia 以中高信心把行動歸於 APT29，理由包括：技術重疊、操作模式、受害者輪廓與基礎設施分析。CISA 把 CVE-2024-27834 列入 KEV，只證明該漏洞已被利用，不等於 CISA 為「Poisoned Source」或 APT29 歸因背書。</li>
+<li><strong>最關鍵的連結來自合作方提供的非公開材料。</strong> Sekoia 引述合作 CERT 的說法：某個被直接入侵網站的後台檔案，留有另一場活動的痕跡，其 TTP 與 IoC 與一份 2025 年私有報告相符；該私有報告把 2025 年水坑行動歸於 APT29。Sekoia 提出兩種可能：操作者沒有清掉上一場行動的殘留，或在入侵本站時誤植入舊元件。這條證據鏈有力，但外部讀者無法獨立檢視那份私有報告。</li>
+<li><strong>Google TAG 的比對支持「框架相似」，不直接證明操作者身分。</strong> Sekoia 稱 TAG 確認本案框架與 2024 年蒙古政府網站水坑行動相似，兩者目標同為竊取 Cookie；TAG 2024 年公開報告本身對該行動的 APT29 連結用語是「疑似／中等信心」。本案的歸因強度高於單點相似，但仍屬情報研判。</li>
+<li><strong>受害規模未公開。</strong> Sekoia 沒有公布受害者人數、被竊資料量或完整受感染網站清單。公開報告也明說，部分投放／外洩主機、YARA 規則與受感染網站細節不公開，只透過 Sekoia CTI 以 TLP:AMBER 提供給國家 CERT 或執法機關；因此外部防禦者能取得的 IoC 並不完整。</li>
+<li><strong>鎖定意圖仍不明確。</strong> Sekoia 明說，尚不清楚攻擊者是要鎖定特定網站的訪客，還是先盡量感染未修補裝置、再從竊得資料中挑選有興趣的目標。直接入侵的網站橫跨天然氣、化工、政黨、軍事與其他領域，部分網站的戰略價值不明；Sekoia 甚至指出，一家澳洲醫療診所的出現讓整體戰略解讀更複雜。</li>
+<li><strong>Plerdy 的角色是受害的第三方元件，不是共犯證據。</strong> 本案顯示 Plerdy 的追蹤腳本曾被污染一週，但公開報告沒有指控 Plerdy 參與攻擊。引用時應把 Plerdy 寫成供應鏈受害者／被利用的投放管道，而不是攻擊者。</li>
+<li><strong>工具來源仍有未知。</strong> DarkSword 被 Sekoia 描述為疑似商業監控廠商開發的工具包；攻擊者如何取得、是否購買、是否由第三方轉手，公開材料沒有答案。本案能確認的是「國家級行動重用了看似商業化的 n-day 利用框架」，不能進一步推論特定廠商涉入本案。</li>
+</ul>
+<h2>5. 防守建議</h2>
+<h3>給一般手機使用者</h3>
+<ul>
+<li><strong>先更新，這是本案最有效的防護。</strong> 三條利用鏈全是已修補漏洞；把 iPhone／iPad 更新到最新 iOS／iPadOS、把 Android 手機與 Chrome 更新到最新版本，並開啟自動更新。CVE-2024-27834 已由 Apple 在 2024 年 5 月的 iOS 17.5／iPadOS 17.5，以及供舊裝置使用的 iOS 16.7.8／iPadOS 16.7.8 等更新中修復；重點不是背版本號，而是不要長期停在舊版。</li>
+<li><strong>太舊、已無法更新的裝置要當成高風險裝置。</strong> 若裝置只能停在受影響的舊系統或舊 Chrome 版本，避免用它登入重要信箱、銀行與工作帳號；高風險使用者可考慮啟用 iPhone 的「封閉模式」（Lockdown Mode）降低攻擊面，但不要把它當成免更新的替代品。</li>
+<li><strong>重開機不是萬靈丹。</strong> 本案載荷不建立持久化，重新啟動可能清除當下在記憶體中的竊密程式；但已經被偷走的 Cookie、工作階段與 Wi-Fi 密碼不會因此失效。若你在 8 月底至 11 月間曾用未更新手機瀏覽高風險網站、或帳號出現異常登入，應登出所有工作階段、變更重要密碼、撤銷可疑登入工作階段，並開啟通行金鑰或多因素驗證。</li>
+<li><strong>Android 使用者要特別檢查 Chrome 資料與 Wi‑Fi 密碼外洩風險。</strong> 若裝置曾中招，AndroSnitch 竊取的不是只有 Cookie，還包括 Chrome 的登入資料、歷史紀錄與 Wi‑Fi 設定。除了帳號密碼，也應視情況更換重要 Wi‑Fi 密碼與路由器管理密碼。</li>
+</ul>
+<h3>給網站經營者與使用第三方腳本的團隊</h3>
+<ul>
+<li><strong>把第三方 JavaScript 當成供應鏈風險管理。</strong> 分析、客服、行銷與追蹤腳本一旦被污染，效果等同於自己的網站被植入惡意碼。應盤點所有第三方腳本與標籤管理工具，移除不必要的服務，固定供應商版本與來源網域，監控腳本內容變更，並要求供應商提供事故通報與完整性機制。</li>
+<li><strong>Plerdy 使用者要回頭查污染期間的紀錄。</strong> 若網站在 2026 年 8 月 27 日至 9 月 3 日期間載入 Plerdy 追蹤腳本，應保存當時的日誌與快取紀錄，確認目前載入的 main.js 來源與內容正確，並檢查站台是否同時存在其他未授權腳本或外連網域。不要只看今天的頁面沒問題，就假設污染期間沒有訪客受影響。</li>
+<li><strong>檢查可疑外連與腳本主機。</strong> 公開報告點名投放／外洩相關網域包括 static.flux-telemetry[.]com、edge-ord.clouds-stacks[.]com、ad.starx-net[.]com 等；但公開 IoC 不完整，查不到這些網域不代表沒有受影響。更重要的是比對網站範本、函式庫檔案與標籤管理設定是否出現未授權變更。</li>
+</ul>
+<h3>給企業與政府機關</h3>
+<ul>
+<li><strong>用裝置姿態控管未更新手機。</strong> 透過 MDM 與條件式存取，要求存取郵件、VPN、雲端硬碟與內部系統的手機達到最低 OS／瀏覽器版本；過舊裝置先隔離或只給有限存取。水坑攻擊鎖定的正是「重要的人、用不夠新的手機、打開平常會看的網站」這個組合。</li>
+<li><strong>把 Cookie／工作階段竊取納入事件應變。</strong> 若懷疑同仁裝置受影響，不能只說「手機重開就好」；應撤銷該使用者的作用中工作階段與重新整理權杖，檢查異常登入地點與工作階段重用紀錄，必要時強制重新驗證。</li>
+<li><strong>高風險職務要有分開的瀏覽與通訊策略。</strong> 外交、國防、採購、研發與高階主管等角色，應使用受管且持續更新的裝置處理敏感服務，避免在同一台長期未更新的手機上同時登入私人信箱、工作信箱、雲端硬碟與社群帳號。</li>
+</ul>
+<h2>6. 原始來源</h2>
+<ul>
+<li>Sekoia Threat Detection &amp; Research, “Poisoned Source: APT29 Watering Holes Targets Mobile Devices”, 2026-11-04：<a href="https://www.sekoia.com/blog/poisoned-source-apt29-watering-holes-targets-mobile-devices-with-n-day-exploits">https://www.sekoia.com/blog/poisoned-source-apt29-watering-holes-targets-mobile-devices-with-n-day-exploits</a></li>
+<li>CISA, Known Exploited Vulnerabilities Catalog（CVE-2024-27834 條目；2026-11-04 列入，聯邦修補期限 2026-11-18）：<a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></li>
+<li>Google Threat Analysis Group, “State-backed attackers and commercial surveillance vendors repeatedly use the same exploits”, 2024-08-29：<a href="https://blog.google/threat-analysis-group/state-backed-attackers-and-commercial-surveillance-vendors-repeatedly-use-the-same-exploits/">https://blog.google/threat-analysis-group/state-backed-attackers-and-commercial-surveillance-vendors-repeatedly-use-the-same-exploits/</a></li>
+<li>National Vulnerability Database, CVE-2024-27834 Detail：<a href="https://nvd.nist.gov/vuln/detail/CVE-2024-27834">https://nvd.nist.gov/vuln/detail/CVE-2024-27834</a></li>
+</ul>
+<a class="back-link" href="../articles.html">← 返回事件分析列表</a></article></div></section></main><footer class="footer"><div class="container footer-grid"><div class="footer-col"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><p class="footer-desc">TaiBear Security Studio 專注於將資安教育融入日常，建立好用、有效、符合合規要求的培訓方案。</p></div><div class="footer-col"><h4>導覽頁面</h4><ul><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li></ul></div><div class="footer-col"><h4>演練詳情</h4><ul><li><a href="https://www.taibear.app/service-phishing.html">社交工程演練</a></li></ul></div><div class="footer-col"><h4>聯絡資訊</h4><p>Email: <a href="mailto:info@taibear.app">info@taibear.app</a></p></div></div><div class="container footer-bottom"><p>&copy; 2026 臺熊資安工坊 TaiBear Security Studio. All rights reserved.</p><p>專業資安顧問團隊 ‧ 用一杯咖啡防禦企業邊界</p></div></footer><script src="../js/main.js"></script></body></html>
