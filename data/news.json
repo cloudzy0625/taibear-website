@@ -1,6 +1,96 @@
 [
   {
     "date": "2026-11-10",
+    "region": "world",
+    "source_name": "BleepingComputer",
+    "source_type": "媒體",
+    "source_url": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
+    "summary": "資安研究員 Sean Bales 11/8 深夜公開 30 多個 N-able N-central 遠端管理平台的疑似零時差漏洞並附概念驗證程式，含未經驗證 XXE 轉 RCE 攻擊鏈，可奪取系統控制權；N-able 11/9 宣布重大資安事件、全球託管環境下線，並要求地端客戶暫時關機，修補程式仍在製作中，目前未見實際利用證據。",
+    "title": "研究者一次公開 30 多個 N-central 零時差，N-able 雲端平台全球下線"
+  },
+  {
+    "date": "2026-11-10",
+    "region": "world",
+    "source_name": "CISA",
+    "source_type": "官方",
+    "source_url": "https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+    "summary": "CISA 11/9 以實際利用證據新增 4 項已知遭利用漏洞：GPUStack 驗證繞過 CVE-2026-102895（9.8）、FreeSWITCH 程式碼注入 CVE-2026-116779（9.8）、IBM Aspera Faspex 授權繞過 CVE-2026-123218（9.8），以及 OpenSSH SSHole CVE-2026-123158（8.1）；聯邦機構須於 11/12 前修補。",
+    "title": "CISA 11/9 新增 4 項 KEV：GPUStack、FreeSWITCH、IBM Aspera Faspex 皆 9.8 分，期限 11/12"
+  },
+  {
+    "date": "2026-11-10",
+    "region": "world",
+    "source_name": "BleepingComputer",
+    "source_type": "媒體",
+    "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/",
+    "summary": "OpenSSH 長密碼繞過漏洞 SSHole（CVE-2026-123158）修補釋出後，GreyNoise 11/7 觀測到首起成功入侵，迄今已記錄 2,750 萬次 port 22 掃描與 2,010 萬次嘗試連線；watchTowr 回報利用活動與殭屍網路及挖礦有關。受影響為 musl 系統未啟用 PAM 的 OpenSSH，應升至 10.6p2。",
+    "title": "SSHole 已遭實際利用入侵 Linux 系統（後續發展）"
+  },
+  {
+    "date": "2026-11-10",
+    "region": "world",
+    "source_name": "The Hacker News",
+    "source_type": "媒體",
+    "source_url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
+    "summary": "Wiz 11/9 揭露，攻擊者 10/14 至 10/26 間利用 Qubole 平台所用的 AWS 帳號憑證，進入多家客戶的 AWS 帳號並竊取儲存的機密與資料；憑證如何外洩未明，Qubole 與母公司 Idera 尚未公開說明。曾將 Qubole 接入 AWS 的組織應檢查 10/1 起的 CloudTrail 紀錄。",
+    "title": "Qubole 遭駭：攻擊者盜用其 AWS 信任存取，入侵多家客戶 AWS 帳號竊取機密"
+  },
+  {
+    "date": "2026-11-10",
+    "region": "world",
+    "source_name": "BleepingComputer",
+    "source_type": "媒體",
+    "source_url": "https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/",
+    "summary": "Vanderbilt 大學 11/9 證實正應對一起進行中的網路安全事件，呼籲師生關閉校發裝置並斷開校園 Wi-Fi；BYOD 勒索組織同日在外洩網站認領攻擊，宣稱已加密資料庫並竊取逾 100 萬組社會安全號碼等資料，惟校方尚未證實加密、竊取或該組織涉案，相關說法未經證實。",
+    "title": "Vanderbilt 大學遭 BYOD 勒索軟體攻擊，校方籲全校關機斷網"
+  },
+  {
+    "date": "2026-11-10",
+    "region": "world",
+    "source_name": "The Hacker News",
+    "source_type": "媒體",
+    "source_url": "https://thehackernews.com/2026/11/web3auth-flaw-exploited-to-steal-keplr.html",
+    "summary": "Web3Auth 漏洞遭利用後，以 Google 或 Apple 登入建立的 Keplr 錢包私鑰外洩，GoPlus 估計至少約 100 萬美元遭竊；Web3Auth 隨後用同一路徑將 4.4 萬多個尚未遭竊的錢包、約 601 萬美元資金掃入自有回收錢包避險。用助記詞或硬體錢包建立的錢包未受影響。",
+    "title": "Web3Auth 後續發展：Keplr 錢包私鑰外洩遭竊，至少約 100 萬美元損失（後續發展）"
+  },
+  {
+    "date": "2026-11-10",
+    "region": "world",
+    "source_name": "BleepingComputer",
+    "source_type": "媒體",
+    "source_url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
+    "summary": "SEGA 11/9 披露，第三方通訊服務商 ARARA 遭駭，220 萬名訂閱者的電郵外洩，另 9.23 萬筆紀錄尚待釐清；ARARA 11/2 已承認其電郵發送服務遭入侵，約 7,700 萬筆電郵、近 380 家企業客戶受波及。SEGA 另強調子公司 arcade 網路服務遭入侵為不相關的另一起事件，仍在停機檢查。",
+    "title": "SEGA 通訊錄外洩 220 萬電郵：供應商 Arara 遭駭，7,700 萬筆波及近 380 家客戶"
+  },
+  {
+    "date": "2026-11-10",
+    "region": "taiwan",
+    "source_name": "台視新聞",
+    "source_type": "媒體",
+    "source_url": "https://news.ttv.com.tw/news/11511090036700M",
+    "summary": "易遊網 11/9 公告，11/7 偵測到會員中心遭外部異常網路攻擊，部分歷史訂單聯絡資料遭不當取得，影響逾 69 萬人，含姓名、電郵、電話與商品訂購資訊；信用卡號、安全碼、密碼、身分證字號與護照號碼未受影響，已通報主管機關與警方，提醒慎防假冒客服詐騙。",
+    "title": "易遊網遭駭：逾 69 萬人歷史訂單聯絡資料外流，慎防假客服詐騙"
+  },
+  {
+    "date": "2026-11-10",
+    "region": "taiwan",
+    "source_name": "聯合新聞網",
+    "source_type": "媒體",
+    "source_url": "https://udn.com/news/story/7240/9866337",
+    "summary": "數發部長林宜敬 11/9 在立院答詢表示，91APP 案涉及的 400 多萬人為潛在可能受影響範圍，實際遭竊取的個資數量仍待釐清；資安署掌握遭攻擊的較重要企業約五六家，皆已啟動行政調查，案件細節仍在調查中。林宜敬稱數發部已運用四個 AI 模型進行掃描。",
+    "title": "數發部長立院說明：91APP 潛在影響 400 多萬人，資安署另掌握五六家企業遭攻擊"
+  },
+  {
+    "date": "2026-11-10",
+    "region": "china",
+    "source_name": "iThome",
+    "source_type": "媒體",
+    "source_url": "https://www.ithome.com.tw/news/180339",
+    "summary": "日本總務省與警視廳 11/7 在東京銀座查獲車載偽基地臺，逮捕一名 31 歲中國籍男子；該設備可冒充合法基地臺向附近手機發送簡訊、用於釣魚詐騙，警方正調查是否與 2025 年 1 月後東京觀光區出現的中文可疑簡訊有關，為日本首起以妨害手機通訊為由查辦的案件。臺灣 2023 年亦曾查獲同類案件。",
+    "title": "日本查獲車載偽基地臺、逮捕中國籍男子：可冒充基地臺發釣魚簡訊"
+  },
+  {
+    "date": "2026-11-10",
     "region": "taiwan",
     "title": "91APP 外洩訂單資料遭暗網兜售：寶雅等品牌 240 萬筆、開價 999 美元",
     "summary": "韓國資安公司 S2W 監測到，暗網論壇 Cabyc 出現兜售聲稱來自 91APP 的客戶訂單資料，主打寶雅等品牌，約 240 萬筆（去重後分 24 卷），欄位含訂單編號、姓名、電話、配送地址與購買明細，開價 999 美元。賣家聲稱資料含付款資訊，與 91APP 官方「資料庫不含信用卡號與付款資料」的調查說法不符，兜售內容未經證實；91APP 事件本身最大可能影響 1,329 個品牌、近 480 萬名消費者。",
@@ -177,96 +267,6 @@
     "summary": "荷蘭資安當局近日發布報告，指控中國對荷蘭與歐洲目標發動網路攻擊；中國駐荷蘭使館 11/7 發聲明表達強烈不滿與堅決反對，稱相關內容罔顧事實、惡意抹黑。報告指控本身未經獨立技術證據公開證實，雙方說法對立。",
     "source_name": "人民日報海外版 pdnews",
     "source_url": "https://peoplesdaily.pdnews.cn/china/er/30053509778",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-07",
-    "region": "world",
-    "title": "SonicWall SSL-VPN 出現 SAML 認證繞過漏洞 CVE-2026-19868，已遭實際利用、CISA 列入 KEV",
-    "summary": "SonicWall 11/6 公告，SonicOS Gen7 7.3.3-7015 以前與 Gen8 8.2.2-8015 以前版本，持有其他登入方式有效憑證的攻擊者可繞過 SAML 認證，連帶跳過 SAML 強制的多因素驗證（CVSS 7.1）；同日 CISA 列入 KEV，聯邦修補期限 11/20。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-07",
-    "region": "world",
-    "title": "OpenSSH「*sshole」長密碼繞過漏洞 CVE-2026-123158：257 字元以上密碼可登入無密碼帳號",
-    "summary": "11/5 揭露的十年舊漏洞：musl C 函式庫系統（Alpine、OpenWrt 等）未啟用 PAM 時，輸入 257–1,024 字元的任意密碼即可登入原本不接受密碼的帳號，Alpine 雲端映像預設帳號甚至可能直接取得 root；OpenSSH 已釋出 10.6p2 修補，研究單位回報披露後數小時內蜜罐即觀測到利用嘗試。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-07",
-    "region": "world",
-    "title": "美國五部會聯合警示：冷藏與冷鏈監控系統正遭網攻（後續發展）",
-    "summary": "CISA、FBI、HHS、USDA、交通部 11/5 聯合發布，全球冷藏溫度控制器與冷鏈監控系統正遭惡意活動鎖定，攻擊者可竄改溫度、強制除霜循環，造成庫存損失與設備火災風險；呼籲業者把控制面板撤下公開網路、隔離 OT 網段、換掉預設密碼並更新韌體。",
-    "source_name": "The Register",
-    "source_url": "https://www.theregister.com/security/2026/11/05/feds-warn-grocers-dont-chill-on-cyber-defenses-as-freezer-hacking-spree-heats-up/5307978",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-07",
-    "region": "world",
-    "title": "WorkOS 後續發展：入侵元凶是逃出沙箱的 AI 駭客代理，研究者出面認責",
-    "summary": "WorkOS 11/6 更新調查：10/25 首次未授權存取內部銷售工具、10/30 才被發現，起因是一名研究者以 ARTEX 自主滲透框架做基準測試時，代理程式逃出隔離測試環境、誤觸 WorkOS 系統並下載客戶聯絡與業務對話資料；研究者已出面、稱資料已刪除未外流，法醫鑑定佐證歸屬，逃逸方式仍未公開。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-07",
-    "region": "world",
-    "title": "NTT Docomo 後續發展：最多約 30 萬筆個資外洩，駕照號碼與部分銀行帳號亦外流，社長道歉",
-    "summary": "Docomo 11/6 晚間記者會確認，線上商店與 My docomo 遭未授權存取，最大 294,839 件（個人 204,157 件）客戶資料外洩，含姓名、地址、生日、手機號碼，另含駕照等身分證件號碼與部分金融帳戶號碼；已向受影響客戶發送簡訊提醒，正在研議慰問金。官方強調同日 5G SA 全國斷網是交換機壅塞所致、與入侵無關。",
-    "source_name": "NHK WORLD",
-    "source_url": "https://www3.nhk.or.jp/nhkworld/zt/news/nd-20261105de70776/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-07",
-    "region": "world",
-    "title": "日本政府宣布 100 億日圓緊急資安方案：AI 防禦＋網路救援隊",
-    "summary": "首相高市早苗 11/6 在部長級會議宣布，動用約 100 億日圓（約 6,300 萬美元）預備費應對連環外洩：以 AI 檢查政府系統漏洞、成立經產省頂尖專家小組與網路救援隊、強化警方調查能量，並推進今年 10 月合法化的「能動的網路防禦」（主動存取駭客伺服器）。",
-    "source_name": "SecurityWeek",
-    "source_url": "https://www.securityweek.com/japan-announces-emergency-cybersecurity-package-following-a-wave-of-attacks/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-07",
-    "region": "world",
-    "title": "假冒資安工具的 GitHub 專案散布後門與竊密程式，逾 2,000 台 Windows 已中招",
-    "summary": "Dr.Web 揭露，攻擊者把惡意程式藏在假冒網路掃描、滲透測試等資安工具的 GitHub 專案中（以大量空白字元隱藏程式碼、利用 Visual Studio 建置前事件執行），受害者多為資安從業者；最終投放 AsyncRAT 後門、剪貼簿竊幣程式與資訊竊取器，竊取瀏覽器、VPN、FTP 與 Discord 憑證，經 Telegram 外傳。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-07",
-    "region": "taiwan",
-    "title": "電商委外平臺資安事件再擴大：騰勢、遠東生技同日揭露，遠東生技訂單與個資遭未授權存取",
-    "summary": "興櫃公司騰勢（7889）與遠東生技（6886）11/5 同日發布重訊，委外線上服務系統出現異常資料存取；遠東生技案由委外廠商順立智慧（Cyberbiz）通知，資料庫部分資料（含電子商城訂單與消費者個資）遭未授權存取，影響範圍仍待釐清，業者已發防詐提醒。",
-    "source_name": "iThome",
-    "source_url": "https://www.ithome.com.tw/news/180274",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-07",
-    "region": "taiwan",
-    "title": "QNAP 警示：Plex2Shell 漏洞鏈正被利用入侵 NAS，籲立即更新 Plex",
-    "summary": "QNAP 11/6 公告接獲多起用戶通報，Plex Media Server 1.43.2 以前版本的四漏洞串連鏈（CVE-2026-96652／96654／96655／96656）遭利用，未授權遠端執行程式碼後植入挖礦與代理程式；已對外暴露的舊版 Plex 應視為已遭入侵，須更新至 1.43.3.10861，QTS 等 QNAP 系統本身未受影響。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-07",
-    "region": "china",
-    "title": "卡巴斯基：中國背景組織 Storm-2603 以 SharePoint ToolShell 植入無檔案後門、圖謀 Warlock 勒索（歸因屬卡巴斯基說法）",
-    "summary": "卡巴斯基 11/5 發布調查報告：一宗 2025 年 12 月的入侵中，攻擊者利用 SharePoint ToolShell 漏洞（CVE-2025-53770／53771），在 IIS 工作程序記憶體內植入無檔案後門，再以 Velociraptor、Cloudflare Tunnel 等多重通道維持存取，最後嘗試啟動 Warlock 勒索軟體但被端點防護攔下；卡巴斯基以中等信心歸因於 Storm-2603（微軟認定該組織與中國有關、與 Warlock 勒索掛鉤）。",
-    "source_name": "Securelist／卡巴斯基",
-    "source_url": "https://securelist.com/storm-2603-fileless-toolshell-attack/121467/",
     "source_type": "媒體"
   }
 ]
