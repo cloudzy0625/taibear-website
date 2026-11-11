@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>韓國金融業連環遭駭事件分析：一個月 37 家機構被入侵，當局啟動全產業總檢查</title><meta name="description" content="韓國金融委員會 2026 年 11 月 5 日公布：9 月 30 日至 11 月 3 日間，37 家金融相關公司通報 40 起入侵事件，外洩約 47.3 萬筆資料、遭竊約 10 億韓元。第一波 7 家銀行與儲蓄銀行經當局研判為同一攻擊者、疑用 AI 工具自動化攻擊；其後新增通報以中小型證券、保險、電子金融、P2P 與虛擬資產業者為主，被攻破的多是 API、開發測試系統等周邊系統。當局宣布對約 580 家機構全面檢查。"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/drafts.css"><link rel="stylesheet" href="../css/articles.css"></head><body class="draft-site"><header class="header"><div class="container nav-container"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><nav aria-label="主要導覽"><ul class="nav-links" id="nav-links"><li><a href="https://www.taibear.app/about.html">關於 TaiBear</a></li><li><a href="https://www.taibear.app/services.html">服務方案</a></li><li><a href="https://www.taibear.app/plans.html">套餐方案</a></li><li><a href="https://www.taibear.app/scenarios.html">適用情境</a></li><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" class="active" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li><li><a href="https://www.taibear.app/faq.html">常見問題</a></li><li><a href="https://www.taibear.app/contact.html">聯絡我們</a></li></ul></nav><div class="nav-actions"><a href="https://www.taibear.app/contact.html" class="btn btn-primary">立即諮詢</a><button type="button" class="menu-toggle" id="menu-toggle" aria-label="開啟導覽選單" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header><main><section class="detail-hero text-center"><div class="container"><div class="hero-tagline">入侵事件</div><h1 class="section-title">韓國金融業連環遭駭事件分析：一個月 37 家機構被入侵，當局啟動全產業總檢查</h1><p class="section-subtitle">韓國金融委員會 2026 年 11 月 5 日公布：9 月 30 日至 11 月 3 日間，37 家金融相關公司通報 40 起入侵事件，外洩約 47.3 萬筆資料、遭竊約 10 億韓元。第一波 7 家銀行與儲蓄銀行經當局研判為同一攻擊者、疑用 AI 工具自動化攻擊；其後新增通報以中小型證券、保險、電子金融、P2P 與虛擬資產業者為主，被攻破的多是 API、開發測試系統等周邊系統。當局宣布對約 580 家機構全面檢查。</p></div></section><section class="section-padding draft-content"><div class="container"><article class="article-body"><a class="back-link" href="../articles.html">← 返回事件分析列表</a><div class="article-meta"><span><strong>分析日期：</strong>2026-11-11</span><span><strong>分類：</strong>入侵事件</span><span><strong>原始來源：</strong><a href="https://www.fsc.go.kr/no010101/88086">韓國金融委員會</a></span><span class="meta-tags"><strong>標籤：</strong><span class="tag-chip">韓國金融業</span><span class="tag-chip">金融委員會</span><span class="tag-chip">金融資安</span><span class="tag-chip">API 安全</span><span class="tag-chip">虛擬資產</span></span></div>
+<h2>概述</h2>
+<p>2026 年 11 月 5 日上午，韓國金融委員會在金融保安院汝矣島分院召開「AI 時代資安體系革新全金融業座談會」，由委員長李億遠主持，會中公布一組罕見的統計：自 2026 年 9 月 30 日首次確認入侵事件起，至 11 月 3 日止，全韓國共有 37 家金融相關公司通報 40 起資安入侵事件，外洩資訊約 47.3 萬筆，遭竊資金約 10 億韓元。金融委員會同時宣布，將對約 580 家金融公司、電子金融業者與虛擬資產業者啟動全面檢查，逐一盤點所有對外 IT 接觸點（含 API）與內部控制體系。</p>
+<p>這波事件有三個值得注意的特徵。第一，規模擴散速度快：10 月 14 日當局中途統計時還是 16 家、約 10 萬筆外洩，一個月不到就成長到 37 家、47.3 萬筆。第二，受害者以中小型機構為主：37 家的業種分布是電子金融業 10 家、金融投資業 5 家、儲蓄銀行 5 家、銀行僅 4 家，另有線上投資連結金融業（P2P）4 家、保險業 3 家、虛擬資產業 3 家、授信專門金融業 2 家、儲蓄互助機構 1 家——10 月 14 日全金融業查核清單檢查結束後，新增通報主要集中在中小型證券、保險、電子金融、P2P 與虛擬資產交易所。第三，被攻破的多半不是核心系統，而是歷來管理較疏忽的周邊系統：金融委員會新聞稿指出，近期入侵多發生在認證與存取控制系統、營業與管理用 API、開發與測試及臨時營運系統。</p>
+<p>外洩內容以金融公司在營業過程蒐集的資訊為主，包括員工資料、客戶姓名、身分證字號（住民登錄番號）與帳戶號碼。當局特別說明，帳戶密碼等「可直接用於非法支付交易」的資訊，目前尚未確認有外洩案例——請注意官方用語是「尚未確認」，不是「確定未外洩」。遭竊的約 10 億韓元，主要來自小型虛擬資產交易所、電子金融業者與 P2P 業者所管理的公司統籌資金（連網熱錢包、消費性點數、P2P 託管資金等），個別用戶的直接資金損失，當局現階段評估「尚未實際發生」，但這同樣是調查中的初步評估，不是結案認定。上述 37 家、40 起、47.3 萬筆與 10 億韓元，都是「已通報、目前清查中」的數字，仍可能隨調查變動。</p>
+<h2>時間線</h2>
+<ul>
+<li>2025 年（背景，非本次統計）：樂天卡約 297 萬名客戶資料外洩，是去年的獨立大案。韓國媒體以「樂天卡事件一年後，全金融業再度被攻破」作對照，但該案未計入本次 40 起；SK Telecom、KT 的事件屬電信業，也不在本次金融業統計內。</li>
+<li>2026-09-30：本次統計期間的起點，第一起入侵事件確認。</li>
+<li>2026 年 9 月底至 10 月初（第一波）：新韓銀行、KB 國民銀行、韓亞銀行、BNK 釜山銀行、睿嘎藍儲蓄銀行、Welcome 儲蓄銀行、現代 Capital 共 7 家機構陸續傳出入侵。該波主要攻擊員工與貸款業務員使用的外部網頁與附屬系統，當時未影響網路銀行、行動銀行等對客服務。</li>
+<li>2026-10-04：韓聯社報導，當局表示多家機構發現同一攻擊者的 IP（銀行組與儲蓄銀行／授信組的 IP 不同，但手法相似），攻擊者持續變換 IP；當局研判攻擊者使用 AI 工具，對多家金融公司發動大規模自動化攻擊。</li>
+<li>2026-10-14：當局中途統計為 16 家公司、約 10 萬筆外洩；全金融業查核清單檢查於此日結束，此後新增通報轉以中小型機構為主。</li>
+<li>2026-10-21 起：北韓分配的 IP 段（175.45.176.0/22）對金融業發動掃描式存取，共計 4,404,101 次，當局經整合監控系統 FIRST 發布注意事項。</li>
+<li>2026-10-28 至 10-29：媒體陸續報導具名個案——大信證券 38,490 名客戶個資外洩、Bithumb 交易所經內部行動群組軟體發生個資外洩、未來資產資產運用部分網站系統遭異常存取。金融保安院 10 月 29 日公開回應北韓 IP 一事：IP 可以偽造，無法斷定為北韓所為，該批存取與近期入侵事件未確認有明確關聯，也未確認造成任何入侵。</li>
+<li>2026-11-02：金融當局先與主要虛擬資產業者召開緊急檢討會議。</li>
+<li>2026-11-03：本次統計期間截止日（37 家、40 起、約 47.3 萬筆、約 10 億韓元）。</li>
+<li>2026-11-05：金融委員會召開全金融業座談會並發布新聞稿，宣布約 580 家機構全面檢查與後續制度措施（見第五節）。檢查期間發現的問題以補正為前提彈性處理，但當局明言：檢查結束後再發生入侵事件將嚴格究責，重大管理疏失追究至包括 CEO 在內的經營團隊。</li>
+<li>2026-11-09 至 11-10（上架前補充）：金融保安院（FSI）本身遭入侵——其資安評估支援系統網站於 11 月 9 日約 15:00 確認遭未授權存取，隨即阻斷該系統，11 月 10 日向金融委員會與韓國網路振興院（KISA）通報。約 200 份行政表單、約 300 筆個人資料（姓名、出生日期）與約 350 筆系統使用者相關資訊外洩；當局稱部分金融公司提交的資安狀況資料可能亦受波及，確切範圍調查中。攻擊者頻繁變換 IP、偽裝成正常存取，與第一波手法相似；是否與本波 40 起相關，當局未定論（詳見「歸因與證據限制」節上架前補充）。</li>
+</ul>
+<h2>技術分析</h2>
+<h3>3.1 攻擊面：周邊系統，而非核心系統</h3>
+<p>目前公開資訊中，官方對入侵途徑的唯一概括描述，來自金融委員會新聞稿：近期入侵多發生在「認證・存取控制系統、營業・管理用 API、開發・測試及臨時營運系統」等歷來管理較疏忽的周邊系統。第一波的攻擊目標是員工與貸款業務員用的外部網頁與附屬系統。這與當局這次全面檢查的範圍完全對應：官網等對客服務、員工管理、內部業務、合作業務系統，以及認證／存取控制、營業管理用 API、開發／測試／臨時系統——換句話說，當局認為問題出在「資產清冊之外、或清冊上有但沒人管」的系統。這也是為什麼檢查時程分兩段：已登錄於資產清冊的系統 11 月 30 日前完成，未登錄系統與內部控制全面調查 12 月 31 日前完成。</p>
+<h3>3.2 第一波的共同攻擊者與「AI 工具」研判</h3>
+<p>韓聯社 10 月 4 日的報導指出，當局在第一波 7 家機構中發現同一攻擊者的 IP 反覆出現（銀行組與儲蓄銀行／授信組之間 IP 不同、手法相似），攻擊者持續變換 IP，並研判其使用 AI 工具對多家金融公司發動大規模自動化攻擊。這是目前唯一由官方管道支持的「共同攻擊者」研判，且僅限於第一波。韓國媒體另引述資安界人士與當局追蹤說法，稱攻擊 IP 留有中國系開源 AI 滲透系統「ARTEX AI」的痕跡、警方網路搜查局已介入調查——這是媒體轉述，不是官方歸因結論，本篇僅記錄其存在，不採為定論。10 月 14 日之後新增的中小型機構案件，官方從未表示與第一波相關。</p>
+<h3>3.3 資金竊取的型態：打統籌帳戶，不打個別用戶</h3>
+<p>約 10 億韓元的遭竊資金，集中在小型虛擬資產交易所、電子金融業者與 P2P 業者管理的公司統籌資金：連網熱錢包、消費性點數、P2P 託管資金等集中管理的帳戶。這個型態解釋了當局「個別用戶直接資金損失尚未實際發生」的評估——攻擊者拿走的是業者集中保管的資金池，而不是逐一盜用客戶帳戶。相對地，外洩的 47.3 萬筆個資（姓名、身分證字號、帳戶號碼）屬於後續詐騙（例如語音釣魚）的原料，當局已啟動暗網個資流通監測，但截至公布時，未確認外洩資料已在暗網流通、也未公布二次被害的確認案例。</p>
+<h3>3.4 公開資訊的邊界</h3>
+<p>必須明說：40 起事件中，沒有任何一起公布了完整的入侵手法。各案的初始入侵途徑、使用的惡意程式、是否有共同供應商或其他供應鏈因素，皆無公開資訊，也沒有 IoC 清單可供其他機構比對防禦。37 家受害機構的完整名單同樣未公布——具名機構僅來自各家媒體在一個月內陸續報導的個案，無法逐一確認是否全數列入這 40 起。本節的分析因此只能停留在攻擊面與攻擊型態的層級，不能下放到單一事件的技術細節。</p>
+<h2>歸因與證據限制</h2>
+<ul>
+<li><strong>「同一攻擊者」只成立於第一波</strong>：官方研判（同一 IP、相似手法、疑用 AI 工具自動化攻擊）僅涵蓋 9 月底至 10 月初的 7 家機構。其後一個月新增的 30 家左右通報，官方未表示與第一波相關，也未公布任何正式歸因。把 40 起事件寫成「同一批駭客所為」，超出了目前證據。</li>
+<li><strong>「ARTEX AI 痕跡」是媒體說法</strong>：韓媒引述資安界人士與追蹤說法，稱攻擊 IP 留有中國系開源 AI 滲透系統痕跡。此說未經官方證實，本篇不作為歸因依據。</li>
+<li><strong>北韓 IP 掃描已被當局降格</strong>：北韓 IP 段的 440 萬次掃描式存取看似驚人，但金融保安院已公開表示 IP 可偽造、無法斷定為北韓所為，且與近期入侵未確認有關聯、未確認造成入侵。引用這個數字時，必須同時附上這個限定。</li>
+<li><strong>數字都是進行式</strong>：37 家、40 起、47.3 萬筆、10 億韓元皆為「已通報、清查中」口徑；「密碼未外洩」是「尚未確認有外洩案例」、「用戶無損失」是「尚未實際發生」的階段性評估，兩者都可能被後續調查修正。</li>
+<li><strong>英文報導有一處翻譯錯誤</strong>：Korea Herald 英文版稱外洩資料「不包括」客戶姓名、身分證字號與帳戶號碼，與韓文原文相反（這些資料有外洩，未確認外洩的是密碼類資訊）；其姊妹刊 Herald Business 英文版寫法正確。本篇一律以韓文官方新聞稿與韓聯社韓文稿為準。此外，路透社截至 11 月 5 日下午未見對本事件的報導，英文覆蓋以韓國本地媒體的英文版為主。</li>
+</ul>
+<p><strong>上架前補充（2026-11-11）：</strong>本篇上架前夕，本次約 580 家全面檢查的執行單位之一、負責監測金融業駭情的金融保安院（FSI），本身亦傳出入侵事件。FSI 於 2026 年 11 月 9 日約 15:00 確認其資安評估支援系統網站遭未授權存取，隨即阻斷該系統，並於 11 月 10 日向金融委員會與韓國網路振興院（KISA）通報。據韓聯社英文版與路透社報導，外洩包括約 200 份行政表單（如個資同意書）、約 300 筆個人資料（姓名、出生日期，疑似為地方銀行員工）與約 350 筆系統使用者相關資訊；部分金融公司向 FSI 提交的資安狀況資料可能亦受波及，確切範圍仍在調查中，當局稱敏感個人資料據報未外洩（仍待確認）。攻擊者頻繁變換 IP、偽裝成正常存取，手法與本篇第一波相似，但官方未歸因——當局未表示此事件與本波 40 起出自同一攻擊者，是否相關仍未定論，不得據此寫成同一夥人所為。數字口徑亦須區分：FSI 這起事件發生於本篇統計截止日之後，且 FSI 是監管機構，不在原文統計之內；本篇所載 37 家、40 起、約 47.3 萬筆與約 10 億韓元，皆為截至 2026 年 11 月 3 日的通報統計，兩組數字不得相加或混寫。金融當局已表示，FSI 本身遭入侵須從可信度角度嚴肅看待；本次全面檢查的公信力與時程是否因此受到影響，尚無官方說法。</p>
+<h2>防守建議</h2>
+<p>這次事件的教訓不限於韓國金融業，對任何有多個對外系統的組織都適用：</p>
+<h3>韓國當局已宣布的因應措施</h3>
+<p>11 月 5 日座談會由金融委員會委員長李億遠主持，出席者包括金融監督院、金融保安院、各金融業協會會長，以及國務調整室、科技部、行政安全部、個資保護委員會、警察廳、韓國網路振興院（KISA）等部會。主要措施如下：</p>
+<ul>
+<li><strong>全面檢查</strong>：對約 580 家金融公司、電子金融業者與虛擬資產業者（含不受《電子金融交易法》規範的虛擬資產業者），檢查所有 IT 資產對外接觸點（含 API）與內部控制體系。業者先自查；查核不實或發現重大漏洞，由金融監督院、金融保安院現場檢查；發現可致金錢損失或個資外洩的重大漏洞，須立即停止服務。時程：已登錄系統 2026-11-30 前完成；未登錄系統與內部控制全面調查 2026-12-31 前完成，並據此於 2027 年第一季發布「資安內部控制指引」。</li>
+<li><strong>監控與情資共享</strong>：整合監控系統 FIRST 升級，2026 年 12 月試行、2027 年第一季全面啟用，大型業者即時共享攻擊 IP 與惡意程式資訊；暗網個資流通監測同步啟動。</li>
+<li><strong>漏洞評估增頻</strong>：大型金融公司的漏洞分析評估由每年 1 次增至 2 次。朝鮮日報經濟版補充了門檻細節：先適用於總資產 2 兆韓元以上且員工 300 人以上的大型公司，2028 年再擴及中小型公司（此細節未見於韓聯社主稿）。</li>
+<li><strong>虛擬資產業者通報</strong>：11 月內建立同時向金融監督院、金融保安院通報的指引，補上虛擬資產業者不在《電子金融交易法》規範內的通報缺口。</li>
+<li><strong>消費者保護</strong>：當局依《電子金融交易法》《虛擬資產使用者保護法》監督業者落實客戶通知與損害賠償等消費者保護措施，並強化異常交易監測；語音釣魚共同平台 ASAP 將導入 AI「可疑交易判斷指數」（11 月試行），並推動無過失賠償立法。</li>
+<li><strong>中長期制度</strong>：成立「網路分離規制全面解除任務小組」；2027 年第一季提出《數位金融安全法》草案。</li>
+</ul>
+<h3>給一般組織的啟示</h3>
+<ul>
+<li><strong>先把資產清冊補完整</strong>：這次被攻破的重災區是開發、測試、臨時營運系統與附屬系統——正是資產清冊最容易漏掉的部分。不知道自己有多少對外接觸點，就沒有防守可言。韓國當局把「未登錄系統」單獨拉出一個 12 月 31 日的調查期限，值得借鏡。</li>
+<li><strong>API 與存取控制要當核心系統管</strong>：營業與管理用 API、認證與存取控制系統在這波事件中被官方點名。API 清單、認證機制與權限邊界應納入與核心系統同級的盤點與檢測，而不是上線後就不聞不問。</li>
+<li><strong>統籌資金帳戶是高價值目標</strong>：熱錢包、點數、託管資金等集中管理的帳戶，一次得手就是整池資金。這類帳戶需要獨立的異常交易監測與提領覆核，不能只靠周邊系統的一般防護。</li>
+<li><strong>中小型機構不能假設自己不是目標</strong>：這波 37 家裡銀行只有 4 家，其餘多是中小型證券、保險、電子金融、P2P 與虛擬資產業者。攻擊者用自動化工具廣泛掃描時，防護最弱的一群就是入口。</li>
+<li><strong>個資外洩後的二次詐騙要先準備</strong>：姓名、身分證字號與帳戶號碼的外洩，當下不造成直接損失，卻是語音釣魚與冒名詐騙的原料。業者端的客戶通知與異常交易監測、民眾端的「接到自稱銀行來電先掛斷再回撥官方電話」，都是這類事件的標準應對。</li>
+</ul>
+<h2>原始來源</h2>
+<ol>
+<li>韓國金融委員會官方新聞稿（2026-11-05）：<a href="https://www.fsc.go.kr/no010101/88086">https://www.fsc.go.kr/no010101/88086</a></li>
+<li>韓聯社主稿（2026-11-05）：<a href="https://www.yna.co.kr/amp/view/AKR20261105028000002">https://www.yna.co.kr/amp/view/AKR20261105028000002</a></li>
+<li>韓聯社第一波「同一攻擊者」報導（2026-10-04）：<a href="https://www.yna.co.kr/view/AKR20261004027951002">https://www.yna.co.kr/view/AKR20261004027951002</a></li>
+<li>韓聯社中途統計（2026-10-14）：<a href="https://www.yna.co.kr/view/AKR20261014134851002">https://www.yna.co.kr/view/AKR20261014134851002</a></li>
+<li>先驅報經濟版（Herald Business，2026-11-05）：<a href="https://biz.heraldcorp.com/article/10926424">https://biz.heraldcorp.com/article/10926424</a></li>
+<li>朝鮮 Biz（2026-11-05）：<a href="https://biz.chosun.com/stock/finance/2026/11/05/4D37TFIYAFFGBDPRDSZJWNL5RA/">https://biz.chosun.com/stock/finance/2026/11/05/4D37TFIYAFFGBDPRDSZJWNL5RA/</a></li>
+<li>KBS（2026-11-05）：<a href="https://news.kbs.co.kr/news/pc/view/view.do?ncd=8704564">https://news.kbs.co.kr/news/pc/view/view.do?ncd=8704564</a></li>
+<li>NewsPim（北韓 IP 與具名個案，2026-10-28）：<a href="https://newspim.com/news/view/20261028001258">https://newspim.com/news/view/20261028001258</a></li>
+<li>DailySecu（金融保安院回應，2026-10-29）：<a href="https://www.dailysecu.com/news/articleView.html?idxno=209162">https://www.dailysecu.com/news/articleView.html?idxno=209162</a></li>
+<li>中央社轉述版（2026-11-05，對照用）：<a href="https://www.cna.com.tw/news/aopl/202611050098.aspx">https://www.cna.com.tw/news/aopl/202611050098.aspx</a></li>
+<li>韓聯社英文版（2026-11-10，金融保安院遭入侵）：<a href="https://en.yna.co.kr/view/AEN20261110010600315?section=economy-finance/finance">https://en.yna.co.kr/view/AEN20261110010600315?section=economy-finance/finance</a></li>
+<li>路透社（2026-11-10，金融保安院事件，對照用）：<a href="https://www.reuters.com/world/asia-pacific/south-koreas-financial-security-regulator-found-personal-information-stolen-2026-11-10/">https://www.reuters.com/world/asia-pacific/south-koreas-financial-security-regulator-found-personal-information-stolen-2026-11-10/</a></li>
+</ol>
+<a class="back-link" href="../articles.html">← 返回事件分析列表</a></article></div></section></main><footer class="footer"><div class="container footer-grid"><div class="footer-col"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><p class="footer-desc">TaiBear Security Studio 專注於將資安教育融入日常，建立好用、有效、符合合規要求的培訓方案。</p></div><div class="footer-col"><h4>導覽頁面</h4><ul><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li></ul></div><div class="footer-col"><h4>演練詳情</h4><ul><li><a href="https://www.taibear.app/service-phishing.html">社交工程演練</a></li></ul></div><div class="footer-col"><h4>聯絡資訊</h4><p>Email: <a href="mailto:info@taibear.app">info@taibear.app</a></p></div></div><div class="container footer-bottom"><p>&copy; 2026 臺熊資安工坊 TaiBear Security Studio. All rights reserved.</p><p>專業資安顧問團隊 ‧ 用一杯咖啡防禦企業邊界</p></div></footer><script src="../js/main.js"></script></body></html>
