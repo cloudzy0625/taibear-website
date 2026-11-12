@@ -1,5 +1,22 @@
 [
   {
+    "slug": "docomo-data-breach-2026",
+    "title": "Docomo 事件分析：線上會員系統遭入侵、最多 30 萬筆個資外洩，與同日的全國斷網無關",
+    "date": "2026-11-12",
+    "category": "入侵事件",
+    "tags": [
+      "NTT Docomo",
+      "個資外洩",
+      "日本電信",
+      "My docomo",
+      "未授權存取"
+    ],
+    "summary": "NTT Docomo 線上商店與 My docomo 遭外部未授權存取，官方確認最多 294,839 件顧客個資在緊急停機前已外洩，含身分證件號碼與部分銀行帳號；同日的 5G SA 全國障礙經官方調查為交換設備壅塞、與入侵無關。",
+    "source_name": "NTT Docomo",
+    "source_url": "https://www.docomo.ne.jp/info/notice/page/261106_00_m.html",
+    "url": "articles/docomo-data-breach-2026.html"
+  },
+  {
     "slug": "korea-finance-breach-wave-2026",
     "title": "韓國金融業連環遭駭事件分析：一個月 37 家機構被入侵，當局啟動全產業總檢查",
     "date": "2026-11-11",

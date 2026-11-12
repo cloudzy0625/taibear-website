@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Docomo 事件分析：線上會員系統遭入侵、最多 30 萬筆個資外洩，與同日的全國斷網無關</title><meta name="description" content="NTT Docomo 線上商店與 My docomo 遭外部未授權存取，官方確認最多 294,839 件顧客個資在緊急停機前已外洩，含身分證件號碼與部分銀行帳號；同日的 5G SA 全國障礙經官方調查為交換設備壅塞、與入侵無關。"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/drafts.css"><link rel="stylesheet" href="../css/articles.css"></head><body class="draft-site"><header class="header"><div class="container nav-container"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><nav aria-label="主要導覽"><ul class="nav-links" id="nav-links"><li><a href="https://www.taibear.app/about.html">關於 TaiBear</a></li><li><a href="https://www.taibear.app/services.html">服務方案</a></li><li><a href="https://www.taibear.app/plans.html">套餐方案</a></li><li><a href="https://www.taibear.app/scenarios.html">適用情境</a></li><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" class="active" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li><li><a href="https://www.taibear.app/faq.html">常見問題</a></li><li><a href="https://www.taibear.app/contact.html">聯絡我們</a></li></ul></nav><div class="nav-actions"><a href="https://www.taibear.app/contact.html" class="btn btn-primary">立即諮詢</a><button type="button" class="menu-toggle" id="menu-toggle" aria-label="開啟導覽選單" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header><main><section class="detail-hero text-center"><div class="container"><div class="hero-tagline">入侵事件</div><h1 class="section-title">Docomo 事件分析：線上會員系統遭入侵、最多 30 萬筆個資外洩，與同日的全國斷網無關</h1><p class="section-subtitle">NTT Docomo 線上商店與 My docomo 遭外部未授權存取，官方確認最多 294,839 件顧客個資在緊急停機前已外洩，含身分證件號碼與部分銀行帳號；同日的 5G SA 全國障礙經官方調查為交換設備壅塞、與入侵無關。</p></div></section><section class="section-padding draft-content"><div class="container"><article class="article-body"><a class="back-link" href="../articles.html">← 返回事件分析列表</a><div class="article-meta"><span><strong>分析日期：</strong>2026-11-12</span><span><strong>分類：</strong>入侵事件</span><span><strong>原始來源：</strong><a href="https://www.docomo.ne.jp/info/notice/page/261105_03_m.html">NTT Docomo</a></span><span class="meta-tags"><strong>標籤：</strong><span class="tag-chip">NTT Docomo</span><span class="tag-chip">個資外洩</span><span class="tag-chip">日本電信</span><span class="tag-chip">My docomo</span><span class="tag-chip">未授權存取</span></span></div>
+<h2>1. 概述</h2>
+<p>2026 年 11 月 5 日，日本最大電信商 NTT Docomo 同一天發生兩件大事，而且很容易被混為一談。</p>
+<p>第一件是入侵事件：Docomo 線上商店（ドコモオンラインショップ）與會員入口 My docomo 的伺服器遭外部未授權存取。官方在 11 月 5 日凌晨緊急停機後，調查確認在停機之前的入侵期間，已有顧客資訊外洩。11 月 6 日晚間的記者會與第三報公告進一步確認：外洩上限為 294,839 件（以回線計、含已解約；個人 204,157 件、法人 90,682 件）；全體對象的欄位包含姓名、出生日期、地址、電話、電子郵件、身分證件（本人確認書類）號碼與契約資訊，一部分顧客另涉及代理人與勤務先資訊、以及金融機構的銀行帳號（金融機関名、分行名、帳號、戶名）。官方第三報公布的外洩項目中，未包含信用卡資訊與 My Number（個人編號）。社長前田義晃在記者會上道歉；11 月 9 日第四報：My docomo 除 9 項手續外已於當日 15:00 左右順次再開，ドコモオンラインショップ與其餘 9 項手續仍在緊急維護、再開時期未定。</p>
+<p>第二件是同日上午開始的 5G SA 全國通訊障礙，語音、數據與簡訊不穩約 14 小時。這件官方已給出正面原因：交換設備壅塞，調查中未發現未授權存取或網路攻擊的跡象，與入侵案無關。（障礙是否波及使用 Docomo 網路的 MVNO 業者，初期報導說法不一，本篇不採認任何一邊。）</p>
+<p>本篇的主體是第一件入侵事件；第二件只在需要分流時說明，因為把兩件寫成「駭客打癱電信又偷走個資」，是目前證據不支持的說法。</p>
+<h2>2. 時間線</h2>
+<p>（以下時間均為日本時間 JST）</p>
+<ul>
+<li><strong>2026-11-04</strong>：Docomo 確認線上商店與 My docomo 遭外部未授權存取。同日稍早，NTT 社長島田明在決算說明場合表示，2026 年 10 月通訊服務相關的資安攻擊偵測件數約為去年同期的 7 倍；2026 年 9 至 10 月，集團內外共發生 12 件包含疑似在內的資訊外洩事件，其中集團內 5 件、委託先 7 件——這是本案的背景脈絡，不代表兩者有直接關聯。</li>
+<li><strong>2026-11-05 01:05</strong>：Docomo 停止兩個服務的各項手續，進入緊急維護並全面遮斷存取。當時官方判斷為「未授權存取的可能性高」，開始調查影響範圍與原因。</li>
+<li><strong>2026-11-05 白天至晚間（續報）</strong>：調查確認外洩發生在緊急維護開始之前；外洩上限約 30 萬件，欄位為姓名、住所、出生日期、手機號碼、聯絡電話等；其餘範圍仍在調查（日本媒體轉述信用卡等支付資訊也在確認範圍內，但官方公告本身未點名）；維護開始之後未確認新的外洩。官方表示將在細節判明後，儘速個別通知對象顧客，並呼籲提防冒充 Docomo 或關係者的可疑郵件、SMS 與電話。</li>
+<li><strong>2026-11-05 11:18</strong>：5G SA 全國通訊障礙開始，語音通話、數據通訊與簡訊不穩。</li>
+<li><strong>2026-11-06 01:20</strong>：5G SA 障礙排除，歷時約 14 小時。官方公布原因為交換設備壅塞，並明言在事象發生前後均未確認未授權存取的形跡或顯示網路攻擊的事象。</li>
+<li><strong>2026-11-06 晚間</strong>：Docomo 召開記者會並發布第三報：外洩上限確認為 294,839 件（回線計，個人 204,157 件、法人 90,682 件）；外洩欄位擴大公布——全體對象含身分證件號碼與費率方案等契約內容，一部分顧客含金融機構帳號資訊；攻擊手法方面，官方說明攻擊者濫用複數系統相互連動的機制，以機械化方式大量查詢、取得顧客資訊；已確認的攻擊路徑與類似路徑已完成遮斷，停機後未確認新的外洩；社長前田義晃道歉，（當時）服務恢復時期仍未定。</li>
+<li><strong>2026-11-06（本稿時點）</strong>：線上商店與 My docomo 仍在緊急維護中、全面遮斷，恢復時期未定。</li>
+<li><strong>2026-11-09 15:00 左右</strong>：Docomo 發布第四報（17:30 時點版），My docomo 除 9 項手續外順次再開；仍停用的 9 項為あんしんセキュリティ變更・解約、smart あんしん補償利用・交換、docomo 內容決済停止解除、d 払い支付方式／餘額轉出接收停止解除、家庭折扣與合併帳單的新申請／追加／離開、ahamo 方案變更、JAL 行動選項；ドコモオンラインショップ仍在緊急維護。外洩上限維持最大 294,839 回線、項目不變，現時點未確認新的流出。</li>
+<li><strong>2026-11-11 10:34–19:17</strong>：Docomo 5G SA 再度全國障礙，語音、數據與簡訊不穩約 8 小時 43 分，19:17 全數復舊。官方稱原因同為交換設備壅塞，調查未發現未授權存取或網路攻擊跡象；與入侵案無關。</li>
+</ul>
+<h2>3. 技術分析</h2>
+<h3>3.1 已知部分</h3>
+<ul>
+<li>入侵對象是兩個對外 Web 服務（線上商店、My docomo）的伺服器，官方用語是「外部からの不正アクセス」（來自外部的未授權存取）。</li>
+<li>外洩發生在官方停機之前：也就是說，官方在 11 月 4 日確認未授權存取、11 月 5 日凌晨遮斷時，資料外洩已經發生。這是「偵測到入侵」與「資料流出」之間的時間差問題。</li>
+<li>官方確認的是「流出」本身，而不只是「可能被存取」：續報明言已確認一部份顧客資訊流出到外部。</li>
+<li>停機之後未確認新的外洩（官方在續報中的時點性陳述）。</li>
+<li>攻擊手法的輪廓在 11 月 6 日記者會上首次由官方說明：攻擊者自外部發動大量存取，濫用複數系統相互連動的機制，以機械化方式查詢並取得顧客資訊；有日本媒體以「既有安全診斷未涵蓋的攻擊」形容此手法。官方並表示，已確認的攻擊路徑與類似路徑均已遮斷。</li>
+</ul>
+<h3>3.2 未知部分</h3>
+<ul>
+<li>侵入路徑的技術細節仍未公布：官方在記者會上說明了手法的輪廓（濫用系統連動、以機械化方式查詢取得），但最初如何取得存取、涉及哪些系統與介面，仍在調查確認中。沒有 CVE 編號、沒有 IoC、沒有第三方技術報告。</li>
+<li>實際外洩件數仍是上限口徑：11 月 6 日記者會給出的 294,839 件同樣是「最大」數字，欄位範圍已大致判明，但逐件確認仍在進行，最終數字可能下修。</li>
+<li>攻擊者停留時間、最初入侵時點未公布。</li>
+<li>信用卡資訊與 My Number 未列入官方第三報公布的外洩項目；惟調查仍在進行，日後公告若有修正，本篇應同步更新。</li>
+</ul>
+<h3>3.3 通訊障礙的分流</h3>
+<p>5G SA 障礙屬於核心網路設備事件：官方調查結論是交換設備壅塞，並明言未發現未授權存取或網路攻擊的跡象。它與入侵案的系統層面不同（核心網路對比對外 Web 服務）、官方認定也不同，時間重疊是同日發生，本篇不把兩者合併敘述，也不推定關聯。同一障礙在 11 月 11 日又發生一次（10:34–19:17），官方說法同為交換設備壅塞、無攻擊跡象；兩次障礙的關聯性官方尚未說明，本篇不推定。</p>
+<h2>4. 歸因與證據限制</h2>
+<ul>
+<li><strong>沒有歸因。</strong> Docomo 官方未指名任何行為者、國家或組織，日本媒體的報導也沒有歸因說法。本篇不作任何歸因推測。</li>
+<li><strong>證據目前只有營運商自報。</strong> 現階段的公開資訊全部來自 Docomo 自己的多版官方公告，加上通訊社與專業媒體的轉述；沒有第三方鑑識報告，也沒有監管機關（總務省、個人情報保護委員會）的公開調查結論或處分（截至本稿時點）。</li>
+<li><strong>294,839 件仍是上限，不是定案。</strong> 官方用語是「最大」，且明言具體範圍與件數仍在調查。引用這個數字時必須保留「上限」的性質。</li>
+<li><strong>未確認事項不得反向解讀。</strong> 信用卡與 My Number 未列入第三報的外洩項目，這是「不在公布清單上」，不是官方保證絕對未外洩；侵入路徑的技術細節是「未特定」，不是「已排除某種手法」。</li>
+<li><strong>障礙與入侵的關係，官方立場是分開的。</strong> 障礙已有正面原因認定（設備壅塞）且調查明言無攻擊跡象；因此本篇將兩案分開敘述。若日後官方修正認定，本篇應同步更新。</li>
+</ul>
+<h2>5. 防守建議</h2>
+<h3>給 Docomo 顧客與一般使用者</h3>
+<ul>
+<li>提防冒名釣魚：外洩欄位（姓名、電話、生日、地址）正是詐騙集團客製化話術的材料。官方已呼籲，對冒充 Docomo 或關係者的郵件、SMS、電話保持警戒，不點連結、不開附件、不在來路不明的頁面輸入帳號密碼或信用卡資訊。</li>
+<li>以官方個別通知為準：官方表示將在細節判明後個別通知對象顧客。自稱「外洩查詢」的網站或要求先付費、先登入的通知，都不是官方管道。</li>
+</ul>
+<h3>給營運對外會員／電商系統的團隊</h3>
+<ul>
+<li>大量讀取與匯出的異常偵測要先於入侵偵測：本案外洩發生在官方確認入侵之前，代表資料流出的偵測時效比入侵本身更關鍵。顧客資料的批次查詢、匯出、異常時段存取應有告警與上限。</li>
+<li>對外 Web 服務與顧客資料庫之間落實最小權限與網路分段，避免單一服務被入侵就直達整批顧客資料。</li>
+<li>預置停機與公告劇本：本案從確認存取到凌晨停機的決策速度、以及公告中給上限、給欄位、未確認事項明說未確認、同步發布冒名詐騙提醒的寫法，都值得當作事件公告的參考樣式。</li>
+<li>事件判讀紀律：同一天發生多起事件時，先分流（系統、原因、官方認定）再評論，不以時間重疊推定關聯。</li>
+</ul>
+<h2>6. 原始來源</h2>
+<ul>
+<li>NTT Docomo 官方公告（外洩續報版，2026-11-05）：<a href="https://www.docomo.ne.jp/info/notice/page/261105_03_m.html">https://www.docomo.ne.jp/info/notice/page/261105_03_m.html</a></li>
+<li>NTT Docomo 官方公告（第三報，11 月 6 日 18:00 時點版：外洩欄位與件數更新）：<a href="https://www.docomo.ne.jp/info/notice/page/261106_00_m.html">https://www.docomo.ne.jp/info/notice/page/261106_00_m.html</a></li>
+<li>NTT Docomo 官方公告（第四報，11 月 9 日 17:30 時點版：My docomo 部分手續再開）：<a href="https://www.docomo.ne.jp/info/notice/page/261109_00_m.html">https://www.docomo.ne.jp/info/notice/page/261109_00_m.html</a></li>
+<li>IT Post（第四報整理：My docomo 再開與仍停用手續清單，對照來源）：<a href="https://itpostjp.com/security/ntt-docomo-my-docomo-online-shop-leak-300000/">https://itpostjp.com/security/ntt-docomo-my-docomo-online-shop-leak-300000/</a></li>
+<li>ITmedia Mobile（11 月 6 日記者會報導：件數內訳與手法說明）：<a href="https://www.itmedia.co.jp/mobile/amp/2611/06/news085.html">https://www.itmedia.co.jp/mobile/amp/2611/06/news085.html</a></li>
+<li>NTT Docomo 官方公告（2026-11-05 09:00 時點版）：<a href="https://www.docomo.ne.jp/info/notice/page/261105_02_m.html">https://www.docomo.ne.jp/info/notice/page/261105_02_m.html</a></li>
+<li>NTT Docomo 通訊狀況頁（5G SA 障礙原因：交換設備壅塞、無未授權存取跡象）：<a href="https://www.docomo.ne.jp/info/status/">https://www.docomo.ne.jp/info/status/</a></li>
+<li>Kyodo News（2026-11-06，5G 障礙恢復與原因）：<a href="https://english.kyodonews.net/articles/-/90581">https://english.kyodonews.net/articles/-/90581</a></li>
+<li>Kyodo News（2026-11-11，5G SA 再度障礙與復舊）：<a href="https://english.kyodonews.net/articles/-/91037">https://english.kyodonews.net/articles/-/91037</a></li>
+<li>Kyodo News（2026-11-05，障礙與外洩同日報導）：<a href="https://english.kyodonews.net/articles/-/90436">https://english.kyodonews.net/articles/-/90436</a></li>
+<li>ITmedia Mobile（2026-11-05）：<a href="https://www.itmedia.co.jp/mobile/articles/2611/05/news093.html">https://www.itmedia.co.jp/mobile/articles/2611/05/news093.html</a></li>
+<li>Impress Watch（2026-11-05）：<a href="https://www.watch.impress.co.jp/docs/news/2154107.html">https://www.watch.impress.co.jp/docs/news/2154107.html</a></li>
+<li>Jiji／nippon.com（2026-11-05）：<a href="https://www.nippon.com/en/articles/-/56982">https://www.nippon.com/en/articles/-/56982</a></li>
+</ul>
+<a class="back-link" href="../articles.html">← 返回事件分析列表</a></article></div></section></main><footer class="footer"><div class="container footer-grid"><div class="footer-col"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><p class="footer-desc">TaiBear Security Studio 專注於將資安教育融入日常，建立好用、有效、符合合規要求的培訓方案。</p></div><div class="footer-col"><h4>導覽頁面</h4><ul><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li></ul></div><div class="footer-col"><h4>演練詳情</h4><ul><li><a href="https://www.taibear.app/service-phishing.html">社交工程演練</a></li></ul></div><div class="footer-col"><h4>聯絡資訊</h4><p>Email: <a href="mailto:info@taibear.app">info@taibear.app</a></p></div></div><div class="container footer-bottom"><p>&copy; 2026 臺熊資安工坊 TaiBear Security Studio. All rights reserved.</p><p>專業資安顧問團隊 ‧ 用一杯咖啡防禦企業邊界</p></div></footer><script src="../js/main.js"></script></body></html>
