@@ -1,5 +1,22 @@
 [
   {
+    "slug": "claude-code-dont-ask-again-2026",
+    "title": "Claude Code 事件分析：按一次『不再詢問』，密碼就寫進設定檔上了 GitHub",
+    "date": "2026-11-13",
+    "category": "漏洞揭露",
+    "tags": [
+      "Claude Code",
+      "憑證外洩",
+      "GitHub",
+      "開發者安全",
+      "Apiiro"
+    ],
+    "summary": "Claude Code 的「不再詢問」會把核准過的指令原文——連同夾帶的密碼與金鑰——存進專案的 .claude/settings.local.json；Apiiro 在公開 GitHub 數到 1,122 份設定檔含真憑證、共 1,379 組，刪檔也救不回來：先輪替憑證、再清 git 歷史，才是正確順序。",
+    "source_name": "Apiiro",
+    "source_url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again/",
+    "url": "articles/claude-code-dont-ask-again-2026.html"
+  },
+  {
     "slug": "docomo-data-breach-2026",
     "title": "Docomo 事件分析：線上會員系統遭入侵、最多 30 萬筆個資外洩，與同日的全國斷網無關",
     "date": "2026-11-12",

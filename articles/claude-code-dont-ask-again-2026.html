@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Claude Code 事件分析：按一次『不再詢問』，密碼就寫進設定檔上了 GitHub - TaiBear Security Studio 臺熊資安工坊</title><meta name="description" content="Claude Code 的「不再詢問」會把核准過的指令原文——連同夾帶的密碼與金鑰——存進專案的 .claude/settings.local.json；Apiiro 在公開 GitHub 數到 1,122 份設定檔含真憑證、共 1,379 組，刪檔也救不回來：先輪替憑證、再清 git 歷史，才是正確順序。"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/drafts.css"><link rel="stylesheet" href="../css/articles.css"></head><body class="draft-site"><header class="header"><div class="container nav-container"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><nav aria-label="主要導覽"><ul class="nav-links" id="nav-links"><li><a href="https://www.taibear.app/about.html">關於 TaiBear</a></li><li><a href="https://www.taibear.app/services.html">服務方案</a></li><li><a href="https://www.taibear.app/plans.html">套餐方案</a></li><li><a href="https://www.taibear.app/scenarios.html">適用情境</a></li><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" class="active" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li><li><a href="https://www.taibear.app/faq.html">常見問題</a></li><li><a href="https://www.taibear.app/contact.html">聯絡我們</a></li></ul></nav><div class="nav-actions"><a href="https://www.taibear.app/contact.html" class="btn btn-primary">立即諮詢</a><button type="button" class="menu-toggle" id="menu-toggle" aria-label="開啟導覽選單" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header><main><section class="detail-hero text-center"><div class="container"><div class="hero-tagline">漏洞揭露</div><h1 class="section-title">Claude Code 事件分析：按一次『不再詢問』，密碼就寫進設定檔上了 GitHub</h1><p class="section-subtitle">Claude Code 的「不再詢問」會把核准過的指令原文——連同夾帶的密碼與金鑰——存進專案的 .claude/settings.local.json；Apiiro 在公開 GitHub 數到 1,122 份設定檔含真憑證、共 1,379 組，刪檔也救不回來：先輪替憑證、再清 git 歷史，才是正確順序。</p></div></section><section class="section-padding draft-content"><div class="container"><article class="article-body"><a class="back-link" href="../articles.html">← 返回事件分析列表</a><div class="article-meta"><span><strong>分析日期：</strong>2026-11-13</span><span><strong>分類：</strong>漏洞揭露</span><span><strong>原始來源：</strong><a href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again/">Apiiro</a></span><span class="meta-tags"><strong>標籤：</strong><span class="tag-chip">Claude Code</span><span class="tag-chip">憑證外洩</span><span class="tag-chip">GitHub</span><span class="tag-chip">開發者安全</span><span class="tag-chip">Apiiro</span></span></div>
+<h2>1. 概述</h2>
+<p>Claude Code 是 Anthropic 推出的 AI 程式開發助手。開發者請它查資料庫、呼叫 API 時，它提出的指令常會帶著設定檔裡的密碼或金鑰；執行前它會先徵求同意，而只要開發者選了「Yes, and don't ask again」（是，不再詢問），它就會把這條指令<strong>原文</strong>——包含其中的密碼與金鑰——存成一條 allow rule，寫進專案資料夾內的 <code>.claude/settings.local.json</code>，明文保存。這個檔案若跟著專案一起 commit、push 到公開 GitHub，裡面的憑證就等於公開。</p>
+<p>應用安全公司 Apiiro 於 2026 年 11 月 5 日發布研究：他們在 11 月 1 日至 3 日以 GitHub 程式碼搜尋盤點公開 repo，在預設分支上找到 104,185 份 <code>.claude/settings.local.json</code>、分布於 103,617 個 repo，其中 1,122 份（1.1%）含至少一組真憑證，合計 1,379 組不重複憑證（636 組符合已知服務商格式的金鑰，加上 743 組附在公開主機位址旁的密碼或權杖）；若把 git 歷史、團隊共用的 <code>.claude/settings.json</code> 與 agent 對話紀錄都算進來，總數是 2,539 組、分布 1,994 個 repo，共有 63 個組織受影響。先把證據邊界講清楚：Apiiro 明言他們<strong>沒有測試或使用任何一組憑證、也沒有連線任何主機</strong>，所以以上是「已暴露」的盤點，不是「已被入侵」的證實；被通知的組織中，僅一家確認其金鑰在當時仍然有效。而就算現在把檔案刪掉也救不回來——舊版本留在 git 歷史與 fork 裡。正確的處置順序是先輪替憑證，再從版控移除並清理歷史。本篇的目的不是歸因——這裡沒有攻擊者，成因是一個產品的預設行為撞上日常的 git 工作流——而是給開發者一份自查清單。</p>
+<h2>2. 時間線</h2>
+<p>（日期為來源所載；本案的「事件」是一條產品行為被公開盤點的過程。）</p>
+<div class="article-table-wrap"><table class="article-table"><thead><tr><th>時間</th><th>事件</th></tr></thead><tbody>
+<tr><td><code>2025 年 8 月 11 日</code></td><td>使用者在 Claude Code 的 issue tracker 回報：核准過的指令連同 API 金鑰與權杖，被原文存進 settings.local.json。</td></tr>
+<tr><td><code>2026 年 1 月 3 日</code></td><td>該回報在 60 天無活動後，被自動機器人以「not planned」關閉。Apiiro 指出，四件相關回報全數被同一個機器人關閉、沒有一件得到 Anthropic 回覆。</td></tr>
+<tr><td><code>2026 年 11 月 1 日至 3 日</code></td><td>Apiiro 以 GitHub 程式碼與 commit 搜尋盤點公開 repo（僅預設分支）。以 11 月 2 日為快照時點：每一份含憑證的檔案都還躺在該 repo 的預設分支上，且半數已放了至少 217 天。</td></tr>
+<tr><td><code>2026 年 11 月 2 日至 3 日</code></td><td>Apiiro 把組織級案例逐一通報給各受影響組織的負責人。</td></tr>
+<tr><td><code>2026 年 11 月 5 日</code></td><td>Apiiro 發布研究「Coding Agents Are Leaking Your Secrets to GitHub」。</td></tr>
+<tr><td><code>2026 年 11 月 6 日</code></td><td>The Hacker News 報導本案，標題點出 1,122 份公開副本。</td></tr>
+<tr><td><code>2026 年 11 月 7 日</code></td><td>Anthropic 的 Claude Code 負責人 Boris Cherny 在 Hacker News 回應並參與週末討論（依 Apiiro 11 月 8 日的更新註記）。</td></tr>
+<tr><td><code>2026 年 11 月 8 日</code></td><td>Apiiro 在原文加上上述回應的更新註記。截至本日，未見 Anthropic 發布產品修補或修改相關文件。</td></tr>
+<tr><td><code>2026 年 11 月 9 日</code></td><td>GitGuardian 公布獨立統計：以持續監測掃描 2025 年 1 月至 2026 年 11 月 7 日所有公開提交，在 settings.local.json 找到 31,088 組不重複密鑰、分布 23,276 個 repo，其中 5,343 組在偵測當下仍有效；Docker Hub 公開映像檔另有 613 組（99 組有效）。</td></tr>
+<tr><td><code>2026 年 11 月 10 日</code></td><td>Dark Reading 報導 Anthropic 的回應：Cherny 表示 Claude Code 歷來未做密鑰掃描，公司正以原型驗證緩解做法（自動模式攔截外洩、內建基本密鑰掃描），評估取捨後隨下一版推出。截至本日，仍無產品修補版本或 CVE 編號。</td></tr>
+</tbody></table></div>
+<h2>3. 技術分析</h2>
+<h3>3.1 機制：被記住的是「整條指令」，不只是權限</h3>
+<p>Claude Code 預設在執行多數 shell 指令前先徵求同意。選「不再詢問」後，它把一條 allow rule 存進專案內的 <code>.claude/settings.local.json</code>，之後符合的指令就不再詢問、直接執行。問題在於被存下來的粒度：有時是一條模式（例如 <code>npm test *</code>），有時是<strong>一整條確切指令</strong>——當指令裡手打了密碼或權杖（例如帶著 <code>PGPASSWORD=</code> 連資料庫、或把 token 寫在指令列上），憑證就以明文跟著進了檔案。Apiiro 以 Anthropic 最新模型 Opus 5.5 與 Fable 5.1 重現了這個行為，並強調這是 Claude Code 用戶端本身的行為、與模型無關。</p>
+<h3>3.2 內建防護為什麼擋不住</h3>
+<p>Claude Code 並非完全沒設防：依其文件，第一次在 git repo 內寫入這個檔案時，它會把 <code>**/.claude/settings.local.json</code> 加入<strong>使用者的全域 git excludes</strong>，讓那台電腦上的 git 在所有 repo 都忽略這個檔案。但這道防護有三個結構性缺口：</p>
+<ul>
+<li>它只存在於「某一位使用者、某一台電腦」的全域設定裡，不會跟著專案走——Claude Code 從未把這個檔案加進專案自己的 <code>.gitignore</code>。repo clone 到另一台機器、或換一位開發者，防護就不存在。</li>
+<li>它擋不住已經 commit 的檔案：檔案若在防護生效前、或在沒有這條 exclude 的環境裡被提交，全域 exclude 對既有版控紀錄毫無作用。</li>
+<li>它擋不住「先有檔案、後有 repo」與「fork」：資料夾在建立 repo 之前就存在的檔案、以及 repo 被 fork 出去的副本，都不在這道防護的範圍內；而 Apiiro 實測，211 個 fork（來自 74 個 repo）帶著與原始 repo 相同的憑證。</li>
+</ul>
+<p>更關鍵的是，Apiiro 追蹤的 1,105 個 repo 中，有 539 個出現了把 Claude 列為共同作者的 commit 去更動這個檔案——也就是說，很多時候是 Claude Code 自己把這個檔案 commit 進去的。</p>
+<h3>3.3 規模與組成</h3>
+<p>以 GitHub 程式碼搜尋（2026 年 11 月 1 日至 3 日、預設分支）盤點的結果：</p>
+<ul>
+<li><code>.claude/settings.local.json</code> 公開副本 104,185 份、分布 103,617 個 repo。</li>
+<li>其中 1,122 份（1.1%）含至少一組真憑證，合計 1,379 組不重複：636 組符合已知服務商格式的金鑰、743 組附在公開主機旁的密碼或權杖。</li>
+<li>依 The Hacker News 的整理，其中超過三分之一可直接開啟資料庫，含 379 組資料庫密碼；另有 43 組公開伺服器的 SSH 登入、42 組 GitHub／GitLab／npm 權杖、23 組 AWS 金鑰。Apiiro 舉出的最嚴重案例，包括一家資料庫廠商自家的管理級雲端金鑰，以及一份病歷資料庫的擁有者密碼。</li>
+<li>廣義口徑共 2,539 組、1,994 個 repo：除了現行檔案的 1,379 組，另有 1,160 組分布在 git 歷史、團隊共用的 <code>.claude/settings.json</code>（76,011 份公開副本中有 298 份含憑證，多數一樣出現在 allow rule 裡）與 agent 對話紀錄中。光 git 歷史裡、現行任何副本都已不存在的憑證就多出 734 組、509 個 repo。</li>
+<li>時間向度：以 2026 年 11 月 2 日快照計，每份含憑證的檔案都還在該 repo 的預設分支上，半數已存在至少 217 天（中位數 217 天）。「刪掉檔案」對這些 repo 而言從來不是修復——歷史裡的那一份還在。</li>
+<li>受影響組織共 63 個，多數是各規模的軟體公司。</li>
+</ul>
+<p>另一組獨立統計來自 GitGuardian（2026 年 11 月 9 日公布）：它以持續監測掃描 2025 年 1 月至 2026 年 11 月 7 日的每一筆公開提交——包括之後被刪除、改寫的版本——在 settings.local.json 找到 31,088 組不重複密鑰、分布 23,276 個 repo，其中 5,343 組在偵測當下仍有效（有判定結果的出現次數中，67% 有效）；Docker Hub 公開映像檔另有 613 組（99 組有效），因為 <code>COPY . .</code> 會把整個工作目錄複進映像檔，<code>.gitignore</code> 擋不住。這組數字與 Apiiro 的不衝突：Apiiro 問的是「11 月初當下還在多少」，GitGuardian 問的是「曾經被推出去過多少」，且 GitGuardian 多做了 Apiiro 沒做的有效性測試。</p>
+<h3>3.4 掃描器抓不到大部分：藏在指令裡的密碼</h3>
+<p>Apiiro 把兩款常用開源掃描器跑過全部 104,185 份檔案：在 1,122 份含真憑證的檔案中，gitleaks 只標出 564 份、TruffleHog 標出 643 份，<strong>215 份兩者都沒標出來</strong>。原因是掃描器主要比對已知金鑰格式，而寫在指令裡的密碼——<code>PGPASSWORD=</code> 後面、<code>sshpass -p</code> 後面、<code>mysql -p</code> 後面的一串字——在掃描器眼中只是普通指令列裡的一個普通單字。這也意味著「CI 有跑密鑰掃描」不等於對這類外洩免疫。</p>
+<h3>3.5 不是所有 coding agent 都這樣</h3>
+<p>Apiiro 比對了 16 個 coding agent 的文件與行為，Claude Code 是其中<strong>唯一被確認</strong>會預設把完整核准指令寫進專案檔案的一個。本篇僅轉述其比對結論；未被確認不等於其他工具有或沒有類似行為，本篇不對其他工具做延伸主張。</p>
+<h2>4. 歸因與證據限制</h2>
+<ul>
+<li>本案沒有攻擊者、也不需要歸因：成因是產品預設行為（把核准指令原文存進專案檔）加上日常 git 工作流（commit、clone、fork）。把它寫成「駭客入侵」或「Anthropic 遭駭」都超出證據。</li>
+<li>「暴露」不等於「已被使用」：Apiiro 明言未測試、未使用任何一組憑證，未連線任何主機。「真憑證」的定義是格式符合已知服務商金鑰、或密碼／權杖附在公開主機位址旁，並經其 AI 審查同意——是「長得像真的、且指向公開主機」，不是「已驗證仍有效」。被通知的組織中僅一家確認金鑰當時仍有效；其餘憑證是否仍有效、是否曾被第三方讀取，都未知。</li>
+<li>數字是公開 GitHub 的下限：盤點僅及公開 repo 的預設分支，且程式碼搜尋有結果上限（Apiiro 以檔案大小切片繞過），歷史口徑本身也是最低估計。私有 repo 與從未上 GitHub 的本機副本不在盤點內——但本機檔案仍可能經 npm 套件、Docker 映像、壓縮檔或同步資料夾外流，不能因為「沒 push 過」就認定安全。</li>
+<li>研究者立場：Apiiro 本身販售應用程式與 coding agent 的安全產品，與本議題有商業利害；其數字截至本稿撰寫時未見第三方獨立複核。本篇的數字全數標明出自 Apiiro，引用時應保留這個出處脈絡。</li>
+<li>關於「Anthropic 沒有回應」的說法要分兩層：issue tracker 上的四件相關回報（最早 2025 年 8 月 11 日）全數被自動機器人關閉、無一得到 Anthropic 回覆，這是 Apiiro 與 The Hacker News 的共同記載；但研究發布後，Claude Code 負責人已於 2026 年 11 月 7 日在 Hacker News 公開回應並參與討論。截至 2026 年 11 月 8 日，未見產品修補或文件變更。本篇不把「tracker 無回覆」擴大寫成「廠商完全沉默」，也不把論壇回應寫成已修復。</li>
+<li>本篇立場：本文是開發者自查與示警，不推薦、也不反推薦任何 coding agent；本站未查證其他工具是否有相同行為，不做未經查證的比較或指控。</li>
+</ul>
+<h2>5. 防守建議</h2>
+<p>核心動作是自查——先假設「只要檔案進過公開 repo，裡面的東西就是公開的」：</p>
+<p>給開發者與團隊（依 Apiiro 建議整理）：</p>
+<ul>
+<li><strong>全面搜尋</strong>：在自己與組織的每個 repo 搜尋 <code>.claude/settings.local.json</code> 與 <code>.claude/settings.json</code>，並且要查 git 歷史——就算現在檔案已經不存在，歷史裡有過也算命中。任一命中，就把該檔案<strong>曾經持有過的</strong>每組密碼、權杖與金鑰視為已公開。</li>
+<li><strong>先輪替、再清理</strong>：順序不能反過來。先輪替檔案曾持有過的全部憑證（優先處理與公開伺服器成對出現的那些，因為它們直接給出存取路徑），之後才做版控清理。</li>
+<li><strong>從版控移除並清歷史</strong>：<code>git rm --cached .claude/settings.local.json</code> 停止追蹤，把它加進<strong>專案自己的</strong> <code>.gitignore</code>（不要只靠全域 excludes），並以 git filter-repo 等工具清除歷史中的舊副本——只刪檔案、只移除追蹤，都清不掉歷史。</li>
+<li><strong>檢查本機檔案</strong>：即使從未 commit，也打開本機的 <code>.claude/settings.local.json</code>，把含有密碼或金鑰的 allow rule 刪掉。</li>
+<li><strong>讓憑證不要進指令</strong>：指令裡改用環境變數或密鑰管理工具的參照（例如 <code>$DB_URL</code>），這樣被存下來的 rule 只會留下變數名、而不是密鑰本身。</li>
+<li><strong>核准模式、不要核准整條指令</strong>：優先核准 <code>Bash(npm run:*)</code> 這類模式型 rule，避免把一條帶著憑證的確切指令永久存下來。</li>
+</ul>
+<p>給安全團隊：</p>
+<ul>
+<li>把 agent 資料夾（<code>.claude/</code>、<code>.cursor/</code>、<code>.gemini/</code>、<code>.specstory/</code> 等）與 agent 的記憶／對話紀錄檔，當作與 <code>.env</code> 同級的「預設含密」檔案看待——在本機與 repo 裡都是。</li>
+<li>把這些路徑納入 pre-commit 與 CI 的密鑰掃描，範圍包含 git 歷史；並確認掃描能抓出「藏在指令裡的密碼」，而不只是已知金鑰格式（本案中兩款主流掃描器合計漏掉 215／1,122）。</li>
+<li>把 <code>.claude/settings.local.json</code> 加進組織的 <code>.gitignore</code> 範本，從新專案就擋下。</li>
+</ul>
+<h2>6. 原始來源</h2>
+<ul>
+<li>Apiiro 研究「Coding Agents Are Leaking Your Secrets to GitHub」（2026-11-05，含 2026-11-08 更新註記）：<a href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again/">https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again/</a></li>
+<li>The Hacker News 報導「Claude Code's "Don't Ask Again" File Exposes Passwords and Keys in 1,122 Public Copies on GitHub」（2026-11-06）：<a href="https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html">https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html</a></li>
+<li>Dark Reading 報導「AI Coding Agents Leak Thousands of Secrets to GitHub」（2026-11-10）：<a href="https://www.darkreading.com/cyber-risk/ai-coding-agents-leak-secrets-github">https://www.darkreading.com/cyber-risk/ai-coding-agents-leak-secrets-github</a></li>
+<li>GitGuardian 研究「Claude Code settings.local.json Secrets: GitHub, Docker Hub」（2026-11-09，2026-11-11 更新）：<a href="https://blog.gitguardian.com/claude-code-settings-local-json-secrets-docker-hub/">https://blog.gitguardian.com/claude-code-settings-local-json-secrets-docker-hub/</a></li>
+</ul>
+<a class="back-link" href="../articles.html">← 返回事件分析列表</a></article></div></section></main><footer class="footer"><div class="container footer-grid"><div class="footer-col"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><p class="footer-desc">TaiBear Security Studio 專注於將資安教育融入日常，建立好用、有效、符合合規要求的培訓方案。</p></div><div class="footer-col"><h4>導覽頁面</h4><ul><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li></ul></div><div class="footer-col"><h4>演練詳情</h4><ul><li><a href="https://www.taibear.app/service-phishing.html">社交工程演練</a></li></ul></div><div class="footer-col"><h4>聯絡資訊</h4><p>Email: <a href="mailto:info@taibear.app">info@taibear.app</a></p></div></div><div class="container footer-bottom"><p>&copy; 2026 臺熊資安工坊 TaiBear Security Studio. All rights reserved.</p><p>專業資安顧問團隊 ‧ 用一杯咖啡防禦企業邊界</p></div></footer><script src="../js/main.js"></script></body></html>
