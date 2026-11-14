@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ARTEX 事件分析：FBI 正式警告，AI 自動攻擊框架三小時就能攻破一家企業 - TaiBear Security Studio 臺熊資安工坊</title><meta name="description" content="FBI 11 月 13 日發布 FLASH 警告：開源 AI 滲透框架 ARTEX 已被駭客武器化，從鎖定目標到取得特權存取最快不到三小時；韓國金融業約 6.7 萬人個資外洩、ConnectWise 供應鏈波及 2,250 多個租戶，全球還有 1,600 多個 ARTEX 主控台直接暴露在網路上。防守重點不是追新漏洞，而是盤點那些沒人管的邊緣系統。"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/drafts.css"><link rel="stylesheet" href="../css/articles.css"></head><body class="draft-site"><header class="header"><div class="container nav-container"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><nav aria-label="主要導覽"><ul class="nav-links" id="nav-links"><li><a href="https://www.taibear.app/about.html">關於 TaiBear</a></li><li><a href="https://www.taibear.app/services.html">服務方案</a></li><li><a href="https://www.taibear.app/plans.html">套餐方案</a></li><li><a href="https://www.taibear.app/scenarios.html">適用情境</a></li><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" class="active" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li><li><a href="https://www.taibear.app/faq.html">常見問題</a></li><li><a href="https://www.taibear.app/contact.html">聯絡我們</a></li></ul></nav><div class="nav-actions"><a href="https://www.taibear.app/contact.html" class="btn btn-primary">立即諮詢</a><button type="button" class="menu-toggle" id="menu-toggle" aria-label="開啟導覽選單" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header><main><section class="detail-hero text-center"><div class="container"><div class="hero-tagline">AI 攻擊手法</div><h1 class="section-title">ARTEX 事件分析：FBI 正式警告，AI 自動攻擊框架三小時就能攻破一家企業</h1><p class="section-subtitle">FBI 11 月 13 日發布 FLASH 警告：開源 AI 滲透框架 ARTEX 已被駭客武器化，從鎖定目標到取得特權存取最快不到三小時；韓國金融業約 6.7 萬人個資外洩、ConnectWise 供應鏈波及 2,250 多個租戶，全球還有 1,600 多個 ARTEX 主控台直接暴露在網路上。防守重點不是追新漏洞，而是盤點那些沒人管的邊緣系統。</p></div></section><section class="section-padding draft-content"><div class="container"><article class="article-body"><a class="back-link" href="../articles.html">← 返回事件分析列表</a><div class="article-meta"><span><strong>分析日期：</strong>2026-11-14</span><span><strong>分類：</strong>AI 攻擊手法</span><span><strong>原始來源：</strong><a href="https://www.ic3.gov/CSA/2026/261113.pdf">FBI IC3</a></span><span class="meta-tags"><strong>標籤：</strong><span class="tag-chip">ARTEX</span><span class="tag-chip">FBI</span><span class="tag-chip">IC3</span><span class="tag-chip">AI 攻擊</span><span class="tag-chip">供應鏈安全</span></span></div>
+<h2>1. 概述</h2>
+<p>ARTEX 是一套開源、以 Go 語言撰寫的自主滲透測試框架：操作者用自然語言下達高階戰術目標，框架內多個專門的超級智慧（SI）代理會自動把目標轉成機器指令並執行，從偵察、入侵到資料外洩，全程幾乎不需要人工介入。ARTEX 本身不含語言模型，而是外接 Anthropic Claude、OpenAI GPT、DeepSeek、GLM、Grok、Kimi 等 LLM 供應商。它原本的定位是授權範圍內的安全測試工具，2026 年 7 月由開發者「Autumn-27」在 GitHub 發布後，10 週內就累積 1,500–2,000 顆星號。</p>
+<p>美國聯邦調查局（FBI）網路犯罪投訴中心（IC3）於 2026 年 11 月 13 日發布 FLASH-20261113-001，正式警告這套框架已被威脅行為者武器化：至少自 2026 年 8 月以來，各類惡意行為者用它針對全球金融、政府、科技、國防、半導體、能源、醫療、製造、電信與法律等產業發動入侵。FBI 點出的關鍵數字是：部分入侵從初步鎖定目標到取得特權存取不到三小時；韓國金融機構遭竊約 67,000 人的個人資訊；一起 ConnectWise Cloud Backup 供應鏈入侵波及超過 2,250 個下游租戶；截至 11 月初，全球有超過 1,600 個 ARTEX 主控台直接暴露在公開網路上。開發者已在 2026 年 10 月 8 日下架原始儲存庫，但分支、鏡像與商業版 ARTEX PRO 讓這套框架持續流傳，下架並沒有讓它消失。</p>
+<p>本篇以 FBI FLASH 全文為第一手來源，整理它的重點、還原 ARTEX 的攻擊鏈、講清楚哪些結論有證據、哪些沒有，並列出防守方現在就能做的事。本篇不做歸因延伸：FLASH 本身沒有把攻擊歸到特定國家或組織，引用時應保留這個界線。</p>
+<h2>2. 時間線</h2>
+<p>（日期為各來源所載；FLASH 本身是彙整文件，時間線綜合其註釋中的 8 篇研究。）</p>
+<div class="article-table-wrap"><table class="article-table"><thead><tr><th>時間</th><th>事件</th></tr></thead><tbody>
+<tr><td><code>2026 年 7 月</code></td><td>開發者「Autumn-27」在 GitHub 發布 ARTEX，10 週內累積估計 1,500–2,000 顆星號。</td></tr>
+<tr><td><code>2026 年 8 月</code></td><td>FBI 認定的惡意使用最早時間：至少自本月起，各類惡意行為者開始用 ARTEX 發動入侵。</td></tr>
+<tr><td><code>2026 年 10 月 7 日</code></td><td>CrowdStrike 揭露未知威脅行為者使用 AI 驅動的 ARTEX 攻擊韓國金融機構。</td></tr>
+<tr><td><code>2026 年 10 月 8 日</code></td><td>開發者因威脅行為者濫用的報導，將 GitHub 原始儲存庫下架。</td></tr>
+<tr><td><code>2026 年 10 月 14 日</code></td><td>Zscaler ThreatLabz 發布威脅行為者濫用代理式 AI 滲透框架攻擊韓國金融機構的分析。</td></tr>
+<tr><td><code>2026 年 10 月 21 日</code></td><td>微軟揭露以 ARTEX 發動的大規模行動導致供應鏈入侵（ConnectWise Cloud Backup 客戶遭波及）。</td></tr>
+<tr><td><code>2026 年 10 月 23 日</code></td><td>Akamai 發布 ARTEX 揭露的「被忽視的攻擊面」分析，含 API 安全意涵。</td></tr>
+<tr><td><code>2026 年 10 月 30 日</code></td><td>Google 威脅情報小組（GTIG）與 Mandiant 發布代理式攻擊框架研究及防禦策略。</td></tr>
+<tr><td><code>2026 年 11 月 5 日</code></td><td>Censys（發現 1,600 多個暴露的 ARTEX 主控台）、Check Point Research、歐盟 CERT-EU 同日發布 ARTEX 相關研究。</td></tr>
+<tr><td><code>2026 年 11 月 6 日</code></td><td>微軟追蹤的 Storm-3358 行動基礎設施（ARTEX 伺服器與 WISP C2 節點）截至本日仍活躍。</td></tr>
+<tr><td><code>2026 年 11 月 13 日</code></td><td>FBI IC3 發布 FLASH-20261113-001，彙整上述研究，提出官方威脅總覽與建議措施。</td></tr>
+</tbody></table></div>
+<h2>3. 技術分析</h2>
+<h3>3.1 框架怎麼運作：下指令的是人，做事的是代理群</h3>
+<p>ARTEX 的核心設計是把「入侵」拆成多個代理分工：操作者用自然語言描述目標（例如「取得這家公司的客戶資料」），框架內的 SI 代理各自負責偵察、掃描、利用、提權、橫向移動與外洩，彼此接力，中間幾乎不需要人下判斷。框架本身不含語言模型，模型全部外接。FBI 引用對攻擊者實例的分析指出，中國模型最為普遍，其中 DeepSeek Flash 系列占主導，原因是能力足夠、成本相對低廉，而且「在以滲透測試為框架時缺乏可觀察到的防護機制」——白話說，就是把攻擊指令包裝成滲透測試，模型就不擋了。</p>
+<h3>3.2 攻擊鏈：八個階段，全是老弱點、新速度</h3>
+<p>FLASH 把觀察到的 ARTEX 活動對應到 MITRE ATT&CK 階段。值得注意的是，整條鏈幾乎沒有零時差漏洞，厲害的是「全自動串連」的速度：</p>
+<ul>
+<li><strong>初始偵察：</strong>自動描繪 Azure 憑證的有效權限（SAS 權杖、服務主體、Kudu 憑證、儲存體金鑰），用次秒級能力檢查、測試 blob 寫入／刪除、ARM 部署驗證試運行；對網頁目錄做 500 多次請求的模糊測試；查詢公開服務判斷受害者地理位置。</li>
+<li><strong>初始存取：</strong>未簽署的 SAML 斷言、XXE、SSRF、匿名檔案上傳、單頁應用程式 JavaScript 裡的硬編碼管理員密碼、沒有驗證的網頁 API、SQL 注入、命令注入、SSTI、弱管理員憑證、竊取的 VPN 設定檔——以及濫用跨帳戶雲端信任關係，從外部合作夥伴租戶轉進目標。</li>
+<li><strong>建立立足點：</strong>部署 JSP／PHP 網頁後門（含透過 MySQL 日誌投毒）、濫用 Kudu 管理 API 執行任意命令、安裝開源 RAT（WISP、vshell、AdaptixC2）、建立 SSH 金鑰對、為現有 OAuth 應用程式新增憑證。</li>
+<li><strong>權限提升：</strong>啟動帶高價值 IAM 角色的雲端實例、Kerberoasting 蒐集服務票證、DCSync 竊取網域 krbtgt 金鑰、建立帶有 is_admin=true 旗標的帳戶、用未輪替的驗證金鑰偽造管理員權杖。</li>
+<li><strong>內部偵察：</strong>對網域控制站執行迭代式 PowerShell 枚舉、枚舉超過 110,000 個 Active Directory 物件、讀取 LAPS 密碼，甚至先盤點端點感測器覆蓋範圍，找出沒裝 CrowdStrike Falcon 的 Windows 電腦。</li>
+<li><strong>橫向移動：</strong>嘗試用 Pass-the-Ticket、Pass-the-Hash、WinRM、Kerberos 中繼移動到網域控制站——這一步被端點防護擋了下來，是整份文件裡少數有記載的防守成功紀錄。</li>
+<li><strong>蒐集與外洩準備：</strong>查詢後端 SQL 資料庫、大量讀取雲端 blob、透過 EC2 實例部署自訂開機指令碼蒐集資料、把命令輸出傳到輪替的 webhook.site 端點、開新的 100GB 磁碟區準備外洩。</li>
+<li><strong>命令與控制：</strong>住宅代理、Tor、SOCKS 代理、Chisel 與 SoftEther 通道，以及 BLOODALCHEMY 植入程式與 C2 網域通訊。</li>
+</ul>
+<h3>3.3 兩個指標案例</h3>
+<p><strong>韓國金融案（約 67,000 人個資外洩）。</strong>CrowdStrike 與 Zscaler 的研究指出，攻擊者用 ARTEX 針對韓國金融機構發動出於牟利動機的行動，造成約 67,000 人的個人資訊外洩。FLASH 公布的相關指標包括一個 ARTEX 主機與開放目錄（38.244.50[.]120）、一組代理 IP，以及一個 LLM API 轉售商網域 xcai[.]pro。注意這個數字的範圍：它是歸因到 ARTEX 這套工具的數字；韓國金融委員會 2026 年 11 月 5 日公布的整波數字是 37 家機構、約 47.3 萬筆外洩，那是整個攻擊波次，不全是 ARTEX 造成的，引用時不要混用。</p>
+<p><strong>ConnectWise 供應鏈案（2,250 多個下游租戶）。</strong>微軟的研究指出，攻擊者入侵 ConnectWise Cloud Backup 的相關應用，順著信任關係存取超過 2,250 個下游租戶的環境，並濫用 Microsoft Graph API。FLASH 公布的相關指標包括一組用於客戶環境登入與 Graph API 活動的 IP，以及三個只關聯 2026 年 10 月 15–16 日的短暫 VPN IP。微軟 11 月的後續報告指出，濫用已擴大到以金融業為目標的網路犯罪行動，並以 Storm-3358 稱呼相關的威脅叢集，其 ARTEX 伺服器與 WISP C2 節點截至 11 月 6 日仍活躍。</p>
+<h3>3.4 為什麼難防：速度、規模、門檻，與一個諷刺</h3>
+<p>FBI 歸納 ARTEX 的風險有五點，翻成白話是：第一，<strong>速度</strong>——代理自動接力，從鎖定到特權存取最快不到三小時，防守方告警還沒看完，攻擊已經做完了；第二，<strong>規模</strong>——小團體可以同時對很多目標發動行動；第三，<strong>門檻低</strong>——技術能力有限的人也能執行複雜入侵；第四，<strong>專打沒人管的地方</strong>——供應商入口、員工 App、行動後端、舊系統、第三方整合，這些周邊系統的安全關注通常遠少於旗艦應用；第五，<strong>供應鏈跳板</strong>——先打較弱的廠商或 CI/CD 管線，再順著信任關係轉進高價值的上游企業，ConnectWise 案就是這個劇本。</p>
+<p>還有一個諷刺：Censys 找到 1,600 多個直接暴露在公開網路上的 ARTEX 主控台——攻擊者自己的指揮台，很多也沒設防。Censys 那篇研究的標題就叫「Agentic Asbestos」（代理式石棉）：這東西一旦散出去，就像石棉一樣清不乾淨。對防守方來說，這同時是機會：暴露的主控台是可以反查的特徵。</p>
+<h2>4. 歸因與證據限制</h2>
+<ul>
+<li><strong>FLASH 是彙整文件，不是 FBI 第一手調查。</strong>所有案例都來自註釋中的 8 篇研究（微軟、Google GTIG／Mandiant、Censys、CrowdStrike、Zscaler、Check Point、Akamai、歐盟 CERT-EU），FBI 做的是彙整與背書。引用數字時最好連同原始研究一起看。</li>
+<li><strong>「國家級」不是這份文件的結論。</strong>「國家級行動」（nation-state campaign）這個說法來自微軟 2026 年 10 月 21 日那篇報告的標題；FBI FLASH 正文只說「各類惡意行為者」，沒有把攻擊歸到特定國家。微軟 11 月的後續報告則說濫用已擴大到網路犯罪集團。本篇不把「國家級」寫成 FBI 的定論。</li>
+<li><strong>67,000 人與 47.3 萬筆是不同口徑。</strong>前者是 CrowdStrike／Zscaler 歸因到 ARTEX 的韓國金融案數字；後者是韓國金融委員會公布的整波攻擊數字（37 家機構）。兩者不要混在一起引用。</li>
+<li><strong>IoC 是歷史快照。</strong>FBI 在文內明確提醒：IP 位址可能已被重新指派給良性服務，封鎖前應以自家網路遙測佐證。特別是標註「短暫 VPN IP、相關期間 10 月 15–16 日」的那三個位址，時效性更短。</li>
+<li><strong>沒有臺灣受害案例。</strong>FLASH 點名的目標產業包含半導體與政府，但沒有提到臺灣的具體受害組織。對臺灣的關聯是「攻擊模式適用」，不是「已經發生」。</li>
+<li><strong>雙重用途工具，FBI 點名的是濫用。</strong>ARTEX 原為授權範圍內的安全測試而設計；FBI 警告的是未經授權的入侵使用，不是持有或合法使用本身。把「用 ARTEX」直接等同於「犯罪」，超出這份文件的範圍。</li>
+<li><strong>模型分布的解讀有限制。</strong>「DeepSeek Flash 最普遍」是對攻擊者控制實例的觀察，說明的是成本與防護現實，不是該模型或其廠商涉入攻擊的證據。</li>
+</ul>
+<h2>5. 防守建議</h2>
+<p>以下整理自 FLASH 的建議措施，白話說明如下：</p>
+<ul>
+<li><strong>盤點所有對外的系統，尤其是沒人想管的那些。</strong>供應商入口、員工 App、行動後端、舊系統、測試站、跨部門長出來的應用——ARTEX 專打這些。公開 IP 的配置要有治理機制，管理介面直接暴露上網之前要經過架構審查；可行的話把企業應用移到零信任存取之後。</li>
+<li><strong>把雲端管理介面鎖起來。</strong>Kudu／SCM 端點、備份平台、虛擬化管理面、雲端管理入口，只允許受信任網路或專用管理路徑存取；不需要的基本發布驗證就關掉；部署憑證的存取要限制。</li>
+<li><strong>清點 OAuth 與服務主體授權。</strong>誰加了憑證、誰被授了高權限、哪些已停用的整合還留著授權——用應用程式 ID 查，不要只看顯示名稱（名稱可以改，ID 不行）。成功與失敗的服務主體登入要分開檢視；裝過受影響 ConnectWise 應用程式的 Microsoft 365 租戶要全面檢視，即使整合已停用。</li>
+<li><strong>給 API 加限流和異常告警。</strong>循序查詢、單一工作階段拉大量紀錄、流量突然暴增，都是 ARTEX 的行為特徵，可以直接設成告警規則。伺服器端要強制授權檢查，回應只給該操作需要的欄位；錯誤訊息不要回傳堆疊追蹤、SQL 錯誤或內部路徑給未驗證使用者。儲存庫、容器映像、CI/CD 管線要持續掃描內嵌密鑰，發現暴露立即輪替。</li>
+<li><strong>留證據，從 10 月 1 日往前查。</strong>FBI 建議至少回查到 2026 年 10 月 1 日的相關活動；Entra 登入與稽核紀錄、Purview 稽核紀錄、SIEM 資料、Graph 遙測先保存，不要為了等匯出而拖延遏制。確認可疑活動後，先保存證據，再由授權人員移除未經授權的憑證與授權；受影響的 ConnectWise 應用程式連線保持停用，直到 ConnectWise 提供正式恢復指示，不要先刪企業應用程式。</li>
+</ul>
+<h2>6. 原始來源</h2>
+<ul>
+<li>FBI IC3，FLASH-20261113-001《Threat Overview of ARTEX Autonomous Penetration Testing Framework》（2026 年 11 月 13 日，TLP:CLEAR，本篇第一手來源）：<a href="https://www.ic3.gov/CSA/2026/261113.pdf">https://www.ic3.gov/CSA/2026/261113.pdf</a></li>
+<li>以下 8 篇研究為 FLASH 註釋所引用的來源，完整引用見 FLASH 原文註釋：Microsoft Security Research and Microsoft Threat Intelligence〈AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise〉（2026 年 10 月 21 日）；Google Threat Intelligence Group〈ARTEX and Friends: Enter Agentic Offensive Frameworks〉（2026 年 10 月 30 日）；Censys〈ARTEX: Agentic Asbestos〉（2026 年 11 月 5 日）；Google Threat Intelligence Group and Mandiant〈ARTEX and Friends: Enter Agentic Offensive Frameworks – Defensive Strategies from Mandiant Consulting〉（2026 年 10 月 30 日）；CrowdStrike〈Unknown Threat Actor Uses AI-Driven ARTEX to Target South Korean Finance〉（2026 年 10 月 7 日）；Zscaler ThreatLabz〈Threat Actor Abuses Agentic AI Pentesting Framework to Target South Korean Financial Institutions〉（2026 年 10 月 14 日）；CERT-EU〈From Penetration Testing to Cyber Threat: Beware of ARTEX〉（2026 年 11 月 5 日）；Check Point Research〈Hacking on Autopilot: Inside ARTEX Cybercrime Campaigns〉（2026 年 11 月 5 日）；Microsoft Threat Intelligence〈ARTEX abuse expands as cybercriminals target financial sector〉（2026 年 11 月）；Akamai〈What ARTEX Reveals About Overlooked Attack Surfaces〉及〈API Security Implications〉（2026 年 10 月 23 日）。</li>
+</ul>
+<a class="back-link" href="../articles.html">← 返回事件分析列表</a></article></div></section></main><footer class="footer"><div class="container footer-grid"><div class="footer-col"><a href="https://www.taibear.app/index.html" class="logo">TaiBear<span>資安工坊</span></a><p class="footer-desc">TaiBear Security Studio 專注於將資安教育融入日常，建立好用、有效、符合合規要求的培訓方案。</p></div><div class="footer-col"><h4>導覽頁面</h4><ul><li><a href="../news.html">資安訊息</a></li><li><a href="../articles.html" aria-current="page">事件分析</a></li><li><a href="../apt.html">APT 組織</a></li></ul></div><div class="footer-col"><h4>演練詳情</h4><ul><li><a href="https://www.taibear.app/service-phishing.html">社交工程演練</a></li></ul></div><div class="footer-col"><h4>聯絡資訊</h4><p>Email: <a href="mailto:info@taibear.app">info@taibear.app</a></p></div></div><div class="container footer-bottom"><p>&copy; 2026 臺熊資安工坊 TaiBear Security Studio. All rights reserved.</p><p>專業資安顧問團隊 ‧ 用一杯咖啡防禦企業邊界</p></div></footer><script src="../js/main.js"></script></body></html>

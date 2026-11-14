@@ -1,5 +1,22 @@
 [
   {
+    "slug": "artex-fbi-flash-2026",
+    "title": "ARTEX 事件分析：FBI 正式警告，AI 自動攻擊框架三小時就能攻破一家企業",
+    "date": "2026-11-14",
+    "category": "AI 攻擊手法",
+    "tags": [
+      "ARTEX",
+      "FBI",
+      "IC3",
+      "AI 攻擊",
+      "供應鏈安全"
+    ],
+    "summary": "FBI 11 月 13 日發布 FLASH 警告：開源 AI 滲透框架 ARTEX 已被駭客武器化，從鎖定目標到取得特權存取最快不到三小時；韓國金融業約 6.7 萬人個資外洩、ConnectWise 供應鏈波及 2,250 多個租戶，全球還有 1,600 多個 ARTEX 主控台直接暴露在網路上。防守重點不是追新漏洞，而是盤點那些沒人管的邊緣系統。",
+    "source_name": "FBI IC3",
+    "source_url": "https://www.ic3.gov/CSA/2026/261113.pdf",
+    "url": "articles/artex-fbi-flash-2026.html"
+  },
+  {
     "slug": "claude-code-dont-ask-again-2026",
     "title": "Claude Code 事件分析：按一次『不再詢問』，密碼就寫進設定檔上了 GitHub",
     "date": "2026-11-13",
