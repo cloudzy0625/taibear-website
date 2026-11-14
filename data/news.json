@@ -1,272 +1,272 @@
 [
-  {
-    "date": "2026-11-10",
-    "region": "world",
-    "source_name": "BleepingComputer",
-    "source_type": "媒體",
-    "source_url": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
-    "summary": "資安研究員 Sean Bales 11/8 深夜公開 30 多個 N-able N-central 遠端管理平台的疑似零時差漏洞並附概念驗證程式，含未經驗證 XXE 轉 RCE 攻擊鏈，可奪取系統控制權；N-able 11/9 宣布重大資安事件、全球託管環境下線，並要求地端客戶暫時關機，修補程式仍在製作中，目前未見實際利用證據。",
-    "title": "研究者一次公開 30 多個 N-central 零時差，N-able 雲端平台全球下線"
-  },
-  {
-    "date": "2026-11-10",
-    "region": "world",
-    "source_name": "CISA",
-    "source_type": "官方",
-    "source_url": "https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-    "summary": "CISA 11/9 以實際利用證據新增 4 項已知遭利用漏洞：GPUStack 驗證繞過 CVE-2026-102895（9.8）、FreeSWITCH 程式碼注入 CVE-2026-116779（9.8）、IBM Aspera Faspex 授權繞過 CVE-2026-123218（9.8），以及 OpenSSH SSHole CVE-2026-123158（8.1）；聯邦機構須於 11/12 前修補。",
-    "title": "CISA 11/9 新增 4 項 KEV：GPUStack、FreeSWITCH、IBM Aspera Faspex 皆 9.8 分，期限 11/12"
-  },
-  {
-    "date": "2026-11-10",
-    "region": "world",
-    "source_name": "BleepingComputer",
-    "source_type": "媒體",
-    "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/",
-    "summary": "OpenSSH 長密碼繞過漏洞 SSHole（CVE-2026-123158）修補釋出後，GreyNoise 11/7 觀測到首起成功入侵，迄今已記錄 2,750 萬次 port 22 掃描與 2,010 萬次嘗試連線；watchTowr 回報利用活動與殭屍網路及挖礦有關。受影響為 musl 系統未啟用 PAM 的 OpenSSH，應升至 10.6p2。",
-    "title": "SSHole 已遭實際利用入侵 Linux 系統（後續發展）"
-  },
-  {
-    "date": "2026-11-10",
-    "region": "world",
-    "source_name": "The Hacker News",
-    "source_type": "媒體",
-    "source_url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
-    "summary": "Wiz 11/9 揭露，攻擊者 10/14 至 10/26 間利用 Qubole 平台所用的 AWS 帳號憑證，進入多家客戶的 AWS 帳號並竊取儲存的機密與資料；憑證如何外洩未明，Qubole 與母公司 Idera 尚未公開說明。曾將 Qubole 接入 AWS 的組織應檢查 10/1 起的 CloudTrail 紀錄。",
-    "title": "Qubole 遭駭：攻擊者盜用其 AWS 信任存取，入侵多家客戶 AWS 帳號竊取機密"
-  },
-  {
-    "date": "2026-11-10",
-    "region": "world",
-    "source_name": "BleepingComputer",
-    "source_type": "媒體",
-    "source_url": "https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/",
-    "summary": "Vanderbilt 大學 11/9 證實正應對一起進行中的網路安全事件，呼籲師生關閉校發裝置並斷開校園 Wi-Fi；BYOD 勒索組織同日在外洩網站認領攻擊，宣稱已加密資料庫並竊取逾 100 萬組社會安全號碼等資料，惟校方尚未證實加密、竊取或該組織涉案，相關說法未經證實。",
-    "title": "Vanderbilt 大學遭 BYOD 勒索軟體攻擊，校方籲全校關機斷網"
-  },
-  {
-    "date": "2026-11-10",
-    "region": "world",
-    "source_name": "The Hacker News",
-    "source_type": "媒體",
-    "source_url": "https://thehackernews.com/2026/11/web3auth-flaw-exploited-to-steal-keplr.html",
-    "summary": "Web3Auth 漏洞遭利用後，以 Google 或 Apple 登入建立的 Keplr 錢包私鑰外洩，GoPlus 估計至少約 100 萬美元遭竊；Web3Auth 隨後用同一路徑將 4.4 萬多個尚未遭竊的錢包、約 601 萬美元資金掃入自有回收錢包避險。用助記詞或硬體錢包建立的錢包未受影響。",
-    "title": "Web3Auth 後續發展：Keplr 錢包私鑰外洩遭竊，至少約 100 萬美元損失（後續發展）"
-  },
-  {
-    "date": "2026-11-10",
-    "region": "world",
-    "source_name": "BleepingComputer",
-    "source_type": "媒體",
-    "source_url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
-    "summary": "SEGA 11/9 披露，第三方通訊服務商 ARARA 遭駭，220 萬名訂閱者的電郵外洩，另 9.23 萬筆紀錄尚待釐清；ARARA 11/2 已承認其電郵發送服務遭入侵，約 7,700 萬筆電郵、近 380 家企業客戶受波及。SEGA 另強調子公司 arcade 網路服務遭入侵為不相關的另一起事件，仍在停機檢查。",
-    "title": "SEGA 通訊錄外洩 220 萬電郵：供應商 Arara 遭駭，7,700 萬筆波及近 380 家客戶"
-  },
-  {
-    "date": "2026-11-10",
-    "region": "taiwan",
-    "source_name": "台視新聞",
-    "source_type": "媒體",
-    "source_url": "https://news.ttv.com.tw/news/11511090036700M",
-    "summary": "易遊網 11/9 公告，11/7 偵測到會員中心遭外部異常網路攻擊，部分歷史訂單聯絡資料遭不當取得，影響逾 69 萬人，含姓名、電郵、電話與商品訂購資訊；信用卡號、安全碼、密碼、身分證字號與護照號碼未受影響，已通報主管機關與警方，提醒慎防假冒客服詐騙。",
-    "title": "易遊網遭駭：逾 69 萬人歷史訂單聯絡資料外流，慎防假客服詐騙"
-  },
-  {
-    "date": "2026-11-10",
-    "region": "taiwan",
-    "source_name": "聯合新聞網",
-    "source_type": "媒體",
-    "source_url": "https://udn.com/news/story/7240/9866337",
-    "summary": "數發部長林宜敬 11/9 在立院答詢表示，91APP 案涉及的 400 多萬人為潛在可能受影響範圍，實際遭竊取的個資數量仍待釐清；資安署掌握遭攻擊的較重要企業約五六家，皆已啟動行政調查，案件細節仍在調查中。林宜敬稱數發部已運用四個 AI 模型進行掃描。",
-    "title": "數發部長立院說明：91APP 潛在影響 400 多萬人，資安署另掌握五六家企業遭攻擊"
-  },
-  {
-    "date": "2026-11-10",
-    "region": "china",
-    "source_name": "iThome",
-    "source_type": "媒體",
-    "source_url": "https://www.ithome.com.tw/news/180339",
-    "summary": "日本總務省與警視廳 11/7 在東京銀座查獲車載偽基地臺，逮捕一名 31 歲中國籍男子；該設備可冒充合法基地臺向附近手機發送簡訊、用於釣魚詐騙，警方正調查是否與 2025 年 1 月後東京觀光區出現的中文可疑簡訊有關，為日本首起以妨害手機通訊為由查辦的案件。臺灣 2023 年亦曾查獲同類案件。",
-    "title": "日本查獲車載偽基地臺、逮捕中國籍男子：可冒充基地臺發釣魚簡訊"
-  },
-  {
-    "date": "2026-11-10",
-    "region": "taiwan",
-    "title": "91APP 外洩訂單資料遭暗網兜售：寶雅等品牌 240 萬筆、開價 999 美元",
-    "summary": "韓國資安公司 S2W 監測到，暗網論壇 Cabyc 出現兜售聲稱來自 91APP 的客戶訂單資料，主打寶雅等品牌，約 240 萬筆（去重後分 24 卷），欄位含訂單編號、姓名、電話、配送地址與購買明細，開價 999 美元。賣家聲稱資料含付款資訊，與 91APP 官方「資料庫不含信用卡號與付款資料」的調查說法不符，兜售內容未經證實；91APP 事件本身最大可能影響 1,329 個品牌、近 480 萬名消費者。",
-    "source_name": "S2W Daily Threat（X）",
-    "source_url": "https://x.com/S2W_DailyThreat/status/2119701550067339638",
-    "source_type": "社群（X）"
-  },
-  {
-    "date": "2026-11-09",
-    "region": "world",
-    "title": "Rails 修補 9.8 分重大漏洞：Active Storage 未經驗證可寫入任意檔案",
-    "summary": "Rails 11/4 發布 8.0.5.2 及 8.1.4.1 安全更新，修補 21 項問題，其中 Active Storage 漏洞 CVSS 9.8：使用 ImageMagick 處理上傳圖片且符合特定設定的網站，未經驗證攻擊者可寫入任意檔案，搭配 Disk 服務還可能讀取任意檔案；watchTowr 已在實驗環境重現，官方尚未說明是否遭實際利用。",
-    "source_name": "iThome",
-    "source_url": "https://www.ithome.com.tw/news/180273",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-09",
-    "region": "world",
-    "title": "微軟：Storm-3358 以 ARTEX 自主攻擊框架鎖定金融業",
-    "summary": "微軟 11/6 指出，柬埔寨籍牟利組織 Storm-3358 自 10 月起以 ARTEX 自主 AI 攻擊框架鎖定東南亞金融機構，掃描對外系統、利用匿名檔案上傳與 SSRF 漏洞，植入 WISP、vshell、AdaptixC2 遠端木馬；ARTEX 濫用已從國家級間諜擴及牟利犯罪。",
-    "source_name": "Microsoft Security Blog",
-    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
-    "source_type": "官方"
-  },
-  {
-    "date": "2026-11-09",
-    "region": "world",
-    "title": "Gnosis Pay 客戶資料外洩：卡號、住址與關聯錢包一併外流",
-    "summary": "Gnosis Pay 11/6 披露，11/3 偵測到舊版自有品牌卡片系統遭未授權存取、客戶資料外洩；依受害用戶公開的通知，外洩內容含姓名、完整住址、卡號與關聯的全部錢包地址，Cointelegraph 另稱部分通知含有效期與 CVV；資金未受影響，受影響卡片預定 12/20 停用。",
-    "source_name": "CoinDesk",
-    "source_url": "https://www.coindesk.com/business/2026/11/07/gnosis-pay-breach-exposes-card-numbers-home-addresses-and-linked-crypto-wallets",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-09",
-    "region": "world",
-    "title": "SM Entertainment 遭駭：員工身分證號與銀行帳號外洩，子公司同受波及",
-    "summary": "SM Entertainment 11/8 公告，11/4 左右外部攻擊者未授權存取業務系統並外洩部分文件，含員工手機、地址、銀行帳號、住民登錄番號（身分證號）與合約資料；子公司 DearU、Dream Maker 同受波及，粉絲資料未外洩，已通報 KISA 與個資保護委員會。",
-    "source_name": "Chosun Biz",
-    "source_url": "https://biz.chosun.com/en/en-society/2026/11/08/XF4UESERQBB7TP5DZTIUTKGW5Y/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-09",
-    "region": "world",
-    "title": "OpenAI GPT-6 Cyber：找出 Firefox 81 個未知高風險漏洞、Linux 核心 948 個可實際提權漏洞",
-    "summary": "OpenAI 11/5 發表資安專用模型 GPT-6 Cyber，在 Firefox 找出 81 個先前未知的高風險漏洞，並對 Linux 核心 2,308 個疑似漏洞中的 948 個開發出可實際運作的提權攻擊程式；模型資安能力風險等級列為 Critical，初期僅提供給核准的 Daybreak Red 客戶。",
-    "source_name": "iThome",
-    "source_url": "https://www.ithome.com.tw/news/180285",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-09",
-    "region": "world",
-    "title": "菲律賓海外就業系統約 69GiB 資料庫備份疑遭竊，政府展開調查",
-    "summary": "Hunt.io 發現菲律賓海外就業系統資料庫備份疑遭竊：攻擊者暴露的伺服器留有 27 個 MSSQL 備份檔傳輸紀錄，約 69GiB 資料於 9/6 不到 24 分鐘內遭複製，疑涉海外就業管理局業務系統；菲律賓國家隱私委員會已與移工部展開調查。",
-    "source_name": "iThome",
-    "source_url": "https://www.ithome.com.tw/news/180288",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-09",
-    "region": "world",
-    "title": "歐盟初步認定 TikTok「For You」推薦違反 DSA，最高可罰全球營收 6%",
-    "summary": "歐盟執委會 11/6 初步認定 TikTok「For You」推薦演算法違反數位服務法（DSA）：未充分評估演算法把用戶推入悲傷、孤立與身材焦慮內容迴圈的系統性風險，既有緩解措施無效；若確認違規，最高可處全球年營收 6% 罰款，現為初步認定、TikTok 可答辯。",
-    "source_name": "PPC Land",
-    "source_url": "https://ppc.land/tiktok-faces-fine-of-up-to-6-over-for-you-feed-rabbit-holes/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-09",
-    "region": "world",
-    "title": "Apple 將檢查 iCloud 公開分享的照片與檔案，27.3 版起實施",
-    "summary": "Apple 11/3 宣布，自 iOS、iPadOS、macOS、visionOS 27.3 起，將檢查用戶以「知道連結者皆可存取」公開分享的 iCloud 照片與檔案是否含不法或有害內容；即使開啟進階資料保護，這類公開分享仍不受端對端加密保護，違規內容可能遭移除、帳號停用。",
-    "source_name": "iThome",
-    "source_url": "https://www.ithome.com.tw/news/180284",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-09",
-    "region": "china",
-    "title": "香港警方：今年首 3 季發現逾 4.4 萬項高風險漏洞，86% 涉遠端桌面服務",
-    "summary": "香港警方公布，今年首 3 季發現逾 4.4 萬項高風險網絡安全漏洞，其中約 3.8 萬項（86%）涉遠端桌面服務；針對香港的網絡威脅情報近 130 萬項、按年升 32%，首 3 位為網絡釣魚、偵察與惡意軟件；65 間學校防火牆韌體過舊已獲協助更新。",
-    "source_name": "明報",
-    "source_url": "https://news.mingpao.com/pns/港聞/article/20261109/s00002/1794157550102/首3季揭4-4萬高風險網安漏洞-八成涉「遙距桌面服務」",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-08",
-    "region": "world",
-    "title": "Chainalysis 遭駭範圍擴大：全數用戶密碼雜湊與有效權杖外洩（後續發展）",
-    "summary": "Chainalysis 11/4 更新披露，全數用戶的姓名、帳號、密碼雜湊值與有效權杖皆已外洩，登入入口、Reactor、KYT 等核心服務已下架，要求全數用戶重設密碼並輪換 API 金鑰；公司稱目前無證據顯示調查資料遭存取或歸因資料遭竄改。",
-    "source_name": "BleepingComputer",
-    "source_url": "https://www.bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers/",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-08",
-    "region": "world",
-    "title": "Claude Code「不再詢問」把密碼寫進設定檔，1,122 份已公開外流 GitHub",
-    "summary": "Apiiro 研究發現，開發者在 Claude Code 核准指令時選「是，且不再詢問」，工具會把含密碼、API 金鑰的完整指令逐字存進 .claude/settings.local.json；掃描 104,185 份公開檔案，1,122 份含至少一組真憑證、共 1,379 組，刪檔也清不掉 git 歷史紀錄。",
-    "source_name": "The Hacker News",
-    "source_url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-08",
-    "region": "world",
-    "title": "SonicWall GMS 退役產品爆免登入檔案讀取漏洞 CVE-2026-109593（9.1 分），無修補可用",
-    "summary": "SonicWall 公告已終止支援的集中管理平臺 GMS（9.5.2 及更早版本）存在未經驗證檔案讀取漏洞 CVE-2026-109593（CVSS 9.1），攻擊者不需登入即可經網路讀取內部檔案；產品已退役、不會發布修補，官方建議遷移至 NSM。",
-    "source_name": "iThome",
-    "source_url": "https://www.ithome.com.tw/news/180287",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-08",
-    "region": "world",
-    "title": "惡意瀏覽器擴充套件可經 Claude Dispatch 驅動 Claude Desktop 執行程式碼",
-    "summary": "Forever Security 研究證實，能在 claude.ai 執行腳本的瀏覽器擴充套件，可冒用使用者身分經 Dispatch 功能向 Claude Desktop 下指令並自動點按核准，進而在電腦上執行程式碼；Anthropic 曾稱 Dispatch 將退役，但功能仍可使用。",
-    "source_name": "The Hacker News",
-    "source_url": "https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-08",
-    "region": "world",
-    "title": "惡意 RubyGems 套件 strutil-core 散布竊密蠕蟲，專挑 AI 開發工具設定下手",
-    "summary": "Socket 分析指出，RubyGems 套件 strutil-core 1.0.1 安裝時即下載 Bun 執行 5.48 MB 竊密蠕蟲（Shai-Hulud 衍生的 Miasma 家族），竊取雲端、CI、SSH 與 AI 工具憑證，並在 Claude、Cursor、Gemini 等工具設定檔植入 MCP 伺服器與啟動鉤子；RubyGems 已在發布約 5 小時後下架，尚未確認受害者。",
-    "source_name": "Socket",
-    "source_url": "https://socket.dev/blog/shai-hulud-descendant-malicious-ruby-gem",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-08",
-    "region": "world",
-    "title": "Web3Auth 資安事件：嵌入式錢包服務暫停，MetaMask 用戶初步未受影響",
-    "summary": "Web3Auth 11/7 在 X 通報，旗下供第三方使用的服務出現資安問題，已暫時暫停嵌入式錢包服務；初步調查未發現 MetaMask 用戶受影響，將盡快公布受影響服務用戶需採取的步驟。",
-    "source_name": "Web3Auth（X 官方帳號）",
-    "source_url": "https://x.com/Web3Auth/status/2118814067359969745",
-    "source_type": "社群（X）"
-  },
-  {
-    "date": "2026-11-08",
-    "region": "world",
-    "title": "奇安信 XLab 揭露 Linux 主機面板後門 cwpdoor：指令不留日誌，已有真實受害者",
-    "summary": "奇安信 XLab 指出，免費 Linux 主機管理面板 Control Web Panel 的網頁伺服器 cwpsrv 遭植入後門 cwpdoor，攻擊者以帶簽章的特殊標頭下指令且不留存取日誌，檔案時間戳還會被還原以躲避檢查；9/30 已有含此後門的檔案從巴西上傳至 VirusTotal，顯示野外已有真實受害者。",
-    "source_name": "The Hacker News",
-    "source_url": "https://thehackernews.com/2026/11/hackers-hide-linux-backdoor-in-control.html",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-08",
-    "region": "taiwan",
-    "title": "91APP 後續發展：補償申請表改由官網受理，Google 表單已關閉",
-    "summary": "91APP 個資外洩案補償登記原用 Google 表單受理遭批評後，11/7 起改由 91APP 官網受理、無須登入 Google 帳號，官方強調傳輸全程加密；事件最大可能波及 1,329 個品牌、約 480 萬名消費者。",
-    "source_name": "壹蘋新聞網",
-    "source_url": "https://news.nextapple.com/life/20261107/C42180C6B705C17BEDDEBAF560B0C921",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-08",
-    "region": "taiwan",
-    "title": "高雄男子用 AI 寫程式竊取 23 萬餘筆個資，在暗網販售",
-    "summary": "高雄 38 歲林姓男子透過 AI 撰寫程式，非法入侵公家機關與私人企業網站後台，竊取 23 萬餘筆民眾個資並透過暗網販售，警方已查獲（聯合報 11/7 報導）。",
-    "source_name": "聯合報",
-    "source_url": "https://vip.udn.com/vip/story/121523/9862956?present_date=2026-11-07&from=vipudn_xyz_story",
-    "source_type": "媒體"
-  },
-  {
-    "date": "2026-11-08",
-    "region": "china",
-    "title": "荷蘭資安報告指中國網攻荷蘭與歐洲目標，中國使館駁斥",
-    "summary": "荷蘭資安當局近日發布報告，指控中國對荷蘭與歐洲目標發動網路攻擊；中國駐荷蘭使館 11/7 發聲明表達強烈不滿與堅決反對，稱相關內容罔顧事實、惡意抹黑。報告指控本身未經獨立技術證據公開證實，雙方說法對立。",
-    "source_name": "人民日報海外版 pdnews",
-    "source_url": "https://peoplesdaily.pdnews.cn/china/er/30053509778",
-    "source_type": "媒體"
-  }
+ {
+  "date": "2026-11-14",
+  "region": "world",
+  "title": "CISA 11/13 新增兩項 KEV：Check Point Gaia 提權漏洞與 UnrealIRCd 指令注入漏洞，聯邦修補期限 11/16（後續發展）",
+  "summary": "CISA 11/13 將 Check Point Gaia 作業系統提權漏洞 CVE-2026-123039（CVSS 7.8，PHP2Shell 攻擊鏈的一環）與 UnrealIRCd 指令注入漏洞 CVE-2026-114713（CVSS 8.6）列入已知遭利用漏洞目錄，兩者皆已確認在野利用，美國聯邦機構須於 11/16 前修補。",
+  "source_name": "CISA",
+  "source_url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+  "source_type": "官方"
+ },
+ {
+  "date": "2026-11-14",
+  "region": "world",
+  "title": "泰航與芬蘭航空各因 Amadeus 資安事件外洩逾 6 萬筆與 11 萬筆旅客資訊",
+  "summary": "泰航與芬航 11/9 公告，訂位系統供應商 Amadeus 遭未經授權存取，泰航 60,529 筆、芬航 11.6 萬筆訂位資料受影響，其中芬航近 750 筆資料已遭人開啟查看。",
+  "source_name": "iThome",
+  "source_url": "https://www.ithome.com.tw/news/180477",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-14",
+  "region": "world",
+  "title": "Citrix 一次修補 NetScaler 28 個漏洞，含 10 個重大等級、Console 漏洞 9.4 分",
+  "summary": "Citrix 11/13 修補 NetScaler ADC／Gateway 共 28 個漏洞，其中 10 個為重大等級，多為記憶體溢位；另修補 NetScaler Console 未驗證存取控制繞過漏洞 CVE-2026-120869（CVSS 9.4）。目前未通報在野利用。",
+  "source_name": "SecurityWeek",
+  "source_url": "https://www.securityweek.com/citrix-patches-10-critical-netscaler-vulnerabilities/",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-14",
+  "region": "world",
+  "title": "PostgreSQL 修補 52 個漏洞，含 22 年歷史的認證後 RCE CVE-2026-6460（CVSS 8.8）",
+  "summary": "PostgreSQL 11/13 發布 18.7／17.12／16.16／15.20／14.25，修補 52 個漏洞；最嚴重的是型別混淆漏洞 CVE-2026-6460（CVSS 8.8），可建立物件的資料庫使用者可在伺服器上執行程式碼，根源可追溯至 2004 年，研究者已公開可行的利用手法。",
+  "source_name": "The Hacker News",
+  "source_url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-14",
+  "region": "world",
+  "title": "網頁爬蟲平台 Apify 證實遭入侵，客戶個資與憑證外洩",
+  "summary": "Apify 證實 11/9–10 遭入侵、11/11 發現，攻擊者以被盜憑證取得更多憑證並存取部分客戶帳號；外洩資料含姓名、電郵、帳單資訊、加鹽密碼雜湊、2FA 復原碼、電話及 Google／GitHub 登入權杖。",
+  "source_name": "SecurityWeek",
+  "source_url": "https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-14",
+  "region": "taiwan",
+  "title": "資安署：近期十多家企業受害、約 800 萬筆個資外洩",
+  "summary": "資安署副署長周智禾 11/13 在行政院會後記者會表示，近期約十多家企業受害，導致高達約 800 萬筆個資外洩；另北市府工務局大地工程處臉書專頁帳號密碼被盜、外交部領務局網站遭駭，兩案分別在 9 月底與 11 月初通報、目前均已處理完成。",
+  "source_name": "聯合新聞網",
+  "source_url": "https://udn.com/news/story/7314/9875636",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-14",
+  "region": "taiwan",
+  "title": "UNC6783 宣稱竊得資安院 102GB 資料，資安院回應：去年 7 月已通報、持續監控（後續發展）",
+  "summary": "針對勒索集團 UNC6783 宣稱竊得國家資通安全研究院 102GB 內部文件，資安院向 iThome 回應，去年 7 月已進行資安通報、目前持續監控觀察；外洩樣本為「資安聯防監控月報」，屬 TLP:GREEN、每月廣發各政府機關與簽約廠商。102GB 竊取宣稱本身仍未經證實。",
+  "source_name": "iThome",
+  "source_url": "https://www.ithome.com.tw/news/180499",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-14",
+  "region": "taiwan",
+  "title": "Cyberbiz 後續：大金空調 141 筆訂單受波及、132 筆個資遭存取，首家明確揭露受影響筆數",
+  "summary": "和泰車 11/12 發重訊，子公司委外廠商順立智慧（Cyberbiz）資料庫遭未經授權存取，大金空調零件線上商城 141 筆訂單受波及、其中 132 筆含個資；iThome 資安週報指出事件已牽動至少 13 家上市櫃及興櫃公司。",
+  "source_name": "iThome",
+  "source_url": "https://www.ithome.com.tw/news/180482",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-14",
+  "region": "taiwan",
+  "title": "華南、北富銀帳戶盜轉疑雲：金管會稱與永豐案不同，交易均經綁定裝置與雙重驗證",
+  "summary": "Threads 有用戶反映華南銀、北富銀帳戶款項遭轉走；金管會銀行局 11/12 說明，兩案交易均由客戶事前綁定的實體行動裝置發動、通過密碼／OTP／生物辨識雙重驗證，IP 軌跡亦與日常紀錄相符，與永豐銀中台系統遭入侵案不同，已要求兩行依規定通報重大偶發事件、持續釐清。",
+  "source_name": "ETtoday",
+  "source_url": "https://finance.ettoday.net/news/3271244",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-14",
+  "region": "china",
+  "title": "新威脅組織 SilentAir 劫持亞洲電信節點，攔截臺灣用戶通話與簡訊、2FA 驗證碼",
+  "summary": "Enea 揭露新發現的國家級行為者 SilentAir，自 2025 年初起入侵至少六個亞洲國家電信業者的節點，濫用 SS7／Diameter 訊令攔截目標用戶的通話、簡訊與 2FA 驗證碼，臺灣是主要目標。Enea 以高信心認定為國家級行為者，與中國的關聯僅低信心。",
+  "source_name": "Enea",
+  "source_url": "https://www.enea.com/insights/the-enemy-within-tracking-liminal-panda-and-silentair-through-mobile-networks/",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-13",
+  "region": "world",
+  "title": "N-central 新零時差「4EverAble2Shell」公開數小時即遭實際利用，21 台伺服器被植入挖礦程式（後續發展）",
+  "summary": "研究員 Sean Bales 11/12 再公布 4EverAble2Shell 與 Agent2Shell，未授權即可取得 N-central 伺服器 root 權限（需開啟 Legacy API），且對 11/10 發布的 Hotfix 2 仍有效；PoC 公開後數小時內即有攻擊，至少 21 台生產伺服器被植入 XMRig 挖礦程式，其中 19 台已裝 Hotfix 2。",
+  "source_name": "BleepingComputer",
+  "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-13",
+  "region": "world",
+  "title": "Apache HTTP Server 重大 HTTP/2 漏洞 CVE-2026-119618（CVSS 9.8），未授權可遠端執行程式碼",
+  "summary": "mod_http2 競態條件造成堆積記憶體損毀，影響 2.4.55–2.4.70 且僅限開啟 HTTP/2 的伺服器；2.4.71 已於 11/11 釋出修補，已有概念驗證公開，尚無野外利用通報。",
+  "source_name": "The Hacker News",
+  "source_url": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-13",
+  "region": "world",
+  "title": "GitHub「wfx-loot」行動：4,837 個被盜帳號探查 6 萬多個儲存庫，竊取 Actions 密鑰與雲端憑證",
+  "summary": "攻擊者 11/10 起用被盜 GitHub 憑證對 61,764 個儲存庫測試寫入權限，偽裝成「dependency audit」PR 植入竊密工作流程，至少 1,835 個目標的密鑰遭竊；約 50 個受害帳號在 npm、PyPI 等生態系有發布權限。",
+  "source_name": "BleepingComputer",
+  "source_url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-13",
+  "region": "world",
+  "title": "Check Point 證實 PHP2Shell 遭實際利用入侵防火牆，串連 Gaia 提權漏洞植入後門與清除器",
+  "summary": "攻擊者 10/30–11/4 以 PHP2Shell（CVE-2026-109618/109619）入侵未修補閘道器的 Mobile Access Portal，再以 CVE-2026-123039 提權至 root，植入 webshell 與 TSGA 後門，部分以色列受害者遭部署清除器；約數十台未修補系統受害，修補程式 10/23 已釋出。",
+  "source_name": "SecurityOnline",
+  "source_url": "https://securityonline.info/check-point-gateway-vulnerability-cve-2026-123039/",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-13",
+  "region": "world",
+  "title": "Fortinet 一口氣修補 100 個漏洞，FortiClient 重大漏洞 Fortinet2Shell（CVE-2026-121529，CVSS 9.1）細節曝光",
+  "summary": "Fortinet 11/10 發布 89 則公告、修補 100 個漏洞；其中 FortiClient 的 Fortinet2Shell 為 CORS 組態錯誤，惡意網站可與本機服務通訊、未授權執行任意程式碼，影響啟用 FortiPAM 的 FortiClient Mac/Windows。",
+  "source_name": "iThome",
+  "source_url": "https://www.ithome.com.tw/news/180464",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-13",
+  "region": "world",
+  "title": "微軟 Microsoft 365 全球大當機，Outlook、Teams、Copilot 連不上，連 Defender XDR 也受波及",
+  "summary": "微軟 11/12 上午起多項服務陸續中斷：Exchange Online 信箱先出問題，下午擴大為 Microsoft 365 全面服務降級，Outlook、Teams、SharePoint、Copilot、Defender XDR 等多項服務可能無法連線，影響遍及全球、臺灣用戶也遭殃；Downdetector 的 Outlook 回報一度逼近 13 萬件。微軟稱是多台伺服器意外無法使用所致，截至 11/12 美東晚間仍未完全恢復；目前無證據顯示與網攻有關。",
+  "source_name": "中央廣播電臺",
+  "source_url": "https://www.rti.org.tw/news?uid=3&pid=1051225",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-13",
+  "region": "taiwan",
+  "title": "外交部領事事務局網站遭駭，逾 7.2 萬個護照大頭照外洩",
+  "summary": "領務局 11/4 發現部分網站疑遭入侵，11/9 公布、11/12 更新確認三類資料遭未經授權取得：護照大頭照 72,702 個、駐紐約辦事處驗證授權書 26,072 個、ABTC 申請 774 件；網站已修復上線，民眾無須因此換發護照，但須留意個資遭不當利用。",
+  "source_name": "iThome",
+  "source_url": "https://www.ithome.com.tw/news/180446",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-13",
+  "region": "taiwan",
+  "title": "台積電證實員工個資外洩：部分現職及離職員工資訊未經授權外流（後續發展）",
+  "summary": "台積電 11/12 證實部分現職及離職員工資訊未經授權被放置於外部網站，但目前無證據顯示台積電系統遭到入侵；相關資料與某雲端服務供應商系統服務中的資料相符，與生產或客戶資料無關。賣家宣稱約 46,000 筆、6.9GB、起標 3 BTC、一週內未售出即全量公開，筆數與完整性仍未經證實。",
+  "source_name": "中央社",
+  "source_url": "https://www.cna.com.tw/news/afe/202611120132.aspx",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-13",
+  "region": "taiwan",
+  "title": "netiCRM 後續發展：500 多家非營利組織客戶主機全數納入檢查重建，暫未發現捐款人資料外洩",
+  "summary": "服務商網絡行動科技 11/11 說明，遭入侵的是具管理權限的內部管理主機，已確認客戶聯絡人、方案帳務資料與客服紀錄遭竊，捐款人及支持者資料目前未發現遭竊；11/10 已向數發部通報並報警。",
+  "source_name": "iThome",
+  "source_url": "https://www.ithome.com.tw/news/180438",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-13",
+  "region": "china",
+  "title": "Unit 42：疑似中國關聯行為者以開源 AI 代理框架 Cairn 自主入侵 19 個組織、10 個得手",
+  "summary": "攻擊者 2026-08–09 以 Cairn 搭配智譜 GLM 5.2 與 DeepSeek V4 模型執行 25 次近乎全自主入侵，僅輸入網域名稱與一句目標描述即可行動；10 個組織遭未授權存取或資料竊取，目標含半導體供應鏈（7）、國防（3）、人權與公民社會（4），一案竊得逾百萬筆紀錄。Unit 42 以中度信心評估為中國關聯情報蒐集——歸因屬 Unit 42 說法，非已證實。",
+  "source_name": "Help Net Security",
+  "source_url": "https://www.helpnetsecurity.com/2026/11/12/cairn-autonomous-ai-cyberattacks/",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-12",
+  "region": "world",
+  "title": "CISA 11/10 新增 6 項 KEV：Outlook、Chrome 零時差與 Barracuda 漏洞鏈已遭利用",
+  "summary": "CISA 11/10 將 6 項漏洞列入已知遭利用漏洞名單：Outlook 零時差 CVE-2026-124194 可洩漏 NTLMv2 雜湊、Chrome 零時差 CVE-2026-125350、Barracuda 設備漏洞鏈 CVE-2026-116606（9.3）／CVE-2026-111560（8.6）可取得 root 權限，另有思科 BroadWorks 與 Openwave 漏洞；Barracuda 兩項限 11/13 前修補，其餘 11/24。微軟同日例行更新共修補 1,094 個漏洞。",
+  "source_name": "iThome",
+  "source_url": "https://www.ithome.com.tw/news/180413",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-12",
+  "region": "world",
+  "title": "ScreenConnect 主動攻擊鎖定 MSP：6 家代管商遭入侵、數十家機構受影響",
+  "summary": "Huntress 11/11 揭露，攻擊者利用遭入侵的 MSP ScreenConnect 環境向客戶裝置派送惡意遠端存取用戶端，已確認 6 家 MSP、47 家組織、286 個以上端點受影響且數字持續上升；入侵途徑未明，疑為憑證遭竊或支援連線遭劫持，ConnectWise 已著手調查。",
+  "source_name": "BleepingComputer",
+  "source_url": "https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-12",
+  "region": "world",
+  "title": "Maersk 證實舊系統資料外洩，WhiteArmor 勒索集團索討 500 萬美元",
+  "summary": "全球貨櫃航運龍頭 Maersk 11/11 證實，併購取得的舊系統遭未授權存取並外洩資料；WhiteArmor 勒索集團已在外洩網站認領，宣稱握有約 100GB 資料、含近 3 萬筆司機紀錄與明文密碼，要求 500 萬美元比特幣，Maersk 未證實該集團說法，稱初步證據顯示無敏感資料外洩、營運不受影響。",
+  "source_name": "BleepingComputer",
+  "source_url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-12",
+  "region": "world",
+  "title": "日本宜得利系統遭非法存取，最高 3,762 萬筆會員與客戶個資外洩",
+  "summary": "日本居家連鎖宜得利 11/9 公告，系統遭未授權存取，個人與企業會員、線上商店客戶資料最多 3,762 萬筆外洩，含姓名、電郵、住址、出生日期與企業聯絡資料；10 月中下旬發現異常、11/6 確認，入侵途徑與是否為勒索攻擊仍在調查。",
+  "source_name": "iThome",
+  "source_url": "https://www.ithome.com.tw/news/180409",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-12",
+  "region": "world",
+  "title": "AI 滲透測試平台 AntiFox 遭濫用，竊取 AWS 生產環境機密",
+  "summary": "Arctic Wolf 揭露，開源 AI 自主滲透測試平台 AntiFox 被用於真實入侵：攻擊者經由遭入侵的 IIS 伺服器植入 Web Shell，竊取 AWS 憑證後橫向移動、列舉數十項 AWS 服務，至少一起成功讀取生產環境機密；託管 AntiFox 介面的阿里雲主機與多起入侵有關。",
+  "source_name": "The Hacker News",
+  "source_url": "https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-12",
+  "region": "world",
+  "title": "Fireworks AI 遭駭波及 Notion：約 1% 工作空間的 AI 對話紀錄遭存取（後續發展）",
+  "summary": "Notion 11/11 證實，因 AI 供應商 Fireworks AI 遭駭，約 1% 工作空間的 Notion AI 對話紀錄（含輸入與輸出）遭未授權存取；Fireworks 另確認部分客戶帳務資料、資料集與不完整模型權重亦受影響；Notion 已切斷與 Fireworks 的連線並停用 Insights 功能。",
+  "source_name": "iThome",
+  "source_url": "https://www.ithome.com.tw/news/180407",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-12",
+  "region": "taiwan",
+  "title": "Cyberbiz 風波再擴大：黑松、漢來美食接連揭露委外資料庫遭異常存取",
+  "summary": "黑松與漢來美食 11/10 相繼發布重大訊息，接獲委外購物商城廠商順立智慧（Cyberbiz）通知，資料庫遭未授權異常存取，線上商店部分消費者訂單資料受影響；兩家皆已啟動應變並以簡訊、電郵通知會員提高警覺、防範詐騙。",
+  "source_name": "iThome",
+  "source_url": "https://www.ithome.com.tw/news/180420",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-12",
+  "region": "taiwan",
+  "title": "數發部緊急記者會：AI 驅動攻擊波來襲，企業遭駭 72 小時內須通報、告知、修補",
+  "summary": "數發部 11/11 緊急召開記者會，指出近期 91APP、易遊網等多起個資外洩源於 AI 模型自動尋找漏洞、形成攻擊鏈掃描全球網站；部長林宜敬表示直接財損小、但個資流入詐騙集團的間接損害龐大；呼籲企業遭駭後 72 小時內通報主管機關、主動通知消費者並提供查詢管道、查明原因完成修補。",
+  "source_name": "NOWnews",
+  "source_url": "https://www.nownews.com/amp/news/6891318",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-12",
+  "region": "taiwan",
+  "title": "91APP 後續發展：790 萬筆訂單資料暗網兜售，全家等四品牌相繼回應",
+  "summary": "11/7 在中國暗網「長安不夜城」兜售、宣稱與 91APP 有關的 790 萬筆訂單資料（全家行動購、寶雅、康是美、無印良品）持續延燒；全家 11/11 正式發布重大訊息說明補償與向 91APP 追償機制，其餘三品牌亦要求系統廠商全面查核；筆數與來源仍為賣家單方宣稱、尚未證實。",
+  "source_name": "鏡週刊",
+  "source_url": "https://www.mirrormedia.mg/story/amp/20261111-178fin-151021",
+  "source_type": "媒體"
+ },
+ {
+  "date": "2026-11-12",
+  "region": "china",
+  "title": "Check Point：CopperDragon／Sparrow 串起三組中國關聯間諜活動，目標含臺灣",
+  "summary": "Check Point Research 11/10 報告指出，三組原本以為獨立的間諜活動 SilentDelivery、OceanGate、DarkWire，共用名為 Sparrow 的惡意程式生態系，背後疑似同一工具供應者 CopperDragon，服務 FamousSparrow、Earth Estries 等與中國有關的組織；過去一年鎖定拉美、亞洲、歐洲 21 國的電信、政府、軍方與關鍵基礎設施，臺灣亦在水坑式攻擊目標之列；與 Salt Typhoon 的關聯未定。歸因屬 Check Point 說法。",
+  "source_name": "The Hacker News",
+  "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+  "source_type": "媒體"
+ }
 ]
